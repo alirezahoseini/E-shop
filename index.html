@@ -18,16 +18,92 @@
     <!-- End of Css Files -->
 </head>
 <body>
-
+    
     <!-- container  -->
-    <div class="container-fluid">
-            
+    <div class="container-fluid mx-0 px-0">
+        <!-- back dark filter  -->
+        <div id="back-dark-filter"></div>
+        <!-- End of back dark filter  -->
+        <div class="row mx-0 px-0">
+            <header class="col-12 header d-flex">
+                <div class="row w-100 d-flex justify-content-around align-items-center px-0">
+                    <h2 id="logo" class="col-6 col-lg-2">
+                        <a href="#">
+                            <img src="./files/image/header/e-shop-dark-icon.svg" alt="e-shop e-commerce logo">
+                        </a>
+                    </h2>
+                    <nav id="navbar" class="col-5 align-items-center justify-content-center d-none d-lg-flex">
+                        <ul>
+                            <li>
+                                <a href="#">Men</a>
+                            </li>
+                            <li>
+                                <a href="#">Women</a>
+                            </li>
+                            <li>
+                                <a href="#">Kids</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="header-icons" class="bg-dark col-4 col-lg-2 d-flex align-items-center justify-content-center">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="./files/image/header/search-icon.svg" alt="search icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./files/image/header/cart-icon.svg" alt="cart icon">
+                                </a>
+                            </li>
+                            <li class="d-none d-lg-inline-block">
+                                <a href="#">
+                                    <img src="./files/image/header/avatar-icon.svg" alt="avatar icon">
+                                </a>
+                            </li>
+                            <li class="d-lg-none d-inline-flex">
+                                <a href="#" id="mobile-toggler">
+                                    <img src="./files/image/header/menuicon.svg" alt="menu icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- mobile menu  -->
+                    <div id="mobile-menu" class="d-block d-lg-none text-center">
+                        <h3 class="text-center mt-3 mb-5">
+                            <a href="#">
+                                <img src="./files/image/header/e-shop-dark-icon.svg" alt="logo e-shop market">
+                            </a>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Men</a>
+                            </li>
+                            <li>
+                                <a href="#">Women</a>
+                            </li>
+                            <li>
+                                <a href="#">Kids</a>
+                            </li>
+                        </ul>
+                        <div class="w-100 mt-5">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-light border border">Sing in</a>
+                                <a href="#" class="btn btn-light border border">Sing up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of mobile menu  -->
+                </div>
+            </header>
+        </div>    
     </div>
     <!-- End of container  -->
 
     <!-- JavaScript Files -->
     <script src="./files/swiper-slider/swiper.js"></script>
-    <script src="./js/classes.js"></script>
+    <script src="./js/uiClass.js"></script>
     <script src="./js/header-footer.js"></script>
     <script src="./js/home.js"></script>
     <script src="./files/bootstrap-ltr/jquery-3.5.1.slim.min.js"></script>
