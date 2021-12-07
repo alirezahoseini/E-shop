@@ -1,0 +1,91 @@
+.row{
+    margin: auto 0 !important;
+}
+
+/* banner slider */
+.banner-slider{
+    margin-top: 90px;
+    height: 350px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    max-width: 90%;
+}
+.product-carusel{
+    width: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.swiper-pagination{
+    position: fixed;
+    bottom: 20px;
+}
+.swiper .swiper-button-prev , .swiper-button-next {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px .2px rgba(0, 0, 0, 0.103);
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.swiper .swiper-button-next::after{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: gray;
+}
+.swiper .swiper-button-prev::after{
+    color: gray;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+/* End of banner slider */
+
+
+/* tablet style */
+@media screen and (max-width: 776px) {
+
+}
+/* End of tablet style */
+
+
+
+
+
+
+/* mobile style */
+@media screen and (max-width: 480px) {
+  
+}
+/* End of mobile style */
