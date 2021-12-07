@@ -48,7 +48,7 @@ header #navbar ul li{
     margin: 0px 2vw;
 }
 header #navbar ul li a{
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     transition: .3s;
     -webkit-transition: .3s;
@@ -57,7 +57,7 @@ header #navbar ul li a{
     -o-transition: .3s;
 }
 header #navbar ul li:hover a{
-    color: rgb(63, 63, 63);
+    color: rgb(189, 189, 189);
 }
 header #header-icons ul{
     list-style: none;
@@ -149,5 +149,8 @@ header #header-icons ul{
 
 /* mobile style */
 @media screen and (max-width: 480px) {
+    /* header styles  */
+    
+    /* End of header styles  */
 }
 /* End of mobile style */
