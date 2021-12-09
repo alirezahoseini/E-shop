@@ -30,12 +30,11 @@
     right: 0;
     opacity: 0;
     visibility: hidden;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
 }
 #header-banner #my-slider .slide-1{
     background-image: url('../files/image/header banner/background-joao-silas-SfkLX6fUObk-unsplash.jpg');
@@ -71,7 +70,34 @@
     font-size: 40px;
     font-weight: 700;
     color: white;
+
 }
+#header-banner #my-slider .slide.active h2{
+    animation-name: titleTransform;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+/* slider title animation  */
+@keyframes titleTransform {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+        -webkit-transform: translateX(-10%);
+        -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+        -o-transform: translateX(-10%);
+}
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}
+/* End of slider title animation  */
 #header-banner #my-slider .slide .shop-btn{
     display: flex;
     align-items: center;
@@ -83,6 +109,12 @@
     -moz-transition: .4s ease-in-out;
     -ms-transition: .4s ease-in-out;
     -o-transition: .4s ease-in-out;
+}
+#header-banner #my-slider .slide.active .shop-btn{
+    animation-name: titleTransform;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
 }
 #header-banner #my-slider .slide .shop-btn:hover{
     transform: translateX(5px);
