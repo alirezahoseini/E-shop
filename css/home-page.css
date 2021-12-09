@@ -5,7 +5,7 @@
 
 /* header banner  */
 #header-banner{
-    min-height: 95vh;
+    min-height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -233,8 +233,65 @@
     opacity: .5;
 }
 /* End of slider navigation */
-
 /* End of header banner  */
+
+
+/* new collection section styles  */
+#new-collections img{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+#new-collections div{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 10px;
+    height: 300px;
+}
+#new-collections div:nth-child(1){
+    background: url('../files/image/new collection banners/adult-black-clothes-dark-1040421.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#new-collections div:nth-child(2){
+    background: url('../files/image/new collection banners/beach-black-pants-black-shirt-2001293.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#new-collections div:nth-child(3){
+    background: url('../files/image/new collection banners/person-sale-sign-1785138.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#new-collections div::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+#new-collections div a{
+    z-index: 3;
+    color: white;
+    margin-left: 5px;
+}
+#new-collections div a button{
+    background-color: white;
+    font-size: .4em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#new-collections div a .badge{
+    font-size: .5em;
+}
+
+
+/* End of new collection section styles  */
 
 
 
