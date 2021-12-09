@@ -22,6 +22,37 @@
     justify-content: flex-start;
     align-items: flex-end;
 }
+/* slider progress  */
+#header-banner #my-slider .progrss-scroller{
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: .5em;
+}
+#header-banner #my-slider .slider-progress{
+    height: 25vh;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.295);
+    position: relative;
+    margin: 5px 0;
+}
+#header-banner #my-slider .slider-progress .progress{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+/* End of slider progress  */
 #header-banner #my-slider .slide{
     width: 100%;
     height: 100%;
