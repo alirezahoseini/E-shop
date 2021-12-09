@@ -18,4 +18,6 @@ class Ui {
         // removeing classes from element
         myElement.classList.remove(classes);
     }
+
+    
 }
