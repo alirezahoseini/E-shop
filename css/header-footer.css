@@ -31,6 +31,9 @@ header{
     z-index: 999;
     position: relative;
 }
+header.pages{
+    background-color: white;
+}
 header #logo img{
     width: 100px;
 }
@@ -82,6 +85,39 @@ header #header-icons ul li a img{
     -ms-transition: .5s;
     -o-transition: .5s;
 }
+
+/* header sticky styles */
+header.hide{
+    transition: .7s;
+    position: fixed;
+    top: -100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
+    -webkit-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
+    -moz-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
+    -ms-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
+    -o-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+header.sticky{
+    top: 0;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+/* End of  header sticky styles */
+
+
+
+
+
+
     /* mobile menu styles */
 #mobile-menu{
     display: flex;
@@ -160,11 +196,9 @@ header #header-icons ul li a img{
 
 
 /* tablet style */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 991px) {
     /* header styles  */
-    header{
-        background-color: white;
-    }
+
     /* End of header styles  */
     /* header banner  */
     #header-banner{

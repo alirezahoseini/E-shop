@@ -11,7 +11,9 @@
 eventlisteners();
 function eventlisteners(){
     // header slider  runing
-    document.addEventListener("DOMContentLoaded", headerSlider)
+    document.addEventListener("DOMContentLoaded", headerSlider);
+
+    
 }
 
 
