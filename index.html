@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/css-reset.css">
     <link rel="stylesheet" href="./css/home-page.css">
     <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/product-carusel.css">
     <link rel="stylesheet" href="./files/swiper-slider/swiper.css">
     <link rel="stylesheet" href="./files/feather-icons/feather-icons.css">
     <link rel="stylesheet" href="./files/bootstrap-ltr/bootstrap.min.css">
@@ -215,9 +216,9 @@
             <!-- End of header banner  -->
             <!-- End of header  -->
         </div>   
-        <main class='row w-100 mt-5 mt-lg-4'>
+        <main class='row w-100 mt-4 mt-lg-4'>
             <!-- new collections section  -->
-            <section id="new-collections" class="row w-100 d-flex justify-content-center">
+            <section id="new-collections" class="row w-100 d-flex justify-content-center mt-1">
                 <div class="col-11 col-lg-5">
                     <a href="#">
                         <h5>
@@ -248,6 +249,77 @@
                 </div>
             </section>
             <!-- End of new collections section  -->
+            <!-- product carusel - selected just for you -->
+            <div class="carusel-title">
+                <h3>Selected just for you</h3>
+                <a href="#" class="border rounded-pill">SHOW MORE</a>
+            </div>
+            <!-- carusel -->
+            <div class="product-carusel" data-carusel-id='justUser'> 
+                <div class="carusel-wrapper">
+                    <div class="loop">
+                        <!-- product 1 -->
+                        <a class="product active" data-product-id='1'>
+                            <img src="./files/image/product-images/AdobeStock_118120200.jpg" alt="product 1" class="product-image">
+                            <div class="carusel-body">
+                                <p>Loose Kint 3/4 Sleeve</p>
+                                <span class="product-price">
+                                    $119.99
+                                </span>
+                            </div>
+                        </a>
+                        <!-- End of product 1 -->
+                        <!-- product 2 -->
+                        <a class="product" data-product-id='2'>
+                            <div class="offer-badge rounded-pill">30%</div>
+                            <img src="./files/image/product-images/AdobeStock_136908398.jpg" alt="product 1" class="product-image">
+                            <div class="carusel-body">
+                                <p>Basic Slim Fit T-Shirt</p>
+                                <span class="product-price offer">
+                                    $119 <span class="new-price">$89.9</span>
+                                </span>
+                            </div>
+                        </a>
+                        <!-- End of product 2 -->
+                        <!-- product 3 -->
+                        <a class="product" data-product-id='3'>
+                            <img src="./files/image/product-images/AdobeStock_173519034.jpg" alt="product 1" class="product-image">
+                            <div class="carusel-body">
+                                <p>Loose Textured T-Shirt</p>
+                                <span class="product-price">
+                                    $156.78
+                                </span>
+                            </div>
+                        </a>
+                        <!-- End of product 3 -->
+                        <!-- product 4 -->
+                        <a class="product" data-product-id='4'>
+                            <img src="./files/image/product-images/AdobeStock_236655481.jpg" alt="product 1" class="product-image">
+                            <div class="carusel-body">
+                                <p>T-Shirt Summer Vibes</p>
+                                <span class="product-price">
+                                    $43.99
+                                </span>
+                            </div>
+                        </a>
+                        <!-- End of product 4 -->
+                    
+                    </div>
+                </div>
+                <!-- End of carusel wrapper -->
+                <!-- carusel buttons -->
+                <div class="carusel-buttons">
+                    <div class="prev-product">
+                        <i class="feather-icon icon-arrow-left"></i>
+                    </div>
+                    <div class="next-product active">
+                        <i class="feather-icon icon-arrow-right"></i>
+                    </div>
+                </div>
+                <!-- carusel buttons -->
+            </div>
+            <!-- End of carusel -->
+            <!-- End of product carusel - selected just for you -->
         </main> 
     </div>
     <!-- End of container  -->
@@ -256,6 +328,7 @@
     <script src="./files/swiper-slider/swiper.js"></script>
     <script src="./js/uiClass.js"></script>
     <script src="./js/header-footer.js"></script>
+    <script src="./js/products-carusel.js"></script>
     <script src="./js/home.js"></script>
     <script src="./files/bootstrap-ltr/jquery-3.5.1.slim.min.js"></script>
     <script src="./files/bootstrap-ltr/bootstrap.bundle.min.js"></script>
