@@ -97,8 +97,8 @@
 .product-carusel .carusel-wrapper .product .carusel-body .product-price.offer{
     color:rgb(212, 212, 212);
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
+    justify-content: left !important;
+    align-items: center;
 }
 .product-carusel .carusel-wrapper .product .carusel-body .product-price.offer .new-price{
     color: red;
@@ -127,7 +127,6 @@
     font-size: 1.5em;
     z-index: 4;
     cursor: pointer;
-    margin-left: 20px;
     opacity: .4;
 }
 .product-carusel .carusel-buttons i:hover{
@@ -139,7 +138,7 @@
 }
 .product-carusel .carusel-buttons .next-product{
     pointer-events: none;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .product-carusel .carusel-buttons .next-product.active i{
     pointer-events:painted ;

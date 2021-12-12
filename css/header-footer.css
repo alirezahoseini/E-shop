@@ -63,6 +63,7 @@ header #navbar ul li:hover a{
     color: rgb(189, 189, 189);
 }
 header #header-icons ul{
+    max-width: 200px;
     list-style: none;
     display: flex;
     width: 100%;

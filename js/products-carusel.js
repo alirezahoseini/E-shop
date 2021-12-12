@@ -99,7 +99,7 @@ function caruselProducts(){
             if(balance == startPoint){
                 ui.removeClassFromElement('.prev-product', 'active');
             }
-        })
+        });
 
     }
 
