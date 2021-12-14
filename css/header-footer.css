@@ -179,7 +179,135 @@ header.sticky{
 
 
 
-
+/* footer styles  */
+/* joinClub styles  */
+.joinClub > .row{
+    background: url('../files/image/footer/blake-wisz-GFrBMipOd_E-unsplash.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+.joinClub > .row::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.joinClub .title{
+    z-index: 2;
+    color: white;
+}
+.joinClub .title h3{
+    font-size: .9em;
+}
+.joinClub .form{
+    z-index: 2;
+}
+.joinClub form{
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.joinClub form input{
+    background-color: white;
+    border: none;
+    font-size: .5em;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.joinClub form input:focus{
+    box-shadow: 0 0 0px 3px rgb(141, 141, 141);
+    -webkit-box-shadow: 0 0 0px 3px rgb(141, 141, 141);
+    -moz-box-shadow: 0 0 0px 3px rgb(141, 141, 141);
+    -ms-box-shadow: 0 0 0px 3px rgb(141, 141, 141);
+    -o-box-shadow: 0 0 0px 3px rgb(141, 141, 141);
+}
+.joinClub form button{
+    background-color: rgb(255, 153, 0);
+    color: black;
+    border: none;
+    outline: none;
+    font-size: .6em;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+.joinClub form button:hover{
+    background-color: black;
+    color: rgb(255, 153, 0);
+}
+/* End of joinClub styles  */
+/* main footer styles */
+.main-footer .discription p{
+    font-size: .5em;
+    line-height: 25px;
+    color: gray;
+}
+.main-footer .discription  .icons img{
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+.main-footer .discription .icons img:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.main-footer .links{
+    font-size: .5em;
+    color: black;
+}
+.main-footer .links p{
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.main-footer .links ul li{
+    margin: 10px 0;
+}
+.main-footer .links ul li a{
+    color: black;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.main-footer .links ul li a:hover{
+    color: rgb(0, 102, 255);
+}
+.main-footer .copy p{
+    color: rgb(170, 170, 170);
+    font-size: .45em;
+}
+/* End of main footer styles */
+/* End of footer styles  */
 
 
 
@@ -206,5 +334,7 @@ header.sticky{
         position: relative;
     }
     /* End of header banner  */
+    /* footer */
+    /* End of footer */
 }
 /* End of tablet style */
