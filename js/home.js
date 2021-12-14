@@ -1,5 +1,6 @@
 // Classes 
-
+// products carusel
+const productCrusel = new ProductCarusel();
 
 
 
@@ -10,8 +11,10 @@
 // Eventlisteners
 eventlisteners();
 function eventlisteners(){
-    // header slider  runing
+    // header slider runing
     document.addEventListener("DOMContentLoaded", headerSlider);
+    // product crusel runing
+    document.addEventListener("DOMContentLoaded", productCaruselRuning);
 
     
 }
@@ -97,5 +100,13 @@ function headerSlider(){
     
     // set slides length to end counter
     endCount.innerHTML += slides.length;
+}
 
+
+// products carusel runing
+function productCaruselRuning(){
+    // first carusel - just for you products
+    productCrusel.newCrusel('justUser');
+    // first carusel - just for you products
+    productCrusel.newCrusel('women');
 }

@@ -289,9 +289,77 @@
 #new-collections div a .badge{
     font-size: .5em;
 }
-
-
 /* End of new collection section styles  */
+
+
+/* e-shop attributes section */
+#attributes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+}
+#attributes .title h3{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: .7em;
+}
+#attributes .item{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+#attributes .item .attribute-icon{
+    background-color: rgb(241, 241, 241);
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+} 
+#attributes .item .attribute-icon svg{
+    transition:.4s;
+    width: 27px;
+    -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:.4s;
+    -o-transition:.4s;
+}
+#attributes .item .attribute-body{
+    display: flex;
+    flex-direction: column;
+}
+#attributes .item .attribute-body h5{
+    width: 100%;
+    margin-top: 30px;
+    font-size: .5em;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+#attributes .item .attribute-body p{
+    font-size: .5em;
+    color: grey;
+}
+#attributes .item:hover  .attribute-icon{
+    background-color: #fff3df;
+}
+#attributes .item:hover  .attribute-icon svg{
+    fill: #eb9100;
+}
+/* End of e-shop attributes section */
 
 
 
