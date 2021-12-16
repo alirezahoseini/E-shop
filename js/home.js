@@ -101,8 +101,8 @@ function headerSlider(){
 
 // products carusel runing
 function productCaruselRuning(){
-    // first carusel - just for you products
-        var swiper = new Swiper(".justForYou", {
+    // swiper products carusel
+        var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
@@ -129,31 +129,4 @@ function productCaruselRuning(){
         },
       });
 
-    // for women products
-    var swiper = new Swiper(".forWomens", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".button-next",
-          prevEl: ".button-prev",
-        },
-        breakpoints: {
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        },
-      });
 }

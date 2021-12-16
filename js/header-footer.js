@@ -43,6 +43,8 @@ function eventlisteners(){
 function headerChangeHeigth(e){
     // access to header
     const header = document.querySelector("header");
+    // access to back to up button
+    const backToUpBtn = document.querySelector('#back-to-up');
     // created counter
     let counter = 0;
 
@@ -59,16 +61,28 @@ function headerChangeHeigth(e){
             // hide header
             header.classList.add('hide');
         }
+        
 
         // if user scroll back show header
         if(i > counter){
             // show header 
             header.classList.add('sticky');
-            
+            // show back to up button
+            backToUpBtn.classList.add('show');
         }else{
             // hide header
             header.classList.remove('sticky');
+            // hide back to up button
+            backToUpBtn.classList.remove('show');
         }
+
+        // back to up button default hide
+        if(scrollPosition <= 10){
+            console.log(scrollPosition);
+            // hide back to up button
+            backToUpBtn.classList.remove('show')
+        }
+
 
         // transparent bacground header  desctop size
         if(window.innerWidth > 991){
