@@ -1,3 +1,29 @@
+#loader{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgb(255, 255, 255);
+    z-index:10000;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    flex-direction: column;
+}
+#loader img{
+    height: 40vh;
+}
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 #back-dark-filter{
     display: block;
     width: 100vw;
@@ -182,7 +208,7 @@ header.sticky{
 /* footer styles  */
 /* joinClub styles  */
 .joinClub > .row{
-    background: url('../files/image/footer/blake-wisz-GFrBMipOd_E-unsplash.svg');
+    background: url('../files/image/footer/blake-wisz-GFrBMipOd_E-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -243,7 +269,7 @@ header.sticky{
     color: black;
     border: none;
     outline: none;
-    font-size: .6em;
+    font-size: .5em;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;

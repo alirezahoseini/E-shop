@@ -9,6 +9,11 @@ const ui = new Ui();
 eventlisteners();
 function eventlisteners(){
 
+    // hide loader
+    window.addEventListener('load', () => {
+        document.querySelector("#loader").classList.add('hide');
+    })
+
     // show mobile menu
     document.querySelector("#mobile-toggler").addEventListener("click", () => {
         // show menu

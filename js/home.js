@@ -1,8 +1,4 @@
 // Classes 
-// products carusel
-const productCrusel = new ProductCarusel();
-
-
 
 
 
@@ -14,7 +10,7 @@ function eventlisteners(){
     // header slider runing
     document.addEventListener("DOMContentLoaded", headerSlider);
     // product crusel runing
-    document.addEventListener("DOMContentLoaded", productCaruselRuning);
+    productCaruselRuning();
 
     
 }
@@ -106,7 +102,58 @@ function headerSlider(){
 // products carusel runing
 function productCaruselRuning(){
     // first carusel - just for you products
-    productCrusel.newCrusel('justUser');
-    // first carusel - just for you products
-    productCrusel.newCrusel('women');
+        var swiper = new Swiper(".justForYou", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+        breakpoints: {
+          "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          "@1.50": {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+    // for women products
+    var swiper = new Swiper(".forWomens", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+        breakpoints: {
+          "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          "@1.50": {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
 }
