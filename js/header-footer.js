@@ -1,5 +1,7 @@
 // Classes -------------------
 const ui = new Ui();
+const shopingCart = new ShopingCart();
+const newLocalStoage = new NewLoacalStorage();
 
 
 
@@ -12,23 +14,16 @@ function eventlisteners(){
     // hide loader
     window.addEventListener('load', () => {
         document.querySelector("#loader").classList.add('hide');
-    })
-
-    // show mobile menu
-    document.querySelector("#mobile-toggler").addEventListener("click", () => {
-        // show menu
-        ui.addingCustomClass("#mobile-menu", "active");
-        // show background filter
-        ui.addingCustomClass("#back-dark-filter", 'active');
     });
 
-    // hidde mobile menu
-    document.querySelector("#back-dark-filter").addEventListener("click", () => {
-        // hidde menu
-        ui.removeClassFromElement("#mobile-menu", "active");
-        // hidde background filter
-        ui.removeClassFromElement("#back-dark-filter", 'active');
-    });
+    // run shoping cart 
+    document.addEventListener('DOMContentLoaded', runShopingCart);
+
+    // run mobile menu
+    document.addEventListener('DOMContentLoaded', runMobileMenu);
+
+    // back dark filter clicked --->  hidde mobile menu || shoping cart
+    document.querySelector("#back-dark-filter").addEventListener("click", hideBackDarkFilter);
 
     // change header heigth with top scroll
     document.addEventListener("DOMContentLoaded", headerChangeHeigth)
@@ -38,6 +33,121 @@ function eventlisteners(){
 
 
 // Functions -------------------
+
+// every thing in shoping cart
+function runShopingCart(){
+
+    // show shoping cart
+    document.querySelector('#cart-icon').addEventListener('click', showShopingCart );
+
+    // user click shoping cart close btn ---> hide shoping cart
+    document.querySelector("#shoping-cart .close-btn").addEventListener('click', () => {
+        // hide shoping cart
+        ui.removeClassFromElement("#shoping-cart", "active");
+        // hide background filter
+        ui.removeClassFromElement("#back-dark-filter", 'active');
+    });
+
+    // show shoping cart 
+    function showShopingCart(){
+        // show shoing cart
+        ui.addingCustomClass("#shoping-cart", "active");
+        // hidde background filter
+        ui.addingCustomClass("#back-dark-filter", 'active');
+
+    };
+
+    // shoping cart switcher  ------------
+    // access to cart switcher
+    const cartSwitcher = document.querySelector('.cart-switcher');
+    // access to cart switcher btns
+    const cartSwitcherBtns = cartSwitcher.children;
+    const myCartBtn = cartSwitcher.children[0];
+    const myFavoritesBtn = cartSwitcher.children[1];
+
+    // access to cart and favorits sections
+    const cart = document.querySelector('.my-cart');
+    const favorits = document.querySelector('.my-favorites');
+
+    // active my cart
+    myCartBtn.addEventListener('click', () => {
+        // active my cart 
+        myCartBtn.classList.add('active');
+        cart.classList.add('active');
+        // disabled my favorites
+        myFavoritesBtn.classList.remove('active');
+        favorits.classList.remove('active');
+    });
+    // active my favorites
+    myFavoritesBtn.addEventListener('click', () => {
+        // active my favorites 
+        myFavoritesBtn.classList.add('active');
+        favorits.classList.add('active')
+        // disabled my cart
+        myCartBtn.classList.remove('active');
+        cart.classList.remove('active')
+    });
+
+    // ----------------------------------> runing shoping cart 
+    // created base item to local storage
+    newLocalStoage.firstLoadingDataFromLcealStorag();
+
+
+    // add to my cart is  --------------->
+    function runCart(){
+
+    }
+
+    // add to favorits is run --------------->
+    function runFavorites(){
+        // access to user selected product
+        document.addEventListener('click', (e) => {
+            // deleagation user click and add product to my favorites
+            if(e.target.classList.contains('add-favorites-icon')){
+                // add product to favorites list
+                shopingCart.addToFavorites(e.target);
+            }
+            const favoritsList = document.querySelector('.my-favorites')
+        });
+    
+        // update cart counter
+        document.querySelector('#shoping-cart').addEventListener('click', () => ui.cartCounter() );
+
+    }
+}
+
+// back dark filter clicked  -  hide shoping cart and hide mobile menu -----------
+function hideBackDarkFilter(){
+    // access to mobile menu
+    const mobileMenu = document.querySelector('#mobile-menu');
+    // access to shoping cart
+    const shopingCart = document.querySelector('#shoping-cart');
+
+    if(mobileMenu.classList.contains('active')){
+        // hide menu
+        ui.removeClassFromElement("#mobile-menu", "active");
+        // hide background filter
+        ui.removeClassFromElement("#back-dark-filter", 'active');
+    }
+        
+    if(shopingCart.classList.contains('active')){
+        // hide shoping cart
+        ui.removeClassFromElement("#shoping-cart", "active");
+        // hide background filter
+        ui.removeClassFromElement("#back-dark-filter", 'active');
+    }
+}
+
+// everything in mobile menu
+function runMobileMenu(){
+    // show mobile menu
+    document.querySelector("#mobile-toggler").addEventListener("click", () => {
+        // show menu
+        ui.addingCustomClass("#mobile-menu", "active");
+        // show background filter
+        ui.addingCustomClass("#back-dark-filter", 'active');
+    });
+}
 
 // change header heigth with top scroll
 function headerChangeHeigth(e){
@@ -78,7 +188,6 @@ function headerChangeHeigth(e){
 
         // back to up button default hide
         if(scrollPosition <= 10){
-            console.log(scrollPosition);
             // hide back to up button
             backToUpBtn.classList.remove('show')
         }

@@ -22,12 +22,157 @@
     
     <!-- container  -->
     <div class="container-fluid mx-0 px-0">
+        <!-- loader -->
         <div id="loader">
             <img src="./files/image/header/new-loading.gif" alt="loading gif">
         </div>
+        <!-- End of loader -->
         <!-- back dark filter  -->
         <div id="back-dark-filter"></div>
         <!-- End of back dark filter  -->
+        <!-- shoping-cart  -->
+        <div id="shoping-cart" class=''>
+            <div class="cart-header">
+                <h4>Shoping cart</h4>
+                <div class="close-btn">
+                    <i class="feather-icon icon-x"></i>
+                </div>
+            </div>
+            <div class="shoping-wrapper ">
+                <!-- cart switcher -->
+                <div class="cart-switcher">
+                    <div class="cart-btn active">My Cart <span>1</span> </div>
+                    <div class="favorites-btn">My Favorites <span>0</span> </div>
+                </div>
+                <!-- End of cart switcher -->
+                <!-- my products -->
+                <div class="my-cart active mt-2 w-100 px-0 mx-0">
+                    <!-- empty cart  -->
+                    <div class="empty">
+                        <img src="./files/image/header/cart-empty.svg" alt="favorites empty" class="w-25">
+                        <h4>Your Cart is empty</h4>
+                    </div>
+                    <!-- End of empty cart  -->
+                    <!-- cart item -->
+                    <div class="cart-item row my-4">
+                        <div class="symbol">
+                            <i class="feather-icon icon-shopping-cart"></i>
+                        </div>
+                        <div id="remove-item" title='Remove This Item From My Cart'>
+                            <i class="feather-icon icon-x"></i>
+                        </div>
+                        <div class="col-4 cart-img">
+                            <a href="#">
+                                <img src="./files/image/product-images/women-1.jpg" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-7 cart-info">
+                            <a href="#">
+                                <p class="cart-title">
+                                    Basic Slim Fit T-Shirt
+                                </p>
+                            </a>
+                            <div class="counter">
+                                <p>Number:</p>
+                                <div class="counter-input">
+                                    <button id="low">-</button>
+                                    <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                    <button id="up">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                Price: <span>$110</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of cart item -->
+                    <!-- cart item -->
+                    <div class="cart-item row my-4">
+                        <div class="symbol">
+                            <i class="feather-icon icon-shopping-cart"></i>
+                        </div>
+                        <div id="remove-item" title='Remove This Item From My Cart'>
+                            <i class="feather-icon icon-x"></i>
+                        </div>
+                        <div class="col-4 cart-img">
+                            <a href="#">
+                                <img src="./files/image/product-images/women-1.jpg" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-7 cart-info">
+                            <a href="#">
+                                <p class="cart-title">
+                                    Basic Slim Fit T-Shirt
+                                </p>
+                            </a>
+                            <div class="counter">
+                                <p>Number:</p>
+                                <div class="counter-input">
+                                    <button id="low">-</button>
+                                    <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                    <button id="up">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                Price: <span>$110</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of cart item -->
+                    <!-- cart item -->
+                    <div class="cart-item row my-4">
+                        <div class="symbol">
+                            <i class="feather-icon icon-shopping-cart"></i>
+                        </div>
+                        <div id="remove-item" title='Remove This Item From My Cart'>
+                            <i class="feather-icon icon-x"></i>
+                        </div>
+                        <div class="col-4 cart-img">
+                            <a href="#">
+                                <img src="./files/image/product-images/women-1.jpg" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-7 cart-info">
+                            <a href="#">
+                                <p class="cart-title">
+                                    Basic Slim Fit T-Shirt
+                                </p>
+                            </a>
+                            <div class="counter">
+                                <p>Number:</p>
+                                <div class="counter-input">
+                                    <button id="low">-</button>
+                                    <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                    <button id="up">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                Price: <span>$110</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of cart item -->
+                </div>
+                <!-- End of my products -->
+                <!-- my favorites -->
+                <div class="my-favorites  mt-2 w-100 px-0 mx-0">
+                    <!-- empty favorites  -->
+                    <div class="empty">
+                        <img src="./files/image/header/favorites-empty.svg" alt="favorites empty">
+                        <h4>Your Wishlist is empty</h4>
+                    </div>
+                    <!-- End of empty favorites  -->
+                </div>
+                <!-- End of my favorites -->
+                <!-- cart footer  -->
+                <div class="cart-footer">
+                    <p id="total-price" class='mt-2'>Total: <span class="ml-3">$569</span></p>
+                    <button type="button" class="go-payment rounded">The Payment</button>
+                </div>
+                <!-- End of cart footer  -->
+            </div>
+        </div>
+        <!-- End of shoping-cart  -->
         <div class="row mx-0 px-0 d-block" style="height: 110vh;">
             <!-- header  -->
             <header class="col-12 header d-flex home">
@@ -54,13 +199,13 @@
                     <div id="header-icons" class="col-6 col-md-4 col-lg-2 d-flex align-items-center justify-content-center">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a>
                                     <img class="d-lg-none" src="./files/image/header/search-icon-black.svg" alt="search icon">
                                     <img class="d-none d-lg-inline-block light-icons" src="./files/image/header/search-icon.svg" alt="search icon">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a id='cart-icon'>
                                     <img class="d-lg-none" src="./files/image/header/cart-icon-black.svg" alt="cart icon">
                                     <img class="d-none d-lg-inline-block light-icons" src="./files/image/header/cart-icon.svg" alt="cart icon">
                                 </a>
@@ -266,15 +411,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/AdobeStock_118120200.jpg" alt="product 1" loading='lazy'>
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Loose knit 3/4 Sleeve</h3>
-                                <p>$119.99</p>
+                                <p class="default-price">$119.99</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -286,8 +431,8 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-1.jpg" alt="product 2" loading='lazy'>
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">30%</div>
                             </div>
@@ -296,8 +441,8 @@
                             <div class="product-body">
                                 <h3>Women's sports shirt</h3>
                                 <div class="new-price">
-                                    <p class="off">$109.99</pc>
-                                    <p>$156</p>
+                                    <p class="off-price">$109.99</pc>
+                                    <p class="default-price">$156</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
@@ -310,15 +455,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/AdobeStock_136908398.jpg" alt="product 3" loading='lazy'>
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Basic Slim Fit T-Shirt</h3>
-                                <p>$79.99</p>
+                                <p class="default-price">$79.99</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -330,15 +475,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-8.jpg" alt="product 4" loading='lazy'>
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Leopard short skirt</h3>
-                                <p>$241</p>
+                                <p class="default-price">$241</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -350,8 +495,8 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/AdobeStock_173519034.jpg" alt="product 5" loading='lazy'>
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">12%</div>
                             </div>
@@ -360,8 +505,8 @@
                             <div class="product-body">
                                 <h3>Loose Textured T-Shirt</h3>
                                 <div class="new-price">
-                                    <p class="off">$69.99</pc>
-                                    <p>$80</p>
+                                    <p class="off-price">$69.99</pc>
+                                    <p class="default-price">$80</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
@@ -373,21 +518,22 @@
                         <a>
                             <!-- product image -->
                             <div class="product-image">
-                                <img src="./files/image/product-images/AdobeStock_236655481.jpg" alt="product 6">
-                                <div class="items" loading='lazy'>
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <img src="./files/image/product-images/AdobeStock_236655481.jpg" alt="product 5" loading='lazy'>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
-                                <h3>T-Shirt Summer Vibes</h3>
-                                <p>$117</p>
+                                <h3>Basic Slim Fit T-Shirt</h3>
+                                <p class="default-price">$79.99</p>
                             </div>
                             <!-- End of product body -->
                         </a>
                     </div>
                     <!-- End of slide -->
+
                 </div>
                 <!-- end of swiper wrapper -->
                 <div class="button-next feather-icon icon-arrow-right"></div>
@@ -464,15 +610,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-2.png" loading='lazy' alt="product 7">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites"></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites"></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Formal clothes</h3>
-                                <p>$78.99</p>
+                                <p class="default-price">$78.99</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -484,8 +630,8 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-3.jpg" loading='lazy' alt="product 8">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">50%</div>
                             </div>
@@ -494,8 +640,8 @@
                             <div class="product-body">
                                 <h3>Full length Arabic coat</h3>
                                 <div class="new-price">
-                                    <p class="off">$110</pc>
-                                    <p>$220</p>
+                                    <p class="off-price">$110</pc>
+                                    <p class="default-price">$220</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
@@ -508,8 +654,8 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-7.jpg" loading='lazy' alt="product 12">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">24%</div>
                             </div>
@@ -518,8 +664,8 @@
                             <div class="product-body">
                                 <h3>Bright floral summer coat</h3>
                                 <div class="new-price">
-                                    <p class="off">$78.99</pc>
-                                    <p>$135</p>
+                                    <p class="off-price">$78.99</pc>
+                                    <p class="default-price">$135</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
@@ -532,15 +678,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-4.png" loading='lazy' alt="product 9">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Winter sweater</h3>
-                                <p>$99.99</p>
+                                <p class="default-price">$99.99</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -552,8 +698,8 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-5.jpg" loading='lazy' alt="product 10">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">37%</div>
                             </div>
@@ -562,8 +708,8 @@
                             <div class="product-body">
                                 <h3>Classic round collar coat</h3>
                                 <div class="new-price">
-                                    <p class="off">$125</pc>
-                                    <p>$175</p>
+                                    <p class="off-price">$125</pc>
+                                    <p class="default-price">$175</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
@@ -576,15 +722,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-6.jpg" loading='lazy' alt="product 11">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Dark floral summer coat</h3>
-                                <p>$132</p>
+                                <p class="default-price">$132</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -596,8 +742,22 @@
                 <div class="button-prev feather-icon icon-arrow-left"></div>
             </div>
             <!-- End of Swiper -->
-            <!-- End of product carusel - selected just for you -->
-            <!-- product carusel - for womens -->
+            <!-- End of product carusel - for womens-->
+            <!-- larger banner - madison -->
+            <div class="row">
+                <div class="larger-banner col-12 col-lg-6 mx-auto text-center my-4">
+                    <a href="#">
+                        <img src="./files/image/large-banners/madison.jpg" alt="madison banner" class="img-fluid">
+                    </a>
+                </div>
+                <div class="larger-banner col-12 col-lg-6 mx-auto text-center my-4">
+                    <a href="#">
+                        <img src="./files/image/large-banners/smitten.jpg" alt="madison banner" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- End of larger banner - madison -->
+            <!-- product carusel - Attractive skirts -->
             <div class="carusel-title">
                 <h3>Attractive skirts</h3>
                 <a href="#" class="border rounded-pill">SHOW MORE</a>
@@ -606,37 +766,13 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <!-- start slide -->
-                    <div class="swiper-slide" data-id='12'>
-                        <a>
-                            <!-- product image -->
-                            <div class="product-image">
-                                <img src="./files/image/product-images/women-9.jpg" loading='lazy' alt="product 12">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
-                                </div>
-                                <div class="sell">5%</div>
-                            </div>
-                            <!-- End of product image -->
-                            <!-- product body -->
-                            <div class="product-body">
-                                <h3>Girly fantasy skirt</h3>
-                                <div class="new-price">
-                                    <p class="off">$50</pc>
-                                    <p>$55</p>
-                                </div>
-                            </div>
-                            <!-- End of product body -->
-                        </a>
-                    </div>
-                    <!-- End of slide -->
-                    <!-- start slide -->
                     <div class="swiper-slide" data-id='13'>
                         <a>
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-10.jpg" loading='lazy' alt="product 13">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">19%</div>
                             </div>
@@ -645,29 +781,30 @@
                             <div class="product-body">
                                 <h3>Two-layer autumn skirt</h3>
                                 <div class="new-price">
-                                    <p class="off">$78.99</pc>
-                                    <p>$99</p>
+                                    <p class="off-price">$78.99</pc>
+                                    <p class="default-price">$99</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
                         </a>
                     </div>
                     <!-- End of slide -->
+                
                     <!-- start slide -->
                     <div class="swiper-slide" data-id='14'>
                         <a>
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-11.jpg" loading='lazy' alt="product 14">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Classic linen skirt</h3>
-                                <p>$99.99</p>
+                                <p class="default-price">$99.99</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -679,8 +816,8 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-12.jpg" loading='lazy' alt="product 15">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                                 <div class="sell">30%</div>
                             </div>
@@ -689,8 +826,8 @@
                             <div class="product-body">
                                 <h3>Hawaiian design skirt</h3>
                                 <div class="new-price">
-                                    <p class="off">$101</pc>
-                                    <p>$131</p>
+                                    <p class="off-price">$101</pc>
+                                    <p class="default-price">$131</p>
                                 </div>
                             </div>
                             <!-- End of product body -->
@@ -703,15 +840,15 @@
                             <!-- product image -->
                             <div class="product-image">
                                 <img src="./files/image/product-images/women-13.jpg" loading='lazy' alt="product 16">
-                                <div class="items">
-                                    <i class="feather-icon icon-heart" title="Add to Favorites" ></i>
+                                <div class='add-to-favorites'>
+                                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                                 </div>
                             </div>
                             <!-- End of product image -->
                             <!-- product body -->
                             <div class="product-body">
                                 <h3>Flower design cotton skirt</h3>
-                                <p>$87</p>
+                                <p class="default-price">$87</p>
                             </div>
                             <!-- End of product body -->
                         </a>
@@ -723,10 +860,10 @@
                 <div class="button-prev feather-icon icon-arrow-left"></div>
             </div>
             <!-- End of Swiper -->
-            <!-- End of product carusel - selected just for you -->
+            <!-- End of product carusel - Attractive skirts -->
         </main> 
         <!-- footer -->
-        <footer class="row mx-md-4">
+        <footer class="row mx-md-1">
             <!-- join club form -->
             <div class="col-12 joinClub px-0 col-md-11 mx-auto ">
                 <div class="row d-flex align-items-center justify-content-center py-5 mx-0">
@@ -881,14 +1018,21 @@
             <!-- End of back to up button -->
         </footer>
         <!-- End of footer  -->
+        <!-- show message to user -->
+        <div id="show-message">
+
+        </div>
+        <!-- End of show message to user -->
     </div>
     <!-- End of container  -->
 
     <!-- JavaScript Files -->
+    <script src="./files/swiper-slider/swiper.js"></script>       
+    <script src="./js/localStorage.js"></script>       
     <script src="./js/uiClass.js"></script>
-    <script src="./files/swiper-slider/swiper.js"></script>
+    <script src="./js/products-carusel.js"></script>       
+    <script src="./js/shoping-cart.js"></script>
     <script src="./js/header-footer.js"></script>
-    <script src="./js/products-carusel.js"></script>
     <script src="./js/home.js"></script>
     <script src="./files/bootstrap-ltr/jquery-3.5.1.slim.min.js"></script>
     <script src="./files/bootstrap-ltr/bootstrap.bundle.min.js"></script>
