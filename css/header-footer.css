@@ -721,7 +721,7 @@ header.sticky{
     right: 0;
     width: 100vw;
     z-index: 50000;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 #show-message div{
     padding: 10px;
@@ -790,6 +790,96 @@ header.sticky{
 
 /* End of Show message box styles */
 
+/* show qustion to user styles  */
+#question{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.301);
+    margin: 0 auto;
+    z-index: 50001;
+    backdrop-filter: blur(10px);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    opacity: 0;
+    visibility: hidden;
+}
+#question.active{
+    opacity: 1;
+    visibility: visible;
+}
+#question div{
+    background-color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 20px 5px;
+    text-align: center;
+    width: 40vw;
+}
+#question div .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0;
+}
+#question div h4{
+    font-size: 17px;
+    line-height: 40px;
+}
+#question div .buttons button{
+    font-size: .6em;
+    width: 30%;
+    display: inline-block;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: 3px 10px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#question div .buttons button:hover{
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.144);
+    -webkit-box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.144);
+    -moz-box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.144);
+    -ms-box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.144);
+    -o-box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.144);
+}
+#question div button:nth-child(1){
+    background-color: rgb(0, 140, 255);
+}
+#question div button:nth-child(2){
+    background-color: rgb(255, 0, 0);
+}
+#question div button:nth-child(1):hover{
+    background-color: rgb(0, 92, 167);
+}
+#question div button:nth-child(2):hover{
+    background-color: rgb(212, 0, 0);
+}
+/* End of show qustion to user styles  */
 
 
 
@@ -848,6 +938,11 @@ header.sticky{
 
     /* End of shaping cart */
     /* footer */
+    /* // qustion styles  */
+    #question div{
+        width: 80vw;
+    }
+    /* // qustion styles  */
     /* End of footer */
 }
 /* End of tablet style */

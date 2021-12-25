@@ -49,6 +49,12 @@
     -ms-transition: .4s all ease-in-out !important;
     -o-transition: .4s all ease-in-out !important;
     margin: 30px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
 }
 
   .swiper-slide:hover{
@@ -59,7 +65,9 @@
     width: 100%;
     object-fit: cover;
   }
-  
+  .swiper-slide a{
+    cursor: auto;
+  }
 .button-next , .button-prev {
   display: inline-block;
   position: absolute;
@@ -181,4 +189,50 @@
   color:red;
   margin-right: 25px;
 }
+.add-to-cart{
+  width: 95%;
+  margin: 5px auto;
+  font-size: .7em;
+  background-color: rgb(236, 236, 236);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.add-to-cart:hover{
+  background-color: rgb(255, 35, 35);
+  color: #fff;
+  box-shadow: 1px 1px 15px .1px rgba(255, 0, 0, 0.219);
+  margin-bottom: 5px;
+}
+.add-to-cart span::before{
+  content: 'Add to cart';
+}
+.add-to-cart i::before{
+  content: "\f1bf";
+}
+.add-to-cart.added{
+  background-color: rgb(255, 111, 111);
+  color: #fff;
+}
+.add-to-cart.added i::before{
+  content: "\f12e";
+}
+.add-to-cart.added span::before{
+  content: 'Added';
+}
+/* .add-to-cart.added i::before{
+  content: "\f1bf";
+} */
 /* End of product cart styles */

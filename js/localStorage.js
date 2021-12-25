@@ -20,10 +20,18 @@ class NewLoacalStorage{
         // loaded old data from local storage ------------------>
         // access to old favorits
         const oldFavotites = this.getItem('myFavorites');
+        // access to old products
+        const oldProducts = this.getItem('myCart');
 
         // add old favorites to the list
         oldFavotites.forEach(element => {
+            // created favorites
             ui.addingProductToTheFavoritsList(element);
+        });
+        // add old products to the list
+        oldProducts.forEach(element => {
+            // created product in cart
+            ui.addingProductToTheCart(element);
         });
 
         

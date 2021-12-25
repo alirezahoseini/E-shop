@@ -154,6 +154,97 @@ class Ui {
         myProductLikeIcon.classList.add('added');
     }
 
+    // adding product to my cart list
+    addingProductToTheCart(productInfo){
+        // hide empty tag 
+        ui.addingCustomClass('.my-cart .empty', 'hide')
+        // access to the favorits list
+        const cartList = document.querySelector('.my-cart');
+
+        // if off price exist
+        if(productInfo.offPrice !== 0){
+            // created item template
+            cartList.innerHTML += `
+                <!-- cart item -->
+                <div class="cart-item row my-4" data-id='${productInfo.dataId}'>
+                    <div class="symbol">
+                        <i class="feather-icon icon-shopping-cart"></i>
+                    </div>
+                    <i class="feather-icon icon-x remove-item"></i>
+                    <div class="col-4 cart-img">
+                        <a href="#">
+                            <img src="${productInfo.image}" class="img-fluid rounded">
+                        </a>
+                    </div>
+                    <div class="col-7 cart-info">
+                        <a href="#">
+                            <p class="cart-title">
+                                ${productInfo.title}
+                            </p>
+                        </a>
+                        <div class="counter">
+                            <p>Number:</p>
+                            <div class="counter-input">
+                                <button id="low">-</button>
+                                <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                <button id="up">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-price">
+                            Price: <span class='text-meuted'>$${productInfo.price}</span> 
+                        </div>
+                        <div class="cart-off-price">
+                            Offer Price: <span>$${productInfo.offPrice}</span> 
+                        </div>
+                    </div>
+                </div>
+                <!-- End of cart item -->
+            `
+        }else{
+            // created item template
+            cartList.innerHTML += `
+                <!-- cart item -->
+                <div class="cart-item row my-4" data-id='${productInfo.dataId}'>
+                    <div class="symbol">
+                        <i class="feather-icon icon-shopping-cart"></i>
+                    </div>
+                    <i class="feather-icon icon-x remove-item"></i>
+                    <div class="col-4 cart-img">
+                        <a href="#">
+                            <img src="${productInfo.image}" class="img-fluid rounded">
+                        </a>
+                    </div>
+                    <div class="col-7 cart-info">
+                        <a href="#">
+                            <p class="cart-title">
+                                ${productInfo.title}
+                            </p>
+                        </a>
+                        <div class="counter">
+                            <p>Number:</p>
+                            <div class="counter-input">
+                                <button id="low">-</button>
+                                <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                <button id="up">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-price">
+                            Price: <span>$${productInfo.price}</span> 
+                        </div>
+                    </div>
+                </div>
+                <!-- End of cart item -->
+            `
+
+        }
+
+        // adding added class to addToCart btn ----->
+        // access to like btn
+        const addToCartBtn = document.querySelector(`div[data-id='${productInfo.dataId}'] .add-to-cart`);
+        // add adeed class to btn
+        addToCartBtn.classList.add('added');
+    }
+
     // shoping cart product counter 
     cartCounter(){
         // access to the counters 
@@ -162,20 +253,70 @@ class Ui {
 
         // access to data from local storage
         const favorites = newLocalStoage.getItem('myFavorites');
-        // const carts = newLocalStoage.getItem('myCart');
+        const carts = newLocalStoage.getItem('myCart');
 
-        // cartCounter.innerHTML = carts.length;
+        // set counter to html
+        cartCounter.innerHTML = carts.length;
         favoritesCounter.innerHTML = favorites.length; 
+
+        // show and hide empty image for favorites
+        if(favorites.length == 0){
+            // show empty tag 
+            ui.removeClassFromElement('.my-favorites .empty', 'hide');
+        }else{
+            // hide empty tag 
+            ui.addingCustomClass('.my-favorites .empty', 'hide');
+        }
+        // show and hide empty image for cart
+        if(carts.length == 0){
+            // show empty tag 
+            ui.removeClassFromElement('.my-cart .empty', 'hide');
+        }else{
+            // hide empty tag 
+            ui.addingCustomClass('.my-cart .empty', 'hide');
+        }
     }
 
-    // add cart to shopingCart
-    addToShopingList(listId, cartIndex){
-        
-    }
-    // remove cart from shopingCart
-    removeFromShopingList(listId, cartIndex){
+    // show qustion 
+    showQuestion(quest){
+        // access to the question box
+        const box = document.querySelector('#question');
+        // created div
+        const div = document.createElement('div');
+        // set template
+        div.innerHTML = `
+            <h4>${quest}</h4>
+            <div class="buttons">
+                <button type="button" id="confirm">Confirm</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        `;
+        // append div to the box
+        box.appendChild(div);
+        // show quest to the user  - -- add active class to box
+        box.classList.add('active');
+
+        // access to btns
+        const confirm = document.querySelector('#question .buttons #confirm');
+        const cancel = document.querySelector('#question .buttons #cancel');
+        // created result 
+        // created event listener
+        confirm.addEventListener('click', () =>{
+            let result = true;
+            // hide question box
+            box.classList.remove('active');
+            div.remove();
+            // return result
+            return result;
+        })
+        cancel.addEventListener('click', () =>{
+            let result = false;;
+            // hide question box
+            box.classList.remove('active')
+            div.remove();
+            // return result
+            return result;
+        })
 
     }
-    
-        
 }

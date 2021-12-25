@@ -91,15 +91,30 @@ function runShopingCart(){
     // ----------------------------------> runing shoping cart 
     // created base item to local storage
     newLocalStoage.firstLoadingDataFromLcealStorag();
+    // cart items counter
+    ui.cartCounter();
 
 
     // add to my cart is  --------------->
+    runCart();
     function runCart(){
-
+        // add to cart  -*-*-*-*-*-*-*-*-*--
+        // access to all add to cart buttons
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        // each in buttons
+        addToCartButtons.forEach(button => {
+            // if clicked button
+            button.addEventListener('click', () => {
+                // add to the my cart 
+                shopingCart.addToMyCart(button);
+            })
+        });
     }
 
     // add to favorits is run --------------->
+    runFavorites();
     function runFavorites(){
+        // add to favorites  -*-*-*-*-*-*-*-*-*--
         // access to user selected product
         document.addEventListener('click', (e) => {
             // deleagation user click and add product to my favorites
@@ -107,12 +122,10 @@ function runShopingCart(){
                 // add product to favorites list
                 shopingCart.addToFavorites(e.target);
             }
-            const favoritsList = document.querySelector('.my-favorites')
         });
-    
-        // update cart counter
-        document.querySelector('#shoping-cart').addEventListener('click', () => ui.cartCounter() );
 
+        // remove from favorites  -*-*-*-*-*-*-*-*-*--
+        shopingCart.removeItem();
     }
 }
 
