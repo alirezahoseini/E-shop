@@ -294,6 +294,30 @@ class Ui {
             // hide empty tag 
             ui.addingCustomClass('.my-cart .empty', 'hide');
         }
+        
+        // cart icon animated
+        cartIconAnimated()
+        function cartIconAnimated(){
+            // access to the cart icon
+            const cartIcon = document.getElementById('cart-icon');
+
+            // access to cart icon counter tag
+            const cartIconCounterTag = cartIcon.querySelector('#cart-icon-counter');
+            
+            // show and hide cart icon animation
+            if(carts.length == 0){
+                // hide animation
+                cartIcon.classList.add('hide');
+            }else{
+                // show animation
+                cartIcon.classList.remove('hide');
+                // set products length to cart icon counter
+                cartIconCounterTag.innerHTML = carts.length;
+            }
+
+           
+
+        }
 
         // calculate total price from my cart
         calculateTotalPrice();

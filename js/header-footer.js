@@ -179,8 +179,13 @@ function headerChangeHeigth(e){
     /* home default logo ---> light logo
     pages defult logo ---> multicolor logo */
     if(header.classList.contains('home')){
-        // light logo
-        logo.src =  '../files/image/header/e-shop-light-icon.svg';
+        if(window.innerWidth > 991){
+            // desctop light logo
+            logo.src =  '../files/image/header/e-shop-light-icon.svg';
+        }else{
+            // mobile dark logo
+            logo.src =  '../files/image/header/e-shop-dark-icon.svg';
+        }
     }else{
         // multicolor logo
         logo.src =  '../files/image/footer/Group 241.svg';

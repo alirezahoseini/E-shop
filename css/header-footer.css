@@ -438,6 +438,9 @@ header #header-icons ul li:hover a i{
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+header #header-icons ul li a{
+    position: relative;
+}
 header #header-icons ul li a i{
     color:#fff;
     transition: .5s;
@@ -446,7 +449,53 @@ header #header-icons ul li a i{
     -ms-transition: .5s;
     -o-transition: .5s;
 }
-
+header #header-icons #cart-icon.hide div{
+    display: none;
+}
+header #header-icons #cart-icon div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 7px;
+    right: -1px;
+}
+header #header-icons #cart-icon span{
+    font-size: .3em;
+    background-color: rgb(255, 60, 0);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    padding-top: 2px;
+}
+header #header-icons #cart-icon #cart-motion{
+    animation-name: cartIconMotion;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes cartIconMotion {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    100%{
+        width: 25px;
+        height: 25px;
+        opacity: 0;
+    }
+}
 /* header sticky styles */
 header.hide{
     transition: .7s;
