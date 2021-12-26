@@ -109,6 +109,8 @@ function runShopingCart(){
                 shopingCart.addToMyCart(button);
             })
         });
+        // run shoping cart product counter
+        shopingCart.myCartCounterProduct()
     }
 
     // add to favorits is run --------------->

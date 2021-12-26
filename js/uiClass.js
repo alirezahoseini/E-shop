@@ -54,18 +54,37 @@ class Ui {
 
         // created themplate
         div.innerHTML = `
+            <span>
             <i class="feather-icon ${icon}"></i>
             <p>${message}</p>
+            </span>
+            <span id='timer'>
+                <span class='progress'></span>
+            </span>
         `;
-        div.classList.add(theme)
+        // set message theme
+        div.classList.add(theme);
 
         // append message to message box
         messageBox.appendChild(div);
 
+        // access to progress
+        const progress = div.querySelector('.progress');
+
+        // created progress counter
+        let progressCounter = 0;
+        
         // show message to the user after .2s
         setTimeout(() => {
+            // show message
             div.classList.add('show');
-        }, 200)
+            // run progress
+            setInterval(() => {
+                progressCounter += 1;
+                progress.style.width = progressCounter + '%'
+            }, 48);
+        }, 200);
+
 
         // hide message after 5s 
         setTimeout(() => {
@@ -160,7 +179,6 @@ class Ui {
         ui.addingCustomClass('.my-cart .empty', 'hide')
         // access to the favorits list
         const cartList = document.querySelector('.my-cart');
-
         // if off price exist
         if(productInfo.offPrice !== 0){
             // created item template
@@ -186,7 +204,7 @@ class Ui {
                             <p>Number:</p>
                             <div class="counter-input">
                                 <button id="low">-</button>
-                                <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                <input type="number" name="cart-counter" class="cart-counter" min='1' value="${productInfo.counterValue}">
                                 <button id="up">+</button>
                             </div>
                         </div>
@@ -224,7 +242,7 @@ class Ui {
                             <p>Number:</p>
                             <div class="counter-input">
                                 <button id="low">-</button>
-                                <input type="number" name="cart-counter" id="cart-counter" value="1">
+                                <input type="number" name="cart-counter" class="cart-counter" min='1' value="${productInfo.counterValue}">
                                 <button id="up">+</button>
                             </div>
                         </div>
@@ -247,6 +265,7 @@ class Ui {
 
     // shoping cart product counter 
     cartCounter(){
+        calculateTotalPrice();
         // access to the counters 
         const favoritesCounter = document.querySelector('.favorites-btn span');
         const cartCounter = document.querySelector('.cart-btn span');
@@ -275,48 +294,82 @@ class Ui {
             // hide empty tag 
             ui.addingCustomClass('.my-cart .empty', 'hide');
         }
+
+        // calculate total price from my cart
+        calculateTotalPrice();
+        function calculateTotalPrice(){
+
+            // access to the product form local storage
+            const myProducts = JSON.parse(localStorage.getItem('myCart'));
+            
+            // created total 
+            let total = 0;
+            // access to all prices
+            myProducts.forEach((product , index) => {
+                // if offer price exist 
+                if(product.offPrice > 0){
+                    total += product.offPrice;
+                }else{
+                    total += product.price;
+                }
+
+                // if counter value || product counter > 1  --> calculateing
+                if(product.counterValue > 1){
+                    total  = total * product.counterValue;
+                }
+            });
+
+            // access to total tag
+            const totalTag = document.querySelector('#total-price span');
+            // set total price
+            totalTag.innerHTML = `$${total}`;
+        }
+
+
     }
+
+
 
     // show qustion 
-    showQuestion(quest){
-        // access to the question box
-        const box = document.querySelector('#question');
-        // created div
-        const div = document.createElement('div');
-        // set template
-        div.innerHTML = `
-            <h4>${quest}</h4>
-            <div class="buttons">
-                <button type="button" id="confirm">Confirm</button>
-                <button type="button" id="cancel">Cancel</button>
-            </div>
-        `;
-        // append div to the box
-        box.appendChild(div);
-        // show quest to the user  - -- add active class to box
-        box.classList.add('active');
+    // showQuestion(quest){
+    //     // access to the question box
+    //     const box = document.querySelector('#question');
+    //     // created div
+    //     const div = document.createElement('div');
+    //     // set template
+    //     div.innerHTML = `
+    //         <h4>${quest}</h4>
+    //         <div class="buttons">
+    //             <button type="button" id="confirm">Confirm</button>
+    //             <button type="button" id="cancel">Cancel</button>
+    //         </div>
+    //     `;
+    //     // append div to the box
+    //     box.appendChild(div);
+    //     // show quest to the user  - -- add active class to box
+    //     box.classList.add('active');
 
-        // access to btns
-        const confirm = document.querySelector('#question .buttons #confirm');
-        const cancel = document.querySelector('#question .buttons #cancel');
-        // created result 
-        // created event listener
-        confirm.addEventListener('click', () =>{
-            let result = true;
-            // hide question box
-            box.classList.remove('active');
-            div.remove();
-            // return result
-            return result;
-        })
-        cancel.addEventListener('click', () =>{
-            let result = false;;
-            // hide question box
-            box.classList.remove('active')
-            div.remove();
-            // return result
-            return result;
-        })
+    //     // access to btns
+    //     const confirm = document.querySelector('#question .buttons #confirm');
+    //     const cancel = document.querySelector('#question .buttons #cancel');
+    //     // created result 
+    //     // created event listener
+    //     confirm.addEventListener('click', () =>{
+    //         let result = true;
+    //         // hide question box
+    //         box.classList.remove('active');
+    //         div.remove();
+    //         // return result
+    //         return result;
+    //     })
+    //     cancel.addEventListener('click', () =>{
+    //         let result = false;;
+    //         // hide question box
+    //         box.classList.remove('active')
+    //         div.remove();
+    //         // return result
+    //         return result;
+    //     })
 
-    }
+    // }
 }

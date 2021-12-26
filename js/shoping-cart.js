@@ -73,6 +73,8 @@ class ShopingCart{
                 ui.showMessage('Product added to shping cart', 'success');
                 // update cart counter
                 ui.cartCounter();
+                // upadte counter box in shoping cart products
+                this.myCartCounterProduct();
             }
         }else{
             // pushing this product to the my products array
@@ -85,6 +87,8 @@ class ShopingCart{
             ui.showMessage('Product Added to shoping cart', 'success');
             // update cart counter
             ui.cartCounter();
+            // upadte counter box in shoping cart products
+            this.myCartCounterProduct();
         }
     }
 
@@ -116,10 +120,28 @@ class ShopingCart{
             image : image,
             title : title,
             price : price,
-            offPrice : offPrice
+            offPrice : offPrice,
+            counterValue : 1
         }
         return productInfo;
     };  
+
+    // myCart calculater -- counter product
+    myCartCounterProduct(){
+        // access to all products
+        const allProducts = document.querySelectorAll('.my-cart .cart-item .counter');
+        console.log(allProducts);
+        // created event listener on input change
+        allProducts.forEach((counter, index) => {
+            // access to cart counter input
+            const input = counter.querySelector('.cart-counter');
+            // if input onchanged --> set value to local storage
+            input.addEventListener('change', () => {
+                // set new value to local storage 
+                newLocalStoage.setMyCartCounterValue(Number(input.value), index);
+            })
+        });
+    }
     
     // remove item from shoping cart
     removeItem(){
@@ -147,6 +169,10 @@ class ShopingCart{
                         function finalConfirm (){
                             // access to the question box
                             const box = document.querySelector('#question');
+                            // if question exist 
+                            if(box.firstElementChild !== null){
+                                box.firstElementChild.remove();
+                            }
                             // created div
                             const div = document.createElement('div');
                             // set template
@@ -179,10 +205,16 @@ class ShopingCart{
                                 // each in local list
                                 list.forEach((item , index) => {
                                     if(item.dataId == cart.getAttribute('data-id')){
+                                        // access to product from list, and remove selected item
                                         list.splice(index, 1);
+                                        // set new list to local storage
                                         newLocalStoage.setItem(listId, list);
+                                        // show remove message to the user
                                         ui.showMessage('Product removed', 'danger');
+                                        // update cart counter tabs
                                         ui.cartCounter();
+                                        // upadte counter box in shoping cart products
+                                        shopingCart.myCartCounterProduct();
                                         // remove added class from like icon
                                         if(listId == 'myFavorites'){
                                             document.querySelector(`div[data-id='${item.dataId}'] .add-to-favorites`).classList.remove('added');     

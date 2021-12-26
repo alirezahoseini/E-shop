@@ -50,4 +50,28 @@ class NewLoacalStorage{
         // set item
         localStorage.setItem(key, item);
     }
+
+    // set product conunter value
+    setMyCartCounterValue(value, index){
+        // access to the all products from localstorage
+        const allProducts = this.getItem('myCart');
+
+        // access to the selected product
+        const selectedProduct = allProducts[index];
+        console.log(selectedProduct);
+        console.log(selectedProduct.counterValue);
+        // set new counter value
+        selectedProduct.counterValue = value;
+
+        // replaceing new selected product to the all products
+        allProducts[index] = selectedProduct;
+
+        // set new all products to the local storage
+        this.setItem('myCart', allProducts);
+
+        // update total counter
+        ui.cartCounter();
+
+        
+    }
 }

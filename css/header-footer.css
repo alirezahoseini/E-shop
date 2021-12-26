@@ -724,7 +724,6 @@ header.sticky{
     flex-direction: column-reverse;
 }
 #show-message div{
-    padding: 10px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -735,7 +734,6 @@ header.sticky{
     justify-content: center;
     box-shadow: 2px 2px 25px .2px rgba(15, 15, 15, 0.178);
     margin: 15px auto;
-    padding: 10px;
     transform: translateY(-400px);
     -webkit-transform: translateY(-400px);
     -moz-transform: translateY(-400px);
@@ -747,6 +745,14 @@ header.sticky{
     -ms-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     width: 80%;
+    flex-direction: column;
+    padding: 0 !important;
+    overflow: hidden;
+}
+#show-message div span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #show-message div.show{
     transform: translateY(0);
@@ -764,12 +770,13 @@ header.sticky{
     opacity: 0;
 }
 #show-message div.alert{
-    background-color: chocolate;
-    color:white;
+    background-color: rgb(255, 208, 0);
+    color:rgb(54, 54, 54);
 }
+
 #show-message div.success{
-    background-color: green;
-    color:white;
+    background-color: rgb(5, 134, 1);
+    color:rgb(255, 255, 255);
 }
 #show-message div.danger{
     background-color: red;
@@ -780,13 +787,39 @@ header.sticky{
     color:black;
 }
 #show-message div p{
-    font-size: 17px;
+    font-size: 13px;
     margin-bottom: -0px;
-    margin:0 10px;
+    margin: 18px 10px;
 }
-#show-message .progress{
-    display: none;
+
+#show-message #timer{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    display: block;
 }
+#show-message #timer .progress{
+    width: 0%;
+    height: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+#show-message div.alert .progress{
+    background-color: rgb(255, 60, 0);
+}
+#show-message div.success .progress{
+    background-color: rgb(255, 174, 0);
+}
+#show-message div.danger .progress{
+    background-color: rgb(255, 174, 0);
+}
+#show-message div.normal .progress{
+    background-color: rgb(0, 132, 255);
+}
+
 
 /* End of Show message box styles */
 
@@ -837,11 +870,11 @@ header.sticky{
     padding: 0;
 }
 #question div h4{
-    font-size: 17px;
+    font-size: 14px;
     line-height: 40px;
 }
 #question div .buttons button{
-    font-size: .6em;
+    font-size: .5em;
     width: 30%;
     display: inline-block;
     margin-top: 30px;
