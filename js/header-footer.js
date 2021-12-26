@@ -168,10 +168,23 @@ function runMobileMenu(){
 function headerChangeHeigth(e){
     // access to header
     const header = document.querySelector("header");
+    // access to header logo
+    const logo = document.querySelector('#logo img');
     // access to back to up button
     const backToUpBtn = document.querySelector('#back-to-up');
     // created counter
     let counter = 0;
+
+    // header logo setter
+    /* home default logo ---> light logo
+    pages defult logo ---> multicolor logo */
+    if(header.classList.contains('home')){
+        // light logo
+        logo.src =  '../files/image/header/e-shop-light-icon.svg';
+    }else{
+        // multicolor logo
+        logo.src =  '../files/image/footer/Group 241.svg';
+    }
 
     // access to window scroll 
      window.addEventListener("scroll", (e) => {
@@ -211,8 +224,8 @@ function headerChangeHeigth(e){
         // transparent bacground header  desctop size
         if(window.innerWidth > 991){
             // access to light icons
-            const lightIcons = document.querySelectorAll('.light-icons');
-            const aTags = document.querySelectorAll("header #navbar a");
+            const navbarLinks = document.querySelectorAll("header a");
+            const icons = document.querySelectorAll("header a i");
 
             // if user scroll 0 
             if(header.classList.contains('home')){
@@ -220,16 +233,16 @@ function headerChangeHeigth(e){
                     // transparent bsckground 
                     header.style.backgroundColor = 'transparent';
                     header.style.boxShadow = 'none';
-                    header.style.color = '#fff';
+                    
+                    // change logo
+                    logo.src = '../files/image/header/e-shop-light-icon.svg';
+
     
-                    // change  icons color
-                    lightIcons[0].src = '../files/image/header/e-shop-light-icon.svg';
-                    lightIcons[1].src = '../files/image/header/search-icon.svg';
-                    lightIcons[2].src = '../files/image/header/cart-icon.svg';
-                    lightIcons[3].src = '../files/image/header/avatar-icon.svg';
-    
-                    // aTags color change to white
-                    aTags.forEach((element) => {
+                    // navbarLinks color change to white
+                    navbarLinks.forEach((element) => {
+                        element.style.color = '#fff'
+                    });
+                    icons.forEach((element) => {
                         element.style.color = '#fff'
                     });
                 }else{
@@ -238,15 +251,16 @@ function headerChangeHeigth(e){
                     header.style.boxShadow = '0 2px 25px rgba(26, 26, 26, 0.151)';
                     
                     
-                    // change  icons color
-                    lightIcons[0].src = '../files/image/header/e-shop-dark-icon.svg';
-                    lightIcons[1].src = '../files/image/header/search-icon-black.svg';
-                    lightIcons[2].src = '../files/image/header/cart-icon-black.svg';
-                    lightIcons[3].src = '../files/image/header/avatar-icon-black.svg';
+                    // change logo
+                    logo.src = '../files/image/header/e-shop-dark-icon.svg';
+
                     
-                    // aTags color change black
-                    aTags.forEach((element) => {
-                        element.style.color = '#000'
+                    // navbarLinks color change black
+                    navbarLinks.forEach((element) => {
+                        element.style.color = '#000';
+                    });
+                    icons.forEach((element) => {
+                        element.style.color = '#000';
                     });
                 }
             }

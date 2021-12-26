@@ -387,6 +387,12 @@ header{
 header.pages{
     background-color: white;
 }
+header.pages a{
+    color: black !important;
+}
+header.pages a i{
+    color: black !important;
+}
 header #logo img{
     width: 100px;
 }
@@ -423,16 +429,17 @@ header #header-icons ul{
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
+    margin-bottom: 0;
 }
-header #header-icons ul li:hover a img{
+header #header-icons ul li:hover a i{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
-header #header-icons ul li a img{
+header #header-icons ul li a i{
+    color:#fff;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -479,7 +486,7 @@ header.sticky{
     position: fixed;
     top: 0;
     left: 0;
-    width: 70vw;
+    width: 80vw;
     height: 100vh;
     background-color: rgb(255, 255, 255);
     box-shadow: 3px 0 25px rgba(88, 88, 88, 0.123);
@@ -932,7 +939,9 @@ header.sticky{
 /* tablet style */
 @media screen and (max-width: 991px) {
     /* header styles  */
-
+    header #header-icons ul li a i{
+        color:rgb(0, 0, 0);
+    }
     /* End of header styles  */
     /* header banner  */
     #header-banner{
