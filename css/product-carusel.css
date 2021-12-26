@@ -22,7 +22,7 @@
     width: 95%;
     margin: 0 auto;
     position: relative;
-    padding: 40px 0 !important;
+    padding: 25px 0 40px 0 !important;
     align-items: flex-start !important;
   }
 
@@ -31,7 +31,8 @@
     height: auto !important;
     font-size: 18px;
     background: #fff;
-    /*Centerslidetextvertically*/display: -webkit-box;
+    /*Centerslidetextvertically*/
+    display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -58,7 +59,11 @@
 }
 
   .swiper-slide:hover{
-    box-shadow: 0px 0px 25px .5px rgba(0, 0, 0, 0.116);
+    box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
+    -ms-box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
+    -o-box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
   }
   .swiper-slide img {
     display: block;
@@ -143,6 +148,7 @@
   -moz-transition: .4s;
   -ms-transition: .4s;
   -o-transition: .4s;
+  cursor: pointer;
 }
 .product-image .add-to-favorites i:hover{
   background-color: rgb(255, 137, 154);
@@ -236,3 +242,18 @@
   content: "\f1bf";
 } */
 /* End of product cart styles */
+
+
+
+
+
+
+
+
+/* tablet style */
+@media screen and (max-width: 991px) {
+  .swiper-slide:hover{
+    box-shadow: none;
+  }
+}
+/* End of tablet style */
