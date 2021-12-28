@@ -103,7 +103,7 @@
 }
 
 *{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 body{
     position: relative;

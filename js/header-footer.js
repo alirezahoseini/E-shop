@@ -88,47 +88,60 @@ function runShopingCart(){
         cart.classList.remove('active')
     });
 
-    // ----------------------------------> runing shoping cart 
-    // created base item to local storage
-    newLocalStoage.firstLoadingDataFromLcealStorag();
-    // cart items counter
-    ui.cartCounter();
+//     // ----------------------------------> runing shoping cart 
+//     // created base item to local storage
+//     newLocalStoage.firstLoadingDataFromLcealStorag();
+//     // cart items counter
+//     ui.cartCounter();
 
 
-    // add to my cart is  --------------->
-    runCart();
-    function runCart(){
-        // add to cart  -*-*-*-*-*-*-*-*-*--
-        // access to all add to cart buttons
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        // each in buttons
-        addToCartButtons.forEach(button => {
-            // if clicked button
-            button.addEventListener('click', () => {
-                // add to the my cart 
-                shopingCart.addToMyCart(button);
-            })
-        });
-        // run shoping cart product counter
-        shopingCart.myCartCounterProduct()
-    }
+//     // add to my cart is  --------------->
+//     runCart();
+//     function runCart(){
+//         // add to cart  -*-*-*-*-*-*-*-*-*--
+//         // access to all add to cart buttons
+//         const addToCartButtons = document.querySelectorAll('.add-to-cart');
+//         // each in buttons
+//         addToCartButtons.forEach(button => {
+//             // if clicked button
+//             button.addEventListener('click', () => {
+//                 // add to the my cart 
+//                 shopingCart.addToMyCart(button);
+//             })
+//         });
+//         // run shoping cart product counter
+//         // myCart calculater -- counter product
+//         myCartCounterProduct()
+//         function myCartCounterProduct(){
+//             // access to all products
+//             const cartItems = document.querySelectorAll('.my-cart .cart-item');
+//             console.log(cartItems.length);
+//             if(cartItems.length > 0){
+//                 cartItems.forEach(item => {
+//                     if(item.getAttribute('action') === 'increase'){
+//                         item.getAttribute('quntity') += 1;
+//                     }
+//                 });
+//             }
+//         }
+//     }
 
-    // add to favorits is run --------------->
-    runFavorites();
-    function runFavorites(){
-        // add to favorites  -*-*-*-*-*-*-*-*-*--
-        // access to user selected product
-        document.addEventListener('click', (e) => {
-            // deleagation user click and add product to my favorites
-            if(e.target.classList.contains('add-favorites-icon')){
-                // add product to favorites list
-                shopingCart.addToFavorites(e.target);
-            }
-        });
+//     // add to favorits is run --------------->
+//     runFavorites();
+//     function runFavorites(){
+//         // add to favorites  -*-*-*-*-*-*-*-*-*--
+//         // access to user selected product
+//         document.addEventListener('click', (e) => {
+//             // deleagation user click and add product to my favorites
+//             if(e.target.classList.contains('add-favorites-icon')){
+//                 // add product to favorites list
+//                 shopingCart.addToFavorites(e.target);
+//             }
+//         });
 
-        // remove from favorites  -*-*-*-*-*-*-*-*-*--
-        shopingCart.removeItem();
-    }
+//         // remove from favorites  -*-*-*-*-*-*-*-*-*--
+//         shopingCart.removeItem();
+//     }
 }
 
 // back dark filter clicked  -  hide shoping cart and hide mobile menu -----------
@@ -181,14 +194,14 @@ function headerChangeHeigth(e){
     if(header.classList.contains('home')){
         if(window.innerWidth > 991){
             // desctop light logo
-            logo.src =  '../files/image/header/e-shop-light-icon.svg';
+            logo.src =  './files/image/header/e-shop-light-icon.svg';
         }else{
             // mobile dark logo
-            logo.src =  '../files/image/header/e-shop-dark-icon.svg';
+            logo.src =  './files/image/header/e-shop-dark-icon.svg';
         }
     }else{
         // multicolor logo
-        logo.src =  '../files/image/footer/Group 241.svg';
+        logo.src =  './files/image/footer/Group 241.svg';
     }
 
     // access to window scroll 
