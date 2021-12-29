@@ -231,12 +231,5 @@ function headerChangeHeigth(e){
         }
 
     })
-
-    
-    
-
-
-
-
     
 }
