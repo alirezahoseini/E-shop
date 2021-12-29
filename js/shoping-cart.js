@@ -398,7 +398,7 @@ function calculateTotal(){
         });
     }
     // set total to the DOM
-    totalTag.innerHTML = '$' + total;
+    totalTag.innerHTML = '$' + Math.floor(total);
     
     // set cart length to caert counter
     cartCount = cart.length;

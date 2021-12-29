@@ -55,6 +55,7 @@ class Ui {
         // created themplate
         div.innerHTML = `
             <span>
+            <i class="feather-icon icon-x"></i>
             <i class="feather-icon ${icon}"></i>
             <p>${message}</p>
             </span>
@@ -95,6 +96,11 @@ class Ui {
         setTimeout( () => {
             div.remove()
         }, 5900);
+
+        // access to the remove message button
+        const removeMessageBtn = div.querySelector('.icon-x');
+        // set click event
+        removeMessageBtn.addEventListener('click', () => div.classList.add('hide'))
     }
 
     
