@@ -414,7 +414,6 @@ header{
     padding: 10px;
     background-color: transparent;
     z-index: 999;
-    position: relative;
 }
 header.pages{
     background-color: white;
@@ -428,6 +427,7 @@ header.pages a i{
 header #logo img{
     width: 100px;
 }
+
 header #navbar ul {
     list-style: none;
     display: flex;
@@ -449,10 +449,92 @@ header #navbar ul li a{
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
+    position: relative;
 }
 header #navbar ul li:hover a{
     color: rgb(189, 189, 189);
 }
+/* mega menu styles -------------  */
+header .mega-col{
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgb(250, 250, 250);
+    top: 70px;
+    display: flex;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(185, 185, 185);
+}
+header .mega-col *{
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+header .mega-col .arrow{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    top: -8px;
+    left: 36.5vw;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    border-left: 1px solid rgb(185, 185, 185);
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    z-index:0;
+}
+header .mega-col .row{
+ width: 100vw;
+ height: 100%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+}
+header .mega-col .row .mega-nav{
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+header .mega-col .row .mega-nav .nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .6;
+    border-bottom: 2px solid rgba(185, 185, 185, 0);
+    margin: 0 10px;
+    margin-bottom: -1px;
+    padding: 10px 20px 10px 20px;
+}
+header .mega-col .row .mega-nav .nav-item:hover{
+    opacity: 1;
+    border-color: rgb(0, 174, 255);
+    border-width: 2px;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-header span{
+    font-size: .5em;
+    font-weight: 500;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-header img{
+    margin-right: 5px;
+    width: 20px;
+}
+/* End of  mega menu styles  ------------------- */
+
 header #header-icons ul{
     max-width: 200px;
     list-style: none;

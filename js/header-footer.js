@@ -1,6 +1,5 @@
 // Classes -------------------
 const ui = new Ui();
-const shopingCart = new ShopingCart();
 const newLocalStoage = new NewLoacalStorage();
 
 
