@@ -99,7 +99,7 @@ class Ui {
 
         // access to the remove message button
         const removeMessageBtn = div.querySelector('.icon-x');
-        // set click event
+        // set click event and hide message
         removeMessageBtn.addEventListener('click', () => div.classList.add('hide'))
     }
 

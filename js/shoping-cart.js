@@ -9,7 +9,7 @@ const newLoacalStorage = new NewLoacalStorage();
 
 // created base array
 let cart = [];
-const favorites = [];
+let favorites = [];
 // access to the shoping cart 
 const shopingCartParent = document.querySelector('#shoping-cart');
 // access to the all products
@@ -32,8 +32,9 @@ function eventlisteners(){
 // functions ----------------------------------------------
 
 // access to the local storage data
-function accessToTheLocalStorageData(){
-    // access to the data
+function accessToTheLocalStorageData(){ 
+    // set cart data -------------------------------------
+    // access to the cart data
     cart = newLoacalStorage.getItem('myCart');
     // if cart is empty
     if(cart === null){
@@ -49,7 +50,7 @@ function accessToTheLocalStorageData(){
             // calculate total 
             calculateTotal();
             // access to the cart items
-            const cartItems = document.querySelectorAll('.cart-item');
+            const cartItems = document.querySelectorAll('.my-cart .cart-item');
             // active buttons
             cartItems.forEach((item) => {
                 if(item.getAttribute('data-id') === productInfo.dataId){
@@ -62,6 +63,36 @@ function accessToTheLocalStorageData(){
             const addToTheCartBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-cart`);
             // add added class to the add to cart button
             addToTheCartBtn.classList.add('added');
+        })
+    }
+    // set favorites data -------------------------------------
+    // access to the favorites data
+    favorites = newLoacalStorage.getItem('myFavorites');
+    // if favorites is empty
+    if(favorites === null){
+        // created new array
+        favorites = [];
+        // update favorites count
+        favoritesCount();
+    // else add product to the favorites
+    }else{
+        favorites.forEach((productInfo) => {
+            // show product to the dom
+            showFavoriteToDom(productInfo);
+            // update favorites count
+            favoritesCount();
+            // access to the favorite items
+            const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
+            // active buttons
+            favoriteItems.forEach((item) => {
+                if(item.getAttribute('data-id') === productInfo.dataId){
+                    removeFavoritItem(item, productInfo);
+                }
+            })
+            // access to the add to favorites button
+            const addToTheFavoriteBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-favorites`);
+            // add added class to the add to cart button
+            addToTheFavoriteBtn.classList.add('added');
         })
     }
 }
@@ -83,7 +114,7 @@ allProductTags.forEach(productItem => {
             // add added class to the add to cart button
             addToCartBtn.classList.add('added')
             // show success message 
-            ui.showMessage('product added', 'success');
+            ui.showMessage('Product added to cart', 'success');
             // show product to the dom
             showProductToTheDom(productInfo);
             // calculate total 
@@ -116,7 +147,7 @@ allProductTags.forEach(productItem => {
                 // calculate total 
                 calculateTotal();
                 // access to the cart items
-                const cartItems = document.querySelectorAll('.cart-item');
+                const cartItems = document.querySelectorAll('.my-cart .cart-item');
                 // active buttons
                 cartItems.forEach((item) => {
                     if(item.getAttribute('data-id') === productInfo.dataId){
@@ -297,67 +328,65 @@ function removeItem(inItem, productInfo){
     // set addEvent listeners in remove button
     inItem.querySelector('[action="remove"]').addEventListener('click', (e) => {
         //  final confirm -- > 
-            // access to the question box
-            const box = document.querySelector('#question');
-            // if question exist 
-            if(box.firstElementChild !== null){
-                box.firstElementChild.remove();
-            }
-            // created div
-            const div = document.createElement('div');
-            // set template
-            div.innerHTML = `
-                <h4>Do you want to delete the product?</h4>
-                <div class="buttons">
-                    <button type="button" id="confirm">Yes</button>
-                    <button type="button" id="cancel">Cancel</button>
-                </div>
-            `;
-            // append div to the box
-            box.appendChild(div);
-            // show quest to the user  - -- add active class to box
-            box.classList.add('active');
+        // access to the question box
+        const box = document.querySelector('#question');
+        // if question exist 
+        if(box.firstElementChild !== null){
+            box.firstElementChild.remove();
+        }
+        // created div
+        const div = document.createElement('div');
+        // set template
+        div.innerHTML = `
+            <h4>Do you want to delete the product?</h4>
+            <div class="buttons">
+                <button type="button" id="confirm">Yes</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        `;
+        // append div to the box
+        box.appendChild(div);
+        // show quest to the user  - -- add active class to box
+        box.classList.add('active');
 
-            // access to btns
-            const confirm = document.querySelector('#question .buttons #confirm');
-            const cancel = document.querySelector('#question .buttons #cancel');
-            // created result 
-            // created event listener
-            confirm.addEventListener('click', () =>{
-                // each in products 
-                cart.forEach((product, index) => {
-                    // if find selected product in cart items
-                    if(product.dataId === productInfo.dataId){
-                        // remove product in cart 
-                        cart.splice(index, 1);
-                        // remove product in DOM
-                        inItem.remove();
-                        // remove added class in product
-                        allProductTags.forEach(element => {
-                            if(element.getAttribute('data-id') === productInfo.dataId){
-                                element.querySelector('.add-to-cart').classList.remove('added')
-                            }
-                        })
-                    }
-                });
-                // hidde confirm box
-                box.firstChild.remove();
-                // hidde background filter
-                box.classList.remove('active');
-                // update total  price
-                calculateTotal();
-                // show message to the user
-                ui.showMessage('Product removed', 'danger')
-            })
-            // if user canceled
-            cancel.addEventListener('click', () =>{
-                // hidde confirm box
-                box.firstChild.remove();
-                // hidde background filter
-                box.classList.remove('active');
+        // access to btns
+        const confirm = document.querySelector('#question .buttons #confirm');
+        const cancel = document.querySelector('#question .buttons #cancel');
+        // created result 
+        // created event listener
+        confirm.addEventListener('click', () =>{
+            // each in products 
+            cart.forEach((product, index) => {
+                // if find selected product in cart items
+                if(product.dataId === productInfo.dataId){
+                    // remove product in cart 
+                    cart.splice(index, 1);
+                    // remove product in DOM
+                    inItem.remove();
+                    // remove added class in product
+                    allProductTags.forEach(element => {
+                        if(element.getAttribute('data-id') === productInfo.dataId){
+                            element.querySelector('.add-to-cart').classList.remove('added')
+                        }
+                    })
+                }
             });
-
-
+            // hidde confirm box
+            box.firstChild.remove();
+            // hidde background filter
+            box.classList.remove('active');
+            // update total  price
+            calculateTotal();
+            // show message to the user
+            ui.showMessage('Product removed', 'danger')
+        })
+        // if user canceled
+        cancel.addEventListener('click', () =>{
+            // hidde confirm box
+            box.firstChild.remove();
+            // hidde background filter
+            box.classList.remove('active');
+        });
     })
 
 }
@@ -408,10 +437,220 @@ function calculateTotal(){
     headerCartCounterIcon.querySelector('#cart-icon-counter').innerHTML = cartCount;
 }
 
-// 
+// everything in favorites ----------------------------------------------------------->
+allProductTags.forEach(productTag => {
+    // access to the add to favorites button
+    const addToFavoritesBtn = productTag.querySelector('.add-to-favorites');
+    // add click event in add to favorites button
+    addToFavoritesBtn.addEventListener('click', (e) => {
+        // access to the product info
+        const productInfo = accessToProductInfo(productTag);
+        // if favorites empty
+        if(favorites.length === 0){
+            // add product to the favorites array
+            favorites.push(productInfo);
+            // add added class to the add to favorites button
+            addToFavoritesBtn.classList.add('added')
+            // show success message 
+            ui.showMessage('Product added to favorites', 'success');
+            // show item to the DOM
+            showFavoriteToDom(productInfo);
+            // update favorites count
+            favoritesCount();
+            // access to the favorittes items
+            const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
+            // active buttons
+            favoriteItems.forEach((item) => {
+                if(item.getAttribute('data-id') === productInfo.dataId){
+                    removeFavoritItem(item, productInfo);
+                }
+            })
+         // if cart length > 0 
+        }else{
+            // checking added class exist ---> if exsist show err message
+            if(addToFavoritesBtn.classList.contains('added')){
+                // show err message
+                ui.showMessage('This product exist to the favorites', 'alert')
+            }else{
+                // add product to the cart array
+                favorites.push(productInfo);
+                // add added class to the add to cart button
+                addToFavoritesBtn.classList.add('added');
+                // show success message 
+                ui.showMessage('Product added to favorites', 'success');
+                            // show item to the DOM
+            showFavoriteToDom(productInfo);
+            // update favorites count
+            favoritesCount();
+            // access to the favorittes items
+            const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
+            // active buttons
+            favoriteItems.forEach((item) => {
+                if(item.getAttribute('data-id') === productInfo.dataId){
+                    removeFavoritItem(item, productInfo);
+                }
+            })
+            }
+        }
 
+    })
+})
 
+// show favorit item to DOM
+function showFavoriteToDom(productInfo){
+    // created favorite item template 
+    let template = '';
+    // if off price exist
+    if(productInfo.offPrice !== 0){
+        // created item template
+        template = `
+            <!-- cart item -->
+            <div class="cart-item row my-4" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
+                <div class="symbol">
+                    <i class="feather-icon icon-heart"></i>
+                </div>
+                    <i class="feather-icon icon-x remove-item" action='remove'></i>
+                <div class="col-4 cart-img">
+                    <a href="#">
+                        <img src="${productInfo.image}" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-7 cart-info">
+                    <a href="#">
+                        <p class="cart-title">
+                            ${productInfo.title}
+                        </p>
+                    </a>
+                    <div class="cart-price">
+                        Price: <span class='text-meuted'>$${productInfo.price}</span> 
+                    </div>
+                    <div class="cart-off-price">
+                        Offer Price: <span>$${productInfo.offPrice}</span> 
+                    </div>
+                </div>
+            </div>
+            <!-- End of cart item -->
+        `
+    }else{
+        // created item template
+        template = `
+            <!-- cart item -->
+            <div class="cart-item row my-4" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
+                <div class="symbol">
+                    <i class="feather-icon icon-heart"></i>
+                </div>
+                    <i class="feather-icon icon-x remove-item" action='remove'></i>
+                <div class="col-4 cart-img">
+                    <a href="#">
+                        <img src="${productInfo.image}" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-7 cart-info">
+                    <a href="#">
+                        <p class="cart-title">
+                            ${productInfo.title}
+                        </p>
+                    </a>
+                    <div class="cart-price">
+                        Price: <span>$${productInfo.price}</span> 
+                    </div>
+                </div>
+            </div>
+            <!-- End of cart item -->
+        `
+    }
+ 
+    // add new item to the cart
+    myFavoritesDIV.insertAdjacentHTML('afterbegin', template)
+}
 
+// remove favorite item
+function removeFavoritItem(inItem, productInfo){
+    // set addEvent listeners in remove button
+    inItem.querySelector('[action="remove"]').addEventListener('click', (e) => {
+        //  final confirm -- > 
+        // access to the question box
+        const box = document.querySelector('#question');
+        // if question exist 
+        if(box.firstElementChild !== null){
+            box.firstElementChild.remove();
+        }
+        // created div
+        const div = document.createElement('div');
+        // set template
+        div.innerHTML = `
+            <h4>Do you want to delete the product?</h4>
+            <div class="buttons">
+                <button type="button" id="confirm">Yes</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        `;
+        // append div to the box
+        box.appendChild(div);
+        // show quest to the user  - -- add active class to box
+        box.classList.add('active');
+
+        // access to btns
+        const confirm = document.querySelector('#question .buttons #confirm');
+        const cancel = document.querySelector('#question .buttons #cancel');
+        // created result 
+        // created event listener
+        confirm.addEventListener('click', () =>{
+            // each in products 
+            favorites.forEach((product, index) => {
+                // if find selected product in cart items
+                if(product.dataId === productInfo.dataId){
+                    // remove product in favorites
+                    favorites.splice(index, 1);
+                    // remove product in DOM
+                    inItem.remove();
+                    // remove added class in product
+                    allProductTags.forEach(element => {
+                        if(element.getAttribute('data-id') === productInfo.dataId){
+                            element.querySelector('.add-to-favorites').classList.remove('added')
+                        }
+                    })
+                }
+            });
+            // hidde confirm box
+            box.firstChild.remove();
+            // hidde background filter
+            box.classList.remove('active');
+            // update favorites count
+            favoritesCount()
+            // show message to the user
+            ui.showMessage('Product removed', 'danger')
+        });
+        // if user canceled
+        cancel.addEventListener('click', () =>{
+            // hidde confirm box
+            box.firstChild.remove();
+            // hidde background filter
+            box.classList.remove('active');
+        });
+    });
+}
+
+/// favorites counter
+function favoritesCount(){
+    // set new favorites to the local storage
+    newLoacalStorage.setItem('myFavorites', favorites);
+    // access to the favorites count tag
+    const favoritesCountTag = document.querySelector('.cart-switcher .favorites-btn span');
+    // set favorites length
+    favoritesCountTag.innerHTML = favorites.length;
+    // access to the empty image
+    const emptyImage = document.querySelector('.my-favorites .empty');
+    // if favorites empty  || favorites length === 0
+     if(favorites.length == 0){
+        // show empty image
+        emptyImage.classList.remove('hide');
+    }else{
+        // hide empty image
+        emptyImage.classList.add('hide');
+
+    }
+}
 // everything in shoping cart
 class ShopingCart{
 
