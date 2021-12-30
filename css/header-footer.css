@@ -427,21 +427,25 @@ header.pages a i{
 header #logo img{
     width: 100px;
 }
-
-header #navbar ul {
+/* mega menu styles -------------  */
+header #navbar{
+    margin-top: 10px;
+    position: static;
+}
+header #navbar > ul {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-top: 16px;
 }
-header #navbar ul li{
+header #navbar ul > li{
     display: inline-block;
     padding: 10px;
     font-size: .7em;
     margin: 0px 2vw;
 }
-header #navbar ul li a{
+header #navbar ul li > a{
     color: rgb(255, 255, 255);
     font-weight: 300;
     transition: .3s;
@@ -449,46 +453,55 @@ header #navbar ul li a{
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
-    position: relative;
 }
-header #navbar ul li:hover a{
+header #navbar ul li:hover > a{
     color: rgb(189, 189, 189);
 }
-/* mega menu styles -------------  */
+
 header .mega-col{
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     width: 100vw;
     height: 90vh;
     background-color: rgb(250, 250, 250);
-    top: 70px;
-    display: flex;
+    top: 65px;
     left: 0;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid rgb(185, 185, 185);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
 }
-header .mega-col *{
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
+header #navbar ul li:hover .mega-col{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
-header .mega-col .arrow{
+
+header #navbar li .arrow{
+    visibility: hidden;
+    opacity: 0;
     width: 15px;
     height: 15px;
-    background-color: rgb(250, 250, 250);
     position: absolute;
-    top: -8px;
-    left: 36.5vw;
-    border-bottom: 1px solid rgb(185, 185, 185);
-    border-left: 1px solid rgb(185, 185, 185);
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    z-index:0;
+    transform: translate(10px , 3px) rotate(135deg);
+    background-color: rgb(250, 250, 250);
+    -webkit-transform: translate(10px , 3px) rotate(135deg);
+    -moz-transform: translate(10px , 3px) rotate(135deg);
+    -ms-transform: translate(10px , 3px) rotate(135deg);
+    -o-transform: translate(10px , 3px) rotate(135deg);
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+}
+header #navbar ul li:hover .arrow{
+    visibility: visible;
+    opacity: 1;
 }
 header .mega-col .row{
  width: 100vw;
@@ -502,7 +515,7 @@ header .mega-col .row .mega-nav{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    border-bottom: 1px solid rgb(185, 185, 185);
+    border-bottom: 1px solid rgb(207, 207, 207);
 }
 header .mega-col .row .mega-nav .nav-item{
     display: flex;
@@ -510,9 +523,8 @@ header .mega-col .row .mega-nav .nav-item{
     justify-content: center;
     opacity: .6;
     border-bottom: 2px solid rgba(185, 185, 185, 0);
-    margin: 0 10px;
     margin-bottom: -1px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 25px 10px 25px;
 }
 header .mega-col .row .mega-nav .nav-item:hover{
     opacity: 1;
@@ -526,12 +538,125 @@ header .mega-col .row .mega-nav .nav-item .nav-item-header{
     justify-content: center;
 }
 header .mega-col .row .mega-nav .nav-item .nav-item-header span{
-    font-size: .5em;
+    font-size: .65em;
     font-weight: 500;
 }
 header .mega-col .row .mega-nav .nav-item .nav-item-header img{
     margin-right: 5px;
     width: 20px;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body{
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 100vw;
+    min-height: 500px;
+    height: 80vh;
+    display: none;
+    padding: 10px;
+    background-color: rgb(250, 250, 250);
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+header .mega-col .row .mega-nav .nav-item:nth-child(1) .nav-item-body{
+    display: flex;
+}
+header .mega-col .row .mega-nav .nav-item:hover .nav-item-body{
+    display: flex;
+}
+header .mega-col .row .mega-nav .nav-item:hover .nav-item-body .link-box{
+    border-width: 2px !important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body h4{
+    display: flex;
+    align-items: center;
+    font-size: .8em !important;
+    font-weight: 700 !important;
+    color: rgb(0, 0, 0) !important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body h4 a{
+    display: flex;
+    align-items: center;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+    color: rgb(0, 0, 0) !important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body ul {
+    max-height: 70vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body ul li{
+    padding: 0 !important;
+    margin: 10px 0 !important;
+    width: 180px;
+    margin-right: 20px!important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body ul li a{
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    color: rgb(0, 0, 0) !important;
+    border-bottom: 2px solid rgba(0, 0, 255, 0);
+    display: inline-block;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body ul li a:hover{
+    color: rgb(49, 49, 49) !important;
+    border-bottom: 2px solid rgb(0, 140, 255);
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body .brands{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body .brands .col-6{
+    max-width: 220px !important;
+    position: relative;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body .brands h4 {
+    margin-bottom: 20px;
+    font-size: .8em !important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body a.hot {
+    color: red !important;
+    font-weight: bold !important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body h4 i{
+    color: black;
+    font-size: 1em !important;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body .brands img{
+    position: relative;
+    max-width: 200px;
+    display: inline-block;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+header .mega-col .row .mega-nav .nav-item .nav-item-body .brands a img:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 /* End of  mega menu styles  ------------------- */
 
