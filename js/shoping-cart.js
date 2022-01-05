@@ -20,6 +20,8 @@ const myCartDIV = document.querySelector('.my-cart');
 const myFavoritesDIV = document.querySelector('.my-favorites');
 // created cartCount 
 let cartCount = 0;
+// access to the page id
+const pageId = document.querySelector('header');
 
 // eventListeners ----------------------------------------------
 eventlisteners();
@@ -61,8 +63,14 @@ function accessToTheLocalStorageData(){
             });
             // access to the add to cart button
             const addToTheCartBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-cart`);
-            // add added class to the add to cart button
-            addToTheCartBtn.classList.add('added');
+
+            try {
+                // add added class to the add to cart button
+                addToTheCartBtn.classList.add('added');
+            } catch (error) {
+                console.log('This cart product not exist in the page --- cart item');
+                console.log(error);
+            }
         })
     }
     // set favorites data -------------------------------------
@@ -91,8 +99,13 @@ function accessToTheLocalStorageData(){
             })
             // access to the add to favorites button
             const addToTheFavoriteBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-favorites`);
-            // add added class to the add to cart button
-            addToTheFavoriteBtn.classList.add('added');
+            try {
+                // add added class to the add to cart button
+                addToTheFavoriteBtn.classList.add('added');
+            } catch (error) {
+                console.log('This cart product not exist in the page --- favorit list item');
+                console.log(error);
+            }
         })
     }
 }
@@ -207,7 +220,7 @@ function showProductToTheDom(productInfo){
         // created item template
         template = `
             <!-- cart item -->
-            <div class="cart-item row my-4" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
+            <div class="cart-item row my-4 mx-0" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
                 <div class="symbol">
                     <i class="feather-icon icon-shopping-cart"></i>
                 </div>
@@ -245,7 +258,7 @@ function showProductToTheDom(productInfo){
         // created item template
         template = `
             <!-- cart item -->
-            <div class="cart-item row my-4" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
+            <div class="cart-item row my-4 mx-0" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
                 <div class="symbol">
                     <i class="feather-icon icon-shopping-cart"></i>
                 </div>
@@ -498,6 +511,10 @@ allProductTags.forEach(productTag => {
 
 // show favorit item to DOM
 function showFavoriteToDom(productInfo){
+    // cheacking page id
+    if(pageId.classList.contains('pages')){
+        
+    }
     // created favorite item template 
     let template = '';
     // if off price exist
@@ -505,7 +522,7 @@ function showFavoriteToDom(productInfo){
         // created item template
         template = `
             <!-- cart item -->
-            <div class="cart-item row my-4" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
+            <div class="cart-item row my-4 mx-0" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
                 <div class="symbol">
                     <i class="feather-icon icon-heart"></i>
                 </div>
@@ -535,7 +552,7 @@ function showFavoriteToDom(productInfo){
         // created item template
         template = `
             <!-- cart item -->
-            <div class="cart-item row my-4" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
+            <div class="cart-item row my-4 mx-0" data-id='${productInfo.dataId}' quntity='${productInfo.quntity}'>
                 <div class="symbol">
                     <i class="feather-icon icon-heart"></i>
                 </div>

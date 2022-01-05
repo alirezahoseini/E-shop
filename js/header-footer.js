@@ -18,6 +18,9 @@ function eventlisteners(){
     // run shoping cart 
     document.addEventListener('DOMContentLoaded', runShopingCart);
 
+    // run search box
+    document.addEventListener('DOMContentLoaded', runSearchBox);
+
     // run mobile menu
     document.addEventListener('DOMContentLoaded', runMobileMenu);
 
@@ -25,7 +28,7 @@ function eventlisteners(){
     document.querySelector("#back-dark-filter").addEventListener("click", hideBackDarkFilter);
 
     // change header heigth with top scroll
-    document.addEventListener("DOMContentLoaded", headerChangeHeigth)
+    document.addEventListener("DOMContentLoaded", headerChangeHeigth);
 }
 
 
@@ -86,8 +89,33 @@ function runShopingCart(){
         myCartBtn.classList.remove('active');
         cart.classList.remove('active')
     });
-
 }
+
+
+// run search box 
+function runSearchBox() {
+    // access to the search icon
+    const searchIcon = document.querySelector('#search-icon');
+    // access to the close btn
+    const closeBtn = document.querySelector('#search-box .close-btn');
+    // access to the search input
+    const searchInput = document.getElementById('searchInput');
+    
+    // add event
+    searchIcon.addEventListener('click', () =>{
+        // active search box
+        ui.addingCustomClass("#search-box", "active");
+        // hidde background filter
+        ui.addingCustomClass("#back-dark-filter", 'active');
+        // focus in search input
+        searchInput.focus();
+    });
+
+    // close search box
+    closeBtn.addEventListener('click', hideBackDarkFilter );
+}
+
+
 
 // back dark filter clicked  -  hide shoping cart and hide mobile menu -----------
 function hideBackDarkFilter(){
@@ -95,17 +123,29 @@ function hideBackDarkFilter(){
     const mobileMenu = document.querySelector('#mobile-menu');
     // access to shoping cart
     const shopingCart = document.querySelector('#shoping-cart');
+    // access to the search box
+    const searchBox = document.querySelector('#search-box');
 
+    // hide mobile menu
     if(mobileMenu.classList.contains('active')){
         // hide menu
         ui.removeClassFromElement("#mobile-menu", "active");
         // hide background filter
         ui.removeClassFromElement("#back-dark-filter", 'active');
     }
-        
+       
+    // hide shoping cart
     if(shopingCart.classList.contains('active')){
         // hide shoping cart
         ui.removeClassFromElement("#shoping-cart", "active");
+        // hide background filter
+        ui.removeClassFromElement("#back-dark-filter", 'active');
+    }
+
+    // hide search box
+    if(searchBox.classList.contains('active')){
+        // hide shoping cart
+        ui.removeClassFromElement("#search-box", "active");
         // hide background filter
         ui.removeClassFromElement("#back-dark-filter", 'active');
     }
@@ -139,14 +179,14 @@ function headerChangeHeigth(e){
     if(header.classList.contains('home')){
         if(window.innerWidth > 991){
             // desctop light logo
-            logo.src =  './files/image/header/e-shop-light-icon.svg';
+            logo.src =  '../files/image/header/e-shop-light-icon.svg';
         }else{
             // mobile dark logo
-            logo.src =  './files/image/header/e-shop-dark-icon.svg';
+            logo.src =  '../files/image/header/e-shop-dark-icon.svg';
         }
     }else{
         // multicolor logo
-        logo.src =  './files/image/footer/Group 241.svg';
+        logo.src =  '../files/image/footer/Group 241.svg';
     }
 
     // access to window scroll 
