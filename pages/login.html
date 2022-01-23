@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scaleble=0">
+    <title>Login / singup | Fashion Store  </title>
+    <link rel="title icon" type="image/png" href="../files/image/home-page/favicon.png"/>
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/css-reset.css">
+    <link rel="stylesheet" href="../css/login-page.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../files/feather-icons/feather-icons.css">
+    <link rel="stylesheet" href="../files/bootstrap-ltr/bootstrap.min.css">
+    <!-- End of Css Files -->
+</head>
+<body>
+    
+    <!-- container  -->
+    <div class="container-fluid mx-0 px-0">
+        <!-- start login and sing up and forgot password forms -->
+        <div class="main-section mt-2 mb-2">
+            <div class="row">
+                <div class="col-12 mb-2 mt-md-3 pl-lg-5 ">
+                    <a href="./home.html" class="back-to-home-btn text-dark font-weight-bold d-flex align-items-center">
+                        <i class="feather-icon icon-arrow-left mr-2"></i>
+                        <span>Back to store</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto mt-4">
+                    <!-- login form  -->
+                    <div id="login-form" class="w-100 form active">
+                        <h2 class="form-title">
+                            Login
+                        </h2>
+                        <div class="form-dis">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nostrum veritatis error inventore aliquam
+                        </div>
+                        <form id="login">
+                            <input type="text" name="email" placeholder="E-mail">
+                            <div class="password">
+                                <input type="password" name="password" placeholder="Password">
+                                <i class="feather-icon icon-eye-off" title="show/hide password"></i>
+                            </div>
+                            <div class="form-section">
+                                <span>
+                                    <input type="checkbox" name="save-singed" id="save-singed-login" >
+                                    <label for="save-singed-login">Keep me singed in</label>
+                                </span>
+                                <a>Forgot password?</a>
+                            </div>
+                            <div class="login-with-buttons">
+                                <button class="login-facebook">
+                                    <i class="feather-icon icon-facebook"></i>
+                                    <span>Facebook</span>
+                                </button>
+                                <button class="login-gmail">
+                                    <i class="feather-icon icon-mail"></i> 
+                                    <span>Gmail</span>
+                                </button>
+                            </div>
+                            <button class="submit-btn" type="button`">Sing in</button>
+                            <div class="form-switcher my-3 d-flex align-items-center justify-content-center">
+                                <p class="mb-0">Not a member yet?</p>
+                                <a>Sing up</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End of login form  -->
+                    <!-- singup form  -->
+                    <div id="singup-form" class="w-100 form">
+                        <h2 class="form-title">
+                            Created an account and discover the brnefits
+                        </h2>
+                        <div class="form-dis">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nostrum veritatis error inventore aliquam
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, aliquam.
+                        </div>
+                        <form id="singup">
+                            <input type="text" name='fname' placeholder="First name" minlength="3">
+                            <input type="text" name="lname" placeholder="Last name" minlength="3">                            
+                            <input type="email" name="email" placeholder="E-mail">
+                            <input type="password" name="password" placeholder="Password">
+                            <input type="password" name="try-password" placeholder="Confirm password">
+                            <div class="form-section mb-4">
+                                <span class="w-100">
+                                    <input type="checkbox" name="privacy" id="privacy">
+                                    <label for="privacy">I agree to the Google Terms Service and Privacy Policy</label>
+                                </span>
+                            </div>
+                            <button class="submit-btn" type="button" >Singup</button>
+                            <div class="form-switcher my-3 d-flex align-items-center justify-content-center">
+                                <p class="mb-0">Are ou already a member?</p>
+                                <a>Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End of singup form  -->
+                    <!-- forgot form  -->
+                    <div id="forgot-form" class="w-100 form ">
+                        <h2 class="form-title">
+                            Forgot your password?
+                        </h2>
+                        <div class="form-dis">
+                            Enter your email or phone number and recover your account
+                        </div>
+                        <form action="" id="forgot">
+                          <input type="email" name="email" placeholder="E-mail">
+                          <div class="form-liner d-flex align-items-center justify-content-between w-100 mt-1 mb-2">
+                            <hr>
+                            <span>
+                                OR
+                            </span>
+                            <hr>
+                          </div>
+                          <div id="phone-selector" class="password">
+                            <div class="select-country">
+                                <div class="option active" value='+1' country='usa'>
+                                    <span class="flag" style="background-image: url(../files/icons/flags/usa.png);"></span>
+                                    <span>+1</span>
+                                </div>
+                                <div class="option" value='+98' country='iran'>
+                                    <span class="flag" style="background-image: url(../files/icons/flags/iran.png);"></span>
+                                    <span>+98</span>
+                                </div>
+                                <div class="option" value='+93' country='afghanistan'>
+                                    <span class="flag" style="background-image: url(../files/icons/flags/afghanistan.png);"></span>
+                                    <span>+93</span>
+                                </div>
+                                <i class="arrow feather-icon icon-chevron-down"></i>
+                            </div>
+                            <input type="number" name="phone" id="phone" placeholder="Phone number">
+                          </div>
+                            <button class="submit-btn" type="button">Rest password</button>
+                            <div class="form-switcher my-3 d-flex align-items-center justify-content-center">
+                                <p class="mb-0">Are ou already a member?</p>
+                                <a>Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End of forgot form  -->
+                </div>
+            </div>
+        </div>
+        <!-- End of login and sing up and forgot password forms -->
+         
+        <!-- show message to user -->
+        <div id="show-message">
+        </div>
+        <!-- End of show message to user -->
+        <!-- show qustion to user -->
+        <div id="question">
+        </div>
+        <!-- end of show qustion to user -->
+    </div>
+    <!-- End of container  -->
+
+    <!-- JavaScript Files -->    
+    <script src="../js/localStorage.js"></script>       
+    <script src="../js/uiClass.js"></script>
+    <script src="../js/form-validation.js"></script>
+    <script src="../js/login-page.js"></script>
+    <script src="../files/bootstrap-ltr/jquery-3.5.1.slim.min.js"></script>
+    <script src="../files/bootstrap-ltr/bootstrap.bundle.min.js"></script>
+    <!--End of  JavaScript Files -->
+    
+</body>
+</html>

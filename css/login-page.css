@@ -1,0 +1,330 @@
+/* login page styles  */
+
+.main-section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.main-section .row{
+    width: 100%;
+}
+.back-to-home-btn span{
+    font-size: 15px;
+}
+.back-to-home-btn i{
+    font-size: 16px;
+    font-weight: 700;
+}
+.form{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.form.active{
+    display: flex;
+}
+.form .form-title{
+    font-size: .7em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.form .form-dis{
+    text-align: center;
+    font-size: .5em;
+    color: gray;
+    font-weight: 500;
+    line-height: 23px;
+}
+.form form{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.form form input{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: 1px solid rgb(233, 233, 233);
+    outline: none;
+    font-weight: 400;
+}
+.form form input:focus{
+    font-size: 14px;
+    border-color: rgb(255, 166, 0);
+}
+.form form input::placeholder{
+    font-size: 13px;
+    color: gray;
+    padding-left: 15px;
+}
+.form form .password{
+    width: 100%;
+    position: relative;
+}
+.form form .password i{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    color: gray;
+    font-weight: 700;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.form form .form-section{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 11px;
+}
+.form form .form-section span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+}
+.form form .form-section span input{
+    width: 25px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.form form .form-section label{
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.form form .form-section a{
+    color: rgb(12, 12, 12);
+    width: 40%;
+    font-size: 11.4px;
+    text-align: right;
+    letter-spacing: 1.5px;
+}
+.form form .login-with-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+}
+.form form .login-with-buttons button{
+    border: none;
+    outline: none;
+    background-color: gray;
+    width: 48%;
+    padding: 12px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+.form form .login-with-buttons button i{
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+.form form .login-with-buttons button.login-gmail:hover{
+    background-color: #F1584D;
+    color: #fff;
+}
+.form form .login-with-buttons button.login-gmail:hover i{
+    color: #fff;
+}
+.form form .login-with-buttons button.login-gmail{
+    background-color: white;
+    border: 1px solid #F1584D;
+}
+.form form .login-with-buttons button.login-gmail i{
+    color: #F1584D;
+}
+.form form .login-with-buttons button.login-facebook{
+    background-color: #3B5998;
+    border: 1px solid #fff;
+    color: white;
+}
+.form form .login-with-buttons button.login-facebook i{
+    color: #fff;
+}
+.form form .login-with-buttons button.login-facebook:hover{
+    background-color: #fff;
+    border: 1px solid  #3B5998;
+    color: black;
+}
+.form form .login-with-buttons button.login-facebook:hover i{
+    color:  #3B5998;
+}
+.form form .submit-btn{
+    background-color: #fbb03b ;
+    width: 100%;
+    border: 1px solid #fbb03b;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 12px 0;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+    pointer-events:none;
+    opacity: .5;
+}
+.form form .submit-btn.active{
+    pointer-events:visible;
+    opacity: 1;
+}
+.form form .submit-btn:hover{
+    background-color: rgb(255, 145, 0);
+}
+.form-switcher{
+    font-size: 12px;
+    cursor: pointer;
+}
+.form-switcher p{
+    color: gray;
+}
+.form-switcher a{
+    font-weight: 700;
+    margin-left: 15px;
+}
+.form-switcher a:hover{
+    color: gray;
+}
+.form-liner span{
+    width: 33%;
+    text-align: center;
+    color: rgb(201, 201, 201) ;
+}
+.form-liner hr{
+    background-color: rgb(255, 255, 255) !important;
+    height: .5px;
+    width: 33%;
+}
+#phone-selector{
+    position: relative;
+    margin-bottom: 20px;
+}
+#phone-selector input{
+    padding-left: 90px
+}
+.select-country{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    background-color: rgb(248, 248, 248);
+    width: 70px;
+    min-height: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.select-country .arrow{
+    position: absolute;
+    right: 2px !important;
+    top: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.select-country.show .option{
+    display: flex;
+}
+.select-country .option{
+    width: 80%;
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    padding: 2px;
+    display: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+.select-country:hover .option:hover{
+    background-color: rgb(219, 219, 219);
+}
+.select-country .option.active{
+    display: flex;
+    cursor:default;
+}
+.select-country .option.active:hover{
+    background-color: transparent;
+}
+.select-country .option .flag{
+    background-repeat: no-repeat;
+    background-position: left;
+    display: inline-block;
+    background-size: cover;
+    width: 18px;
+    height: 15px;
+}
+input[name='phone']::-webkit-outer-spin-button,
+input[name='phone']::-webkit-inner-spin-button{
+ -webkit-appearance: none;
+ margin: 0;
+}
+input[name='phone']{
+    -moz-appearance: textfield;
+}
