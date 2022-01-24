@@ -1,0 +1,50 @@
+/* pagination styles */
+article .pagination{
+    margin-top: 110px;
+    width: 100%;
+    font-size: .7em;
+}
+article .pagination ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0 10px;
+    overflow-x: auto;
+}
+article .pagination ul li{
+    margin: 0 5px;
+    font-size: .8em;
+}
+article .pagination ul li:first-child{
+    font-size: 1em;
+}
+article .pagination ul li a{
+    color: rgb(151, 151, 151);
+}
+article .pagination ul li a:hover{
+    color: rgb(0, 140, 255);
+}
+article .pagination ul li.slash{
+    color: rgb(151, 151, 151);
+}
+/* End of pagination styles */
+
+
+
+
+
+
+
+
+
+
+/* tablet style */
+@media screen and (max-width: 991px){
+    article .pagination{
+        margin-top: 80px;
+    }
+}
+/* End of tablet style */

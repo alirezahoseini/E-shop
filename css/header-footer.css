@@ -865,8 +865,8 @@ header.hide{
     top: -100%;
     right: 0;
     background-color: white;
-    box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
-    -webkit-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
+    box-shadow: 0 2px 25px rgba(224, 224, 224, 0.151);
+    -webkit-box-shadow: 0 2px 25px rgba(202, 202, 202, 0.151);
     -moz-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
     -ms-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
     -o-box-shadow: 0 2px 25px rgba(26, 26, 26, 0.151);
