@@ -132,3 +132,16 @@ a{
     justify-content: center;
     text-align: center;
 }
+.badge-red{
+    background-color: red;
+    letter-spacing: 1.5px;
+    font-size: .6em;
+    font-weight:600;
+    border-radius: 20px;
+    padding: 3px 15px;
+    color: #fff;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}

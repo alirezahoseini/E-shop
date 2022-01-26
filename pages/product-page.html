@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scaleble=0">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0, maximum-scale=1, user-scaleble=0">
     <title>Product page | Fashion Store  </title>
     <link rel="title icon" type="image/png" href="../files/image/home-page/favicon.png"/>
 
@@ -2894,8 +2894,8 @@
         </div> 
         <!-- End of header  -->
         <!-- product -->
-        <article class="row">
-            <div class="col-12">
+        <article class="row px-0 mx-0">
+            <div class="col-12 w-100">
                 <!-- pagination path  -->
                 <div class="pagination ml-lg-5">
                     <ul>
@@ -2925,19 +2925,154 @@
                 <!-- End of pagination path  -->
             </div>
             <!-- product images  -->
-            <div class="col-12 col-lg-5 ml-lg-5 product-images ">
-                images
+            <div class="col-12 col-lg-5 ml-lg-5 product-images mb-3 px-0">
+                <!-- images carusel -->
+                <div class="swiper product-image-preview">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img
+                            data-src="../files/image/product-images/product-preview/pr-1.jpg"
+                            class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                            data-src="../files/image/product-images/product-preview/pr-2.jpg"
+                            class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                            data-src="../files/image/product-images/product-preview/pr-3.jpg"
+                            class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                            data-src="../files/image/product-images/product-preview/pr-4.jpg"
+                            class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                            data-src="../files/image/product-images/product-preview/pr-5.jpg"
+                            class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                            data-src="../files/image/product-images/product-preview/pr-6.jpg"
+                            class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-scrollbar"></div>
+                    <i class="open-lightbox-icon feather-icon icon-zoom-in"></i>
+                </div>
+                <!-- End of images carusel -->
             </div>
+            <!-- light box  -->
+            <div id="product-image-light-box" class="">
+                <!-- close button -->
+                <i class="close-btn feather-icon icon-x"></i>
+                <!-- End f close button -->
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <!-- orginal images  -->
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper light-box-images">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                    data-src="../files/image/product-images/product-preview/pr-1.jpg"
+                                    class="swiper-lazy"/>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                    data-src="../files/image/product-images/product-preview/pr-2.jpg"
+                                    class="swiper-lazy"/>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                    data-src="../files/image/product-images/product-preview/pr-3.jpg"
+                                    class="swiper-lazy"/>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                    data-src="../files/image/product-images/product-preview/pr-4.jpg"
+                                    class="swiper-lazy"/>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                    data-src="../files/image/product-images/product-preview/pr-5.jpg"
+                                    class="swiper-lazy"/>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                    data-src="../files/image/product-images/product-preview/pr-6.jpg"
+                                    class="swiper-lazy"/>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                </div>
+                            </div>
+                         <div class="swiper-button-next"></div>
+                         <div class="swiper-button-prev"></div>
+                      </div>
+                      <!-- End of orginal images  -->
+                    </div>
+                </div>
+                <!-- light box tumbs  -->
+                <div class="row">
+                    <div class="col-12 col-lg-6 product-tumbs-row">
+                        <div thumbsSlider="" class="swiper light-box-tumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../files/image/product-images/product-preview/pr-1.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../files/image/product-images/product-preview/pr-2.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../files/image/product-images/product-preview/pr-3.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../files/image/product-images/product-preview/pr-4.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../files/image/product-images/product-preview/pr-5.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../files/image/product-images/product-preview/pr-6.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of tumbs  -->
+            </div>
+            <!-- End of light box  -->
             <!-- End of product images  -->
             <!-- product info -->
             <div class="col-12 col-lg-5 mr-lg-5 product-info">
-                product info
+                <div class="row px-1 mx-auto" style="width: 90%;">
+                    <!-- product id  -->
+                    <div class="col-12 mb-3 product-id d-flex align-items-center justify-content-between">
+                        <span class="badge-red">Sell</span>
+                        <span>Product ID: 261311 </span>
+                    </div>
+                    <!-- End of product id  -->
+                </div>
             </div>
             <!-- End of product info -->
         </article>
         <!-- End of product -->
          <!-- footer -->
-         <footer class="row mx-0 mx-md-1 w-100">
+         <footer class="row mx-0 w-100">
             <!-- join club form -->
             <div class="col-12 joinClub px-0 col-md-11 mx-auto ">
                 <div class="row d-flex align-items-center justify-content-center py-5 mx-0">

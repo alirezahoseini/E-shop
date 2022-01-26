@@ -13,7 +13,7 @@ let favorites = [];
 // access to the shoping cart 
 const shopingCartParent = document.querySelector('#shoping-cart');
 // access to the all products
-const allProductTags = document.querySelectorAll('.swiper-slide');
+const allProductTags = document.querySelectorAll('.product-cart');
 // access to the my cart DIV
 const myCartDIV = document.querySelector('.my-cart');
 // access to the my favorites DIV
