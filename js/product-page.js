@@ -11,7 +11,9 @@ function eventlisteners(){
     // product images light box show and hide buttons
     lightBoxBtns();
     // light box zoom effect
-    zoomEffect()
+    zoomEffect();
+    //set colors
+    setColors();
   })
 }
 
@@ -62,6 +64,19 @@ function zoomEffect(){
       image.style.transform = 'scale(1)';
     });
 
+  });
+}
+
+
+// set colors from aria color 
+function setColors(){
+  // access to the color tags
+  const colorTags = document.querySelectorAll('input[name="productColor"]');
+  // each in color tags
+  colorTags.forEach(element => {
+    // access to the aria-color
+    const color = element.getAttribute('aria-color');
+    element.style.setProperty('--boxAfterBackColor', color);
   });
 }
 

@@ -261,9 +261,76 @@ opacity: 1;
    object-fit: cover;
    cursor: pointer;
 }
-/* End of product image light box  */
+/* End of product image light box ---------------- */
 
-
+/* product info styles ----------------------- */
+.product-info .product-id span:last-child{
+    color: rgb(173, 173, 173);
+    font-size: .6em;
+}
+.product-prices{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+}
+.product-prices.offer .opl-price{
+    color: gray;
+    text-decoration:line-through;
+    display: block;
+}
+.product-prices .opl-price{
+    color: gray;
+    text-decoration:line-through;
+    display: none;
+}
+.product-prices .price{
+    color: rgb(233, 0, 0);
+}
+.product-prices .product-brand{
+    font-size: .55em;
+    text-transform:uppercase;
+    background-color: rgb(251, 251, 251);
+    padding: 2px 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+/* colors  */
+.colors{
+    font-size: .7em;
+}
+.color-box{
+    display: flex;
+}
+.color-box input{
+    position: relative;
+    display: flex;
+    margin: 8px;
+    width: 25px;
+}
+.color-box input::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--boxAfterBackColor,red);
+    display: block;
+    outline: 1px solid rgba(200, 200, 200, 0.322);
+    outline-offset: 4px;
+    box-shadow: 0 0 20px .2px rgba(88, 88, 88, 0.315);
+    -webkit-box-shadow: 0 0 20px .2px rgba(88, 88, 88, 0.089);
+    -moz-box-shadow: 0 0 20px .2px rgba(88, 88, 88, 0.089);
+    -ms-box-shadow: 0 0 20px .2px rgba(88, 88, 88, 0.089);
+    -o-box-shadow: 0 0 20px .2px rgba(88, 88, 88, 0.089);
+    border: 1px solid rgba(128, 128, 128, 0.185);
+}
+.color-box input:checked::after{
+    outline-color: black;
+}
+/* End of colors  */
+/* End of product info styles ----------------------- */
 
 
 
@@ -294,6 +361,16 @@ opacity: 1;
         width: 80px !important;
     }
     /* End of product image light box */
+    /* product info */
+    .product-info{
+        font-size: .8em;
+    }
+    .product-prices{
+        justify-content: left;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /* End of product info */
 }
 /* End of tablet style */
 
