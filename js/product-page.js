@@ -2,7 +2,6 @@
 
 
 
-
 // Eventlisteners ----------------------------------------------->
 eventlisteners()
 function eventlisteners(){
@@ -14,6 +13,10 @@ function eventlisteners(){
     zoomEffect();
     //set colors
     setColors();
+    // product counter from product info section 
+    productCounterFromProductInfo();
+    // add to cart button
+    addToCartButton();
   })
 }
 
@@ -80,6 +83,113 @@ function setColors(){
   });
 }
 
+// product counter from product info section 
+function productCounterFromProductInfo(){
+  // access to the current tag
+  const currentTag = document.querySelector('.counter #current');
+  // access to counter buttons
+  const decrease = document.querySelector('.counter #decrease');
+  const increase = document.querySelector('.counter #increase');
+  // access to product info tag for find quntity
+  let prInfoTag = document.querySelector('.product-info');
+
+  // add event on decrease button
+  decrease.addEventListener('click', () => {
+    // access to the current value
+    const currentValue = document.querySelector('.counter #current').innerText;
+    // created new value 
+    let newValue = 0;
+    if(currentValue > 1){
+      newValue = currentValue - 1;
+      // set new value
+      currentTag.innerText = newValue;
+      // set quntity
+      prInfoTag.setAttribute('quntity', currentTag.innerText = newValue);
+    }else{
+      // show err message
+      ui.showMessage('The minimum number is one.!', 'alert');
+    }
+  });
+  // add event on increase button
+  increase.addEventListener('click', () => {
+    // access to the current value
+    const currentValue = document.querySelector('.counter #current').innerText;
+    // created new value 
+    let newValue = 0;
+    if(currentValue < 3){
+      newValue = Number(currentValue) + 1;
+      // set new value
+      currentTag.innerText = newValue;
+      // set quntity
+      prInfoTag.setAttribute('quntity', currentTag.innerText = newValue);
+    }else{
+      // show err message
+      ui.showMessage('The maximum inventory of this product is 3.!', 'alert');
+    }
+  });
+}
+
+
+// adding product the shoping cart
+// function addToCartButton(){
+//   // access to the add to cart button
+//   const btn = document.querySelector('.more-buttons .add-to-cart');
+//   // add click event on btn
+//   btn.addEventListener('click', () => {
+//     // access to the product info
+//     const productInfo = getProductInfo();
+
+//   });
+
+//   // access to product info
+//   function getProductInfo(){
+//     // access to product info tag
+//     const productInfoTag = document.querySelector('.product-info');
+//     // access to vlaues -->
+//     // data id
+//     const dataId = productInfoTag.getAttribute('data-id');
+//     // quntity
+//     const quntity = productInfoTag.getAttribute('quntity');
+//     // image
+//     const image = document.querySelector('.product-image-preview').firstElementChild.firstElementChild.firstElementChild.getAttribute('src');
+//     // title
+//     const title = productInfoTag.querySelector('.product-title').innerText;
+//     // price
+//     // access to price tag
+//     const priceTag = productInfoTag.querySelector('.product-prices');
+//     let price = 0;
+//     let offerPrice = 0;
+//     // chaking offer 
+//     if(priceTag.classList.contains('offer')){
+//       // set offer price
+//       offerPrice = priceTag.querySelector('.offer-price').innerText;
+//       offerPrice = offerPrice.split('$');
+//       offerPrice = Number(offerPrice[1]);
+//       // set old price
+//       price = priceTag.querySelector('.price').innerText;
+//       price = price.split('$');
+//       price = Number(price[1]);
+//     }else{
+//       // set price 
+//       price = priceTag.querySelector('.price').innerText;
+//       price = price.split('$');
+//       price = Number(price[1]);
+//     }
+
+//     // whole product data
+//     const data = {
+//       dataId : dataId,
+//       quntity : quntity,
+//       image : image,
+//       title : title,
+//       price : price,
+//       offerPrice : offerPrice
+//     }
+//     // return data
+//     return data;
+//   }
+
+// }
 
 // Swiper Sliders ----------------------------------------------->
 // Product image carusel with Swiper Slider

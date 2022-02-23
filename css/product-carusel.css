@@ -192,7 +192,7 @@
   margin-right: 20%;
   font-size: .9em;
 }
-.add-to-cart{
+.product-cart .add-to-cart{
   width: 95%;
   margin: 5px auto;
   font-size: .6em;
@@ -213,7 +213,7 @@
   -ms-transition: .3s;
   -o-transition: .3s;
 }
-.add-to-cart:hover{
+.product-cart .add-to-cart:hover{
   background-color: rgb(255, 35, 35);
   color: #fff;
   box-shadow: 1px 1px 15px .1px rgba(255, 0, 0, 0.219);

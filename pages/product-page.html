@@ -3058,7 +3058,7 @@
             <!-- End of light box  -->
             <!-- End of product images  -->
             <!-- product info -->
-            <div class="col-12 col-md-6 mr-lg-5 product-info">
+            <div class="col-12 col-md-6 mr-lg-5 product-info px-0 px-md-1" data-id='100' quntity='1'>
                 <div class="row px-1 mx-0 mx-lg-auto" style="width: 99%;">
                     <!-- product id  -->
                     <div class="col-12 mb-4 product-id d-flex align-items-center justify-content-between">
@@ -3074,17 +3074,18 @@
                     <!-- product prices -->
                     <div class="col-12 product-prices offer mb-4">
                         <span class="d-flex align-items-center justify-content-start">
-                            <div class="price mr-4">
+                            <div class="offer-price mr-4">
                                 $89.99
                             </div>
-                            <div class="opl-price">
+                            <div class="price">
                                 $119.99
                             </div>
                         </span>
                         <span class="product-brand ml-lg-auto my-3">house my brand</span>
                     </div>
-                    <!-- End of product prices -->
-                    <div class="col-12 colors mb-3">
+                    <!-- End of product prices / -->
+                    <!-- choose product color -->
+                    <div class="col-12 font-7 mb-3">
                         <p>Color:</p>
                         <div class="color-box">
                             <input type="radio" name="productColor" aria-color='#808080' id="black" >
@@ -3093,6 +3094,32 @@
                             <input type="radio" name="productColor" aria-color='#ffffff' id="white" checked>
                         </div>
                     </div>
+                    <!-- End of  choose product color / -->
+                    <!-- choose product size -->
+                    <div class="col-12 font-7 my-3">
+                        <span class="d-inline-block mr-3 mb-3">Size:</span><span class="d-inline-block">See size table</span><br>
+                        <select name="choose-size" id="choose-size">
+                            <option value="null">Choose size</option>
+                            <option value="small">small - S</option>
+                            <option value="medium">medium - M</option>
+                            <option value="large">large - L</option>
+                        </select>
+                    </div>
+                    <!-- End of choose product size / -->
+                    <!-- more buttons  -->
+                    <div class="col-12 font-7 my-3">
+                        <p>Quantity:</p>
+                        <div class="more-buttons d-flex align-items-center">
+                            <div class="counter">
+                                <span id="decrease">-</span>
+                                <span id="current">1</span>
+                                <span id="increase">+</span>
+                            </div>
+                            <button class="add-to-cart" type="button">ADD TO CART</button>
+                            <i class="feather-icon icon-heart"></i>
+                        </div>
+                    </div>
+                    <!-- End of  more buttons / -->
                 </div>
             </div>
             <!-- End of product info -->
