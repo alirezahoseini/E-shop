@@ -15,8 +15,9 @@ function eventlisteners(){
     setColors();
     // product counter from product info section 
     productCounterFromProductInfo();
-    // add to cart button
-    addToCartButton();
+    // description and reviews tabs
+    tabs();
+    
   })
 }
 
@@ -129,6 +130,37 @@ function productCounterFromProductInfo(){
   });
 }
 
+// description and reviews tabs
+function tabs(){
+  // access to the tab buttons
+  const desBtn = document.querySelector('.dec-tab');
+  const revBtn = document.querySelector('.rev-tab');
+  // access to sections
+  const description = document.querySelector('#description');
+  const reviews = document.querySelector('#reviews');
+  
+  // add click event on buttons 
+  desBtn.addEventListener('click',() => {
+    // hidde reviews section
+    reviews.classList.add('d-none');
+    // show descripton section
+    description.classList.remove('d-none');
+    // active des btn
+    desBtn.classList.add('active');
+    // desabled rev btn 
+    revBtn.classList.remove('active');
+  });
+  revBtn.addEventListener('click',() => {
+    // hidde description section
+    description.classList.add('d-none');
+    // show reviews section
+    reviews.classList.remove('d-none');
+    // active rev btn
+    revBtn.classList.add('active');
+    // desabled des btn 
+    desBtn.classList.remove('active');
+  });
+}
 
 // adding product the shoping cart
 // function addToCartButton(){
@@ -190,6 +222,11 @@ function productCounterFromProductInfo(){
 //   }
 
 // }
+
+
+
+
+
 
 // Swiper Sliders ----------------------------------------------->
 // Product image carusel with Swiper Slider
