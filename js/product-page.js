@@ -17,7 +17,10 @@ function eventlisteners(){
     productCounterFromProductInfo();
     // description and reviews tabs
     tabs();
-    
+    // load comments from API
+    loadComments();
+    // add new comment
+    addNewComment();
   })
 }
 
@@ -161,6 +164,99 @@ function tabs(){
     desBtn.classList.remove('active');
   });
 }
+
+
+// load comments from API
+function loadComments(){
+  // access to the comments from api
+  accessComments();
+  async function accessComments(){
+    // send request to server
+    let comments = fetch('../files/json/reviews.json');
+    comments.then((result) => {
+      // cheaking response 
+      result.json().then((apiData) => {
+        comments = apiData;
+        createdCommentToDOM(comments);
+      })
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
+  // created and set comments to the DOM
+  function createdCommentToDOM(comments){
+    // access to comment box
+    const commentsBox = document.querySelector('#comments ul');
+    // each in comments
+    comments.forEach((comment) => {
+      // created element 
+      const li = document.createElement('li')
+      // created HTML template
+      li.innerHTML = `
+      <li class="comment d-flex align-items-start mb-4">
+        <div class="comment-img mr-3">
+            <img src="${comment.image}">
+        </div>
+        <div class="comment-body text-left">
+            <h4>${comment.name}</h4>
+            <div class="rate" data-rate='${comment.score}'>
+                <i class="feather-icon icon-star-s"></i>
+                <i class="feather-icon icon-star-s"></i>
+                <i class="feather-icon icon-star-s"></i>
+                <i class="feather-icon icon-star-s"></i>
+                <i class="feather-icon icon-star-s"></i>
+            </div>
+            <p>
+              ${comment.text}
+            </p>
+        </div>
+      </li>
+    `
+  
+    // append comments to comment box
+    commentsBox.appendChild(li)
+    });
+
+  } 
+
+}
+
+// add new comment and comment box
+function addNewComment(){
+  // show and hide comment box
+  function showAndHideAddCommentBox(){
+    // aceess to the comment box
+    const addCommentBox = document.querySelector('#add-comment-box');
+    // access to the add comment button
+    const addCommentButton = document.querySelector('.add-comment-btn');
+    // access to the close button
+    const closeBtn = document.querySelector('#add-comment-box .close-btn');
+    // access to the background blur filter
+    const bgBlur = document.querySelector('#back-dark-filter');
+
+
+    // set click event on add comment button
+    addCommentButton.addEventListener('click', () => {
+      addCommentBox.classList.add('active');
+      bgBlur.classList.add('active');
+    })
+    // set click event on close btn
+    closeBtn.addEventListener('click', () => {
+      addCommentBox.classList.remove('active');
+      bgBlur.classList.remove('active');
+    })
+    // set click event on bgBlur
+    bgBlur.addEventListener('click', () => {
+      addCommentBox.classList.remove('active');
+      bgBlur.classList.remove('active');
+    })
+  }
+  showAndHideAddCommentBox();
+}
+
+
+
 
 // adding product the shoping cart
 // function addToCartButton(){

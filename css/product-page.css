@@ -494,14 +494,10 @@ opacity: 1;
 }
 /* End of description  */
 /* reviews */
-#reviews{
-    position: relative;
-}
 #rating{
     position: sticky;
-    top:85px;
-    left: 30px;
-    height:100%;
+    top: 100px; 
+    height: 100%;
 }
 #rating .total-socre h4{
     font-size: 2.3em;
@@ -564,7 +560,7 @@ opacity: 1;
 #rating .stars-counter ul li #progress-bar-5 .prograss{
     width: 83%;
 }
- button.add-comment{
+ button.add-comment-btn{
      background-color: rgb(255, 153, 0);
      border: none;
      outline: none;
@@ -582,7 +578,7 @@ opacity: 1;
      -ms-transition: .3s;
      -o-transition: .3s;
 }
-button.add-comment:hover{
+button.add-comment-btn:hover{
     background-color: rgb(36, 36, 36);
     color: white;
 }
@@ -622,6 +618,181 @@ button.add-comment:hover{
     color: rgb(255, 153, 0);
 }
 /* End of comments styles  */
+/* add comment styles */
+#add-comment-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(253, 253, 253);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40% , -50%);
+    -webkit-transform: translate(-50% , -40%);
+    -moz-transform: translate(-40% , -50%);
+    -ms-transform: translate(-40% , -50%);
+    -o-transform: translate(-40% , -50%);
+    z-index: 1000;
+    width: 50vw;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+#add-comment-box.active{
+    opacity: 1;
+    visibility: visible;
+}
+#add-comment-box .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+#add-comment-box .header span{
+    font-size: .6em;
+}
+#add-comment-box .header .icon-x{
+    cursor: pointer;
+}
+#add-comment-box .header .icon-x:hover{
+    color:gray;
+}
+    /* stars  */
+    #add-comment-box .set-rate{
+        margin-top: 25px;
+    }
+    #add-comment-box .set-rate p{
+        font-size: .9em;
+    }
+    #add-comment-box .set-rate .stars{
+        margin-top: 15px;
+        font-size: 1.5em;
+        color: rgb(200, 200, 200);
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+    #add-comment-box .set-rate .stars i{
+        cursor: pointer;
+        transition: .1s ease-in;
+        -webkit-transition: .1s ease-in;
+        -moz-transition: .1s ease-in;
+        -ms-transition: .1s ease-in;
+        -o-transition: .1s ease-in;
+        transform: rotate(34deg);
+        -webkit-transform: rotate(34deg);
+        -moz-transform: rotate(34deg);
+        -ms-transform: rotate(34deg);
+        -o-transform: rotate(34deg);
+    }
+    #add-comment-box .set-rate .stars i:hover{
+        text-shadow: 0 0 15px rgba(255, 153, 0, 0.63);
+    }
+    #add-comment-box .set-rate .stars i.star-1:hover ~ i.icon-star-s{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-2:hover ~ i.icon-star-s{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-3:hover ~ i.icon-star-s{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-4:hover ~ i.icon-star-s{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-5:hover ~ i.icon-star-s{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-1:hover{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-2:hover{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-3:hover{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-4:hover{
+        color: rgb(255, 153, 0);
+    }
+    #add-comment-box .set-rate .stars i.star-5:hover{
+        color: rgb(255, 153, 0);
+    }
+    /* End of stars  */
+
+/* add comment form  */
+#add-comment-box form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px auto;
+    width: 100%;
+}
+#add-comment-box form input , textarea {
+    min-width: 90%;
+    font-size: .55em;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(253, 253, 253);
+    padding: 13px 10px;
+    padding-left: 25px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    outline: none;
+    margin: 10px 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+#add-comment-box form input:focus{
+    border-color: rgb(255, 153, 0);
+}
+#add-comment-box form textarea{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-size: .55em;
+    margin-top: 12px;
+}
+#add-comment-box form textarea:focus{
+    border-color: rgb(255, 153, 0);
+}
+#add-comment-box form button[type='submit']{
+    background-color: rgb(255, 153, 0);
+    border: none;
+    width: 70%;
+    margin-top: 15px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 10px 5px;
+    font-size: .6em;
+}
+/*End of add comment form  */
+/* End of add comment styles */
 
 /* End of description and reviews styles -------------------------- */
 
@@ -664,6 +835,36 @@ button.add-comment:hover{
         align-items: flex-start;
     }
     /* End of product info */
+    /* review and description  */
+    #rating{
+        position: static;
+        height: 100%;
+    }
+    #add-comment-box{
+        width: 100vw;
+        height: auto;
+        border-radius:  0px 20px 0 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        overflow-y: scroll;
+        transition: .4s ease-in;
+        -webkit-transition: .4s ease-in;
+        -moz-transition: .4s ease-in;
+        -ms-transition: .4s ease-in;
+        -o-transition: .4s ease-in;
+        top: 100vh;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #add-comment-box.active{
+        top: 40%;
+        opacity: 1;
+        visibility: visible;
+    }       
+    /* End of review and description  */
 }
 /* End of tablet style */
 
