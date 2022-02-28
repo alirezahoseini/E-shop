@@ -503,8 +503,28 @@ opacity: 1;
     font-size: 2.3em;
     font-weight: 300;
 }
-#rating .total-socre i.icon-star-s{
+#rating .total-socre .stars-outer{
+    color: rgb(199, 199, 199);
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+#rating .total-socre .stars-outer::before{
+    content: '\f1e2 \f1e2 \f1e2 \f1e2 \f1e2';
+    font-family: "feather-icons";
+}
+#rating .total-socre .stars-outer .stars-inner{
     color: rgb(255, 153, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+}
+#rating .total-socre .stars-outer .stars-inner::before{
+    content: '\f1e2 \f1e2 \f1e2 \f1e2 \f1e2';
+    font-family: "feather-icons";
 }
 #rating .total-socre .counter{
     display: flex;
@@ -614,8 +634,12 @@ button.add-comment-btn:hover{
 #comments .comment .comment-body .rate{
     margin-bottom: 20px;
 }
-#comments .comment .comment-body .rate .icon-star-s{
-    color: rgb(255, 153, 0);
+#comments .comment .comment-body .rate{
+    color: rgb(199, 199, 199);
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
 }
 /* End of comments styles  */
 /* add comment styles */
@@ -680,11 +704,6 @@ button.add-comment-btn:hover{
         margin-top: 15px;
         font-size: 1.5em;
         color: rgb(200, 200, 200);
-        transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
     }
     #add-comment-box .set-rate .stars i{
         cursor: pointer;
@@ -693,11 +712,6 @@ button.add-comment-btn:hover{
         -moz-transition: .1s ease-in;
         -ms-transition: .1s ease-in;
         -o-transition: .1s ease-in;
-        transform: rotate(34deg);
-        -webkit-transform: rotate(34deg);
-        -moz-transform: rotate(34deg);
-        -ms-transform: rotate(34deg);
-        -o-transform: rotate(34deg);
     }
     #add-comment-box .set-rate .stars i:hover{
         text-shadow: 0 0 15px rgba(255, 153, 0, 0.63);
@@ -850,20 +864,9 @@ button.add-comment-btn:hover{
         -o-border-radius: 0;
         border-radius: 0;
         overflow-y: scroll;
-        transition: .4s ease-in;
-        -webkit-transition: .4s ease-in;
-        -moz-transition: .4s ease-in;
-        -ms-transition: .4s ease-in;
-        -o-transition: .4s ease-in;
-        top: 100vh;
         opacity: 0;
         visibility: hidden;
-    }
-    #add-comment-box.active{
-        top: 40%;
-        opacity: 1;
-        visibility: visible;
-    }       
+    }     
     /* End of review and description  */
 }
 /* End of tablet style */
@@ -905,6 +908,35 @@ button.add-comment-btn:hover{
     #comments{
         padding-left: 0;
     }
+    button.add-comment-btn{
+        width: 80%;
+    }
+    /* stars  */
+    #add-comment-box .set-rate{
+        margin-top: 5px;
+    }
+    #add-comment-box .set-rate p{
+        font-size: .6em;
+    }
+    #add-comment-box .set-rate .stars{
+        margin-top: 10px;
+        font-size: 1.3em;
+    }
+    #add-comment-box form{
+        margin-top: 5px;
+    }
+    #add-comment-box form input , textarea{
+        padding: 8px 14px;
+        margin: 5px auto;
+    }
+    #add-comment-box form textarea{
+        max-width: 90%;
+    }
+    #add-comment-box form button[type='submit']{
+        font-size: .55em;
+        padding: 8px 14px;
+    }
+    /* stars  */
     /* End of description and reviews */
     
 }
@@ -929,6 +961,15 @@ button.add-comment-btn:hover{
     }
     /* End of tabs */
 
+    /* reviews and description  */
+    button.add-comment-btn{
+        width: 90%;
+    }
+    #add-comment-box{
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    /* End of reviews and description  */
     
 }
 /* End of mobile style */

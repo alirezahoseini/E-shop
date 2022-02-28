@@ -21,6 +21,8 @@ function eventlisteners(){
     loadComments();
     // add new comment
     addNewComment();
+    // fill in the total score stars
+    fillTotalScoreStars();
   })
 }
 
@@ -189,7 +191,7 @@ function loadComments(){
     // access to comment box
     const commentsBox = document.querySelector('#comments ul');
     // each in comments
-    comments.forEach((comment) => {
+    comments.forEach((comment, index) => {
       // created element 
       const li = document.createElement('li')
       // created HTML template
@@ -201,11 +203,11 @@ function loadComments(){
         <div class="comment-body text-left">
             <h4>${comment.name}</h4>
             <div class="rate" data-rate='${comment.score}'>
-                <i class="feather-icon icon-star-s"></i>
-                <i class="feather-icon icon-star-s"></i>
-                <i class="feather-icon icon-star-s"></i>
-                <i class="feather-icon icon-star-s"></i>
-                <i class="feather-icon icon-star-s"></i>
+              <i class="feather-icon icon-star-s"></i>
+              <i class="feather-icon icon-star-s"></i>
+              <i class="feather-icon icon-star-s"></i>
+              <i class="feather-icon icon-star-s"></i>
+              <i class="feather-icon icon-star-s"></i>
             </div>
             <p>
               ${comment.text}
@@ -213,18 +215,55 @@ function loadComments(){
         </div>
       </li>
     `
-  
     // append comments to comment box
-    commentsBox.appendChild(li)
+    commentsBox.appendChild(li);
+    // access to the stars
+    const stars = li.querySelectorAll('.rate i');
+    // send li and comment to fill comment stars
+    fillCommentStars(stars, comment);
     });
 
+    // fill in the comment stars
+    function fillCommentStars(stars, comment){
+    
+      // 
+      switch (comment.score) {
+        case 1:
+          stars[0].style.color = 'rgb(255, 153, 0)';
+          break;
+        case 2:
+          stars[0].style.color = 'rgb(255, 153, 0)';
+          stars[1].style.color = 'rgb(255, 153, 0)';
+          break;
+        case 3:
+          stars[0].style.color = 'rgb(255, 153, 0)';
+          stars[1].style.color = 'rgb(255, 153, 0)';
+          stars[2].style.color = 'rgb(255, 153, 0)';
+          break;
+        case 4:
+          stars[0].style.color = 'rgb(255, 153, 0)';
+          stars[1].style.color = 'rgb(255, 153, 0)';
+          stars[2].style.color = 'rgb(255, 153, 0)';
+          stars[3].style.color = 'rgb(255, 153, 0)';
+          break;
+        case 5:
+          stars[0].style.color = 'rgb(255, 153, 0)';
+          stars[1].style.color = 'rgb(255, 153, 0)';
+          stars[2].style.color = 'rgb(255, 153, 0)';
+          stars[3].style.color = 'rgb(255, 153, 0)';
+          stars[4].style.color = 'rgb(255, 153, 0)';
+          break;
+      }
+    }
+    
   } 
 
 }
 
 // add new comment and comment box
 function addNewComment(){
-  // show and hide comment box
+
+  // show and hide comment box  -------------- */ ->
   function showAndHideAddCommentBox(){
     // aceess to the comment box
     const addCommentBox = document.querySelector('#add-comment-box');
@@ -250,12 +289,105 @@ function addNewComment(){
     bgBlur.addEventListener('click', () => {
       addCommentBox.classList.remove('active');
       bgBlur.classList.remove('active');
-    })
+    });
+
+    // take rate
+    function takeRate(){
+      // access to the stars
+      const stars = document.querySelectorAll('.set-rate .stars .icon-star-s');
+
+      // access to the rate text
+      const reateTextTag = document.querySelector('.set-rate p');
+
+      // base point text
+      const pointTexts = ['Very good', 'Good', ' medium', 'Bad' ,'Awful'];
+
+
+      // each in stars
+      stars.forEach((star, index) => {
+        // set click event on stars
+        star.addEventListener('click', () => {
+          // set point text to rate text tag
+          reateTextTag.innerText = `${pointTexts[index]}`;
+
+          // access to selected star and active stars
+          if(star.classList.contains('star-5')){
+            // change star color to gold
+            stars[4].style.color = 'rgb(255, 153, 0)';
+            // change rate taxt color
+            reateTextTag.style.color = 'rgb(204, 0, 34)';
+            // change embpty stars color to gray
+            stars[3].style.color = 'rgb(200, 200, 200)';
+            stars[2].style.color = 'rgb(200, 200, 200)';
+            stars[1].style.color = 'rgb(200, 200, 200)';
+            stars[0].style.color = 'rgb(200, 200, 200)';
+          }else if(star.classList.contains('star-4')){
+            // change star color to gold
+            stars[4].style.color = 'rgb(255, 153, 0)';
+            stars[3].style.color = 'rgb(255, 153, 0)';
+            // change rate taxt color
+            reateTextTag.style.color = 'rgb(204, 0, 143)';
+            // change embpty stars color to gray
+            stars[2].style.color = 'rgb(200, 200, 200)';
+            stars[1].style.color = 'rgb(200, 200, 200)';
+            stars[0].style.color = 'rgb(200, 200, 200)';
+          }else if(star.classList.contains('star-3')){
+            // change star color to gold
+            stars[4].style.color = 'rgb(255, 153, 0)';
+            stars[3].style.color = 'rgb(255, 153, 0)';
+            stars[2].style.color = 'rgb(255, 153, 0)';
+            // change rate taxt color
+            reateTextTag.style.color = 'rgb(180, 0, 204)';
+            // change embpty stars color to gray
+            stars[1].style.color = 'rgb(200, 200, 200)';
+            stars[0].style.color = 'rgb(200, 200, 200)';
+          }else if(star.classList.contains('star-2')){
+            // change star color to gold
+            stars[4].style.color = 'rgb(255, 153, 0)';
+            stars[3].style.color = 'rgb(255, 153, 0)';
+            stars[2].style.color = 'rgb(255, 153, 0)';
+            stars[1].style.color = 'rgb(255, 153, 0)';
+            // change rate taxt color
+            reateTextTag.style.color = 'rgb(54, 0, 204)';
+            // change embpty stars color to gray
+            stars[0].style.color = 'rgb(200, 200, 200)';
+          }else if(star.classList.contains('star-1')){
+            // change star color to gold
+            stars[4].style.color = 'rgb(255, 153, 0)';
+            stars[3].style.color = 'rgb(255, 153, 0)';
+            stars[2].style.color = 'rgb(255, 153, 0)';
+            stars[1].style.color = 'rgb(255, 153, 0)';
+            stars[0].style.color = 'rgb(255, 153, 0)';
+            // change rate taxt color
+            reateTextTag.style.color = 'rgb(0, 122, 204)';
+          }
+        });
+      });
+    }
+    takeRate();
   }
   showAndHideAddCommentBox();
 }
 
+// fill in the total score stars
+function fillTotalScoreStars(){
+  // access to score total
+  const scoreTotal = document.querySelector('.total-socre').getAttribute('total-socre');
+  
+  // created base score
+  const baseScore = 5;
 
+  // calculate the multiplcition of base points and total points
+  const starPercentage = (scoreTotal / baseScore) * 100;
+
+  // round to nearest 10
+  const starPercentageRound = `${Math.round(starPercentage) - 1.5}%`
+  
+  // access to the stars inner
+  const starsInner = document.querySelector('.stars-inner');
+  // set stars inner width
+  starsInner.style.width = starPercentageRound;
+}
 
 
 // adding product the shoping cart
