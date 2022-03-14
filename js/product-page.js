@@ -1,5 +1,5 @@
 // Classes ------------------------------------------------------>
-
+const productCarusel = new ProductCarusel();
 
 
 // Eventlisteners ----------------------------------------------->
@@ -23,6 +23,8 @@ function eventlisteners(){
     addNewComment();
     // fill in the total score stars
     fillTotalScoreStars();
+    // recommend products loaded from API
+    recommentProduct();
   })
 }
 
@@ -387,6 +389,13 @@ function fillTotalScoreStars(){
   const starsInner = document.querySelector('.stars-inner');
   // set stars inner width
   starsInner.style.width = starPercentageRound;
+}
+
+
+
+// recommend products loaded
+function recommentProduct(){
+  productCarusel.newCarusel('#recommend-products', '../files/json/products/just-for-you.json', 'recommend-products');
 }
 
 
