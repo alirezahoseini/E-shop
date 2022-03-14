@@ -1,8 +1,9 @@
 
 // product carusel class 
-
 class ProductCarusel {
     async newCarusel(element, dataLink, caruselParentId){
+      // created shoping cart class
+      const shopingCart = new ShopingCart();
       // access to the selected element 
       const elementTag = document.querySelector(element);
       
@@ -127,6 +128,8 @@ class ProductCarusel {
             ]);
           }
         });
+        // 
+        shopingCart.run();
       }
     };
   
