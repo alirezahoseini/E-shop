@@ -1,5 +1,5 @@
 // Classes 
-
+const productCarusel = new ProductCarusel();
 
 
 
@@ -9,7 +9,8 @@ eventlisteners();
 function eventlisteners(){
     // header slider runing
     document.addEventListener("DOMContentLoaded", headerSlider);
-    
+    // product crusel runing
+    document.addEventListener("DOMContentLoaded", productCaruselsRun);
 }
 
 
@@ -18,7 +19,16 @@ function eventlisteners(){
 
 
 
-// functions
+// functions------------------------------> 
+// product carusels 
+function productCaruselsRun(){
+    // carusel 1 --- > just for you products
+    productCarusel.newCarusel('#just-for-you', '../files/json/products/just-for-you.json', 'just-for-you');
+    // carusel 2 --- > womens-coat products
+    productCarusel.newCarusel('#womens-coat', '../files/json/products/womens-coat.json', 'womens-coat');
+    // carusel 3 --- > womens-skirts products
+    productCarusel.newCarusel('#womens-skirts', '../files/json/products/womens-skirts.json', 'womens-skirts');
+}
 
 // header slider runing 
 function headerSlider(){

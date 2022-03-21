@@ -23,7 +23,6 @@ class ProductCarusel {
         const caruselId = document.querySelector(`#${caruselParentId} .swiper`).getAttribute('id');
         // access carusel and created new swiper
         const mySwiper = new Swiper(`#${caruselId}`, {
-            slidesPerView: 2,
             spaceBetween: 30,
             navigation: {
               nextEl: ".button-next",
@@ -129,7 +128,7 @@ class ProductCarusel {
           }
         });
         // 
-        shopingCart.run();
+        shopingCart.run(caruselParentId);
       }
     };
   

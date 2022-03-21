@@ -1,23 +1,24 @@
 
-// classes ---------------------------------------------
+// classes ------------------------------------------->
 const newLoacalStorage = new NewLoacalStorage();
 
+// global variables --------------------------------->
+// created base array
+let cart = [];
+let favorites = [];
 
 /*
 shoping cart and my favorites codes 
 */
+
 class ShopingCart{
-    run(){
-    
-        // variables ----------------------------------------------
-        
-        // created base array
-        let cart = [];
-        let favorites = [];
-        // access to the shoping cart 
-        const shopingCartParent = document.querySelector('#shoping-cart');
+    run(caruselParentId){
+        // variables -------------------------------------------->
+
+        // access to the carusel parent
+        const parent = document.querySelector(`#${caruselParentId}`)
         // access to the all products
-        const allProductTags = document.querySelectorAll('.product-cart');
+        const allProductTags = parent.querySelectorAll(`.product-cart`);
         // access to the my cart DIV
         const myCartDIV = document.querySelector('.my-cart');
         // access to the my favorites DIV
@@ -27,19 +28,20 @@ class ShopingCart{
         // access to the page id
         const pageId = document.querySelector('header');
         
-        // eventListeners ----------------------------------------------
+        // eventListeners -------------------------------------------->
         eventlisteners();
         function eventlisteners(){
             // show old product from local storage to the shoping cart
-            document.addEventListener('DOMContentLoaded', accessToTheLocalStorageData);
+            accessToTheLocalStorageData()
         }
         
         
-        // functions ----------------------------------------------
+        // functions ---------------------------------------------->
         
         // access to the local storage data
         function accessToTheLocalStorageData(){ 
-            // set cart data -------------------------------------
+            // set cart data --------------------
+
             // access to the cart data
             cart = newLoacalStorage.getItem('myCart');
             // if cart is empty
@@ -50,34 +52,43 @@ class ShopingCart{
                 calculateTotal();
             // else add product to the shoping cart
             }else{
-                cart.forEach((productInfo) => {
-                    // show product to the dom
-                    showProductToTheDom(productInfo);
-                    // calculate total 
-                    calculateTotal();
-                    // access to the cart items
-                    const cartItems = document.querySelectorAll('.my-cart .cart-item');
-                    // active buttons
-                    cartItems.forEach((item) => {
-                        if(item.getAttribute('data-id') === productInfo.dataId){
-                            increaseItem(item, productInfo);
-                            decreaseItem(item, productInfo);
-                            removeItem(item, productInfo);
+                // access shoping cart DOM child
+               const shopingCartDivChild = myCartDIV.querySelectorAll('.cart-item');
+               // Only print cart items in the DOM once -* --*- *-*
+               // Check that the dom tag is empty
+                if(shopingCartDivChild.length == 0){
+                    // append items to dom
+                    cart.forEach((productInfo) => {
+    
+                        // show product to the dom
+                        showProductToTheDom(productInfo);
+                        // calculate total 
+                        calculateTotal();
+                        // access to the cart items
+                        const cartItems = document.querySelectorAll('.my-cart .cart-item');
+                        // active buttons
+                        cartItems.forEach((item) => {
+                            if(item.getAttribute('data-id') === productInfo.dataId){
+                                increaseItem(item, productInfo);
+                                decreaseItem(item, productInfo);
+                                removeItem(item, productInfo);
+                            }
+                        });
+                        // access to the add to cart button
+                        const addToTheCartBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-cart`);
+            
+                        try {
+                            // add added class to the add to cart button
+                            addToTheCartBtn.classList.add('added');
+                        } catch (error) {
+                            console.log('This cart product not exist in the page --- cart item');
+                            console.log(error);
                         }
-                    });
-                    // access to the add to cart button
-                    const addToTheCartBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-cart`);
-        
-                    try {
-                        // add added class to the add to cart button
-                        addToTheCartBtn.classList.add('added');
-                    } catch (error) {
-                        console.log('This cart product not exist in the page --- cart item');
-                        console.log(error);
-                    }
-                })
+                    })
+                }
+
             }
-            // set favorites data -------------------------------------
+            // set favorites data --------------------
             // access to the favorites data
             favorites = newLoacalStorage.getItem('myFavorites');
             // if favorites is empty
@@ -88,29 +99,35 @@ class ShopingCart{
                 favoritesCount();
             // else add product to the favorites
             }else{
-                favorites.forEach((productInfo) => {
-                    // show product to the dom
-                    showFavoriteToDom(productInfo);
-                    // update favorites count
-                    favoritesCount();
-                    // access to the favorite items
-                    const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
-                    // active buttons
-                    favoriteItems.forEach((item) => {
-                        if(item.getAttribute('data-id') === productInfo.dataId){
-                            removeFavoritItem(item, productInfo);
+                // access my favorites DOM child
+               const favoritesDivChild = myFavoritesDIV.querySelectorAll('.cart-item');
+               // Only print favorites items in the DOM once -* --*- *-*
+               // Check that the dom tag is empty
+                if(favoritesDivChild.length == 0){
+                    favorites.forEach((productInfo) => {
+                        // show product to the dom
+                        showFavoriteToDom(productInfo);
+                        // update favorites count
+                        favoritesCount();
+                        // access to the favorite items
+                        const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
+                        // active buttons
+                        favoriteItems.forEach((item) => {
+                            if(item.getAttribute('data-id') === productInfo.dataId){
+                                removeFavoritItem(item, productInfo);
+                            }
+                        })
+                        // access to the add to favorites button
+                        const addToTheFavoriteBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-favorites`);
+                        try {
+                            // add added class to the add to cart button
+                            addToTheFavoriteBtn.classList.add('added');
+                        } catch (error) {
+                            console.log('This cart product not exist in the page --- favorit list item');
+                            console.log(error);
                         }
                     })
-                    // access to the add to favorites button
-                    const addToTheFavoriteBtn = document.querySelector(`.swiper-slide[data-id="${productInfo.dataId}"] .add-to-favorites`);
-                    try {
-                        // add added class to the add to cart button
-                        addToTheFavoriteBtn.classList.add('added');
-                    } catch (error) {
-                        console.log('This cart product not exist in the page --- favorit list item');
-                        console.log(error);
-                    }
-                })
+                }
             }
         }
         
