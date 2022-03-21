@@ -28,6 +28,10 @@ class ProductCarusel {
               nextEl: ".button-next",
               prevEl: ".button-prev",
             },
+            autoplay: {
+              delay : 2500,
+              disableOnInteraction: false,
+            },
             breakpoints: {
               "@0.50": {
                 slidesPerView: 1,
