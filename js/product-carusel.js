@@ -1,12 +1,12 @@
 
 // product carusel class 
 class ProductCarusel {
-    async newCarusel(dataLink, caruselParentId){
+    newCarusel(dataLink, caruselParentId){
       // created shoping cart class
       const shopingCart = new ShopingCart();
-      
+    
       // send request to server with fetch
-      await fetch(dataLink).then((firstRespons) => {
+      fetch(dataLink).then((firstRespons) => {
         firstRespons.json().then((finallyRespons) => {
           // send products to create DOM function
           createdCaruselToDOM(finallyRespons);

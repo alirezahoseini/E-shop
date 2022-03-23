@@ -395,7 +395,7 @@ function fillTotalScoreStars(){
 
 // recommend products loaded
 function recommentProduct(){
-  productCarusel.newCarusel('#recommend-products', '../files/json/products/just-for-you.json', 'recommend-products');
+  productCarusel.newCarusel('../files/json/products/womens-coat.json', 'recommend-products');
 }
 
 
