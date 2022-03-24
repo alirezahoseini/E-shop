@@ -481,41 +481,18 @@ var productImageCarusel = new Swiper(".product-image-preview", {
       lazy: true,
 });
 
-// tumbs carusel for product carusel light box with Swiper Slider
-var lightBoxTumbs = new Swiper(".light-box-tumbs", {
-  loop: false,
-  spaceBetween: 10,
-  slidesPerView: 2,
-  freeMode: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    "@0.75": {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    "@1.00": {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-    "@1.50": {
-      slidesPerView: 5,
-      spaceBetween: 30,
-    }
-  },
+var productImageLightbox = new Swiper(".product-lightbox", {
+    zoom : true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+      lazy: true,
 });
 
-
-// light box for product images with Swiper Slider
-var lightBoxImages = new Swiper(".light-box-images", {
-  slidesPerView: 1,
-  lazy: true,
-  loop: false,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-    swiper: lightBoxTumbs,
-  }
-});
