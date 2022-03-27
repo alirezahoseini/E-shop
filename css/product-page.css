@@ -262,24 +262,30 @@ article .pagination ul li.slash{
 /* End of product image light box ---------------- */
 
 /* product info styles ----------------------- */
-.product-info .product-id span:last-child{
-    color: rgb(173, 173, 173);
-    font-size: .6em;
+.product-info .sale-badge{
+    visibility: hidden;
 }
-.product-prices{
+.product-info.offer .sale-badge{
+    visibility: visible;
+}
+.product-info .product-prices{
     display: flex;
     align-items: center;
     justify-content: left;
     flex-direction: row;
 }
-.product-prices .offer-price{
+.product-info .offer-price{
     display: none;
 }
-.product-prices.offer .price{
+.product-info.offer .price{
     color: gray;
     text-decoration:line-through;
 }
-.product-prices.offer .offer-price{
+.product-info .product-id span:last-child{
+    color: rgb(173, 173, 173);
+    font-size: .6em;
+}
+.product-info.offer .offer-price{
     color: rgb(255, 0, 0);
     display: block;
 }
@@ -834,7 +840,7 @@ button.add-comment-btn:hover{
     .product-info{
         font-size: .8em;
     }
-    .product-prices{
+    .product-info .product-prices{
         justify-content: left;
         flex-direction: column;
         align-items: flex-start;
@@ -871,6 +877,12 @@ button.add-comment-btn:hover{
         height: 360px !important;
     }
     /* End of product images */
+
+    /* product info  */
+    .product-info .product-id span:last-child{
+        display: block;
+    }
+    /* End of product info  */
 
     /* tabs */
     #tabs{

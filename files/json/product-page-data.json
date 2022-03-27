@@ -2,17 +2,43 @@
     {
         "productId" : 261311,
         "title" : "T-Shirt Summer Vibes",
-        "offerSale" : "true",
+        "offerSale" : true,
         "price" : 119.99,
         "offerPrice" : 89.99,
         "brand" : "HOUSE MY BRAND",
-        "colors" : ["#ffffff", "#61b3ff", "#ffe261", "#808080"],
-        "sizes" : {
-            "small" : "SMALL - S",
-            "medium" : "MEDIUM - M",
-            "large" : "LARGE - L"
-        },
-        "maxQuantity" : 3,
+        "colors" : [
+            {
+                "id" : "black",
+                "colorCode" : "#808080"
+            },
+            {
+                "id" : "cream",
+                "colorCode" : "#ffe261"
+            },
+            {
+                "id" : "blue",
+                "colorCode" : "#61b3ff"
+            },
+            {
+                "id" : "white",
+                "colorCode" : "#ffffff"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "SMALL - S"
+            },
+            {
+                "id" : "medium",
+                "name" : "MEDIUM - M"
+            },
+            {
+                "id" : "large",
+                "name" : "LARGE - L"
+            }
+        ],
+        "maxQuantity" : 2,
         "score" : {
             "totalScore" : 4.4,
             "commentsCounter" : 81,

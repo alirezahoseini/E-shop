@@ -5,16 +5,230 @@ const productCarusel = new ProductCarusel();
 // Eventlisteners ----------------------------------------------->
 eventlisteners()
 function eventlisteners(){
-  // after DOM Content Loaded 
-  document.addEventListener('DOMContentLoaded', () => {
+  
+}
+
+
+
+
+// Functions ---------------------------------------------------->
+
+// loading product data from api and set in DOM
+loadingData();
+function loadingData(){
+   // access data from api with fetch --------->
+   fetch('../files/json/product-page-data.json').then((response) => {
+     // open response and access to json file data
+      response.json().then((finallyResponse) => {
+        // send data to set data in DOM function
+        setDataInDOM(finallyResponse[0])
+      }).catch((err) => {
+        // show error message
+        ui.showMessage("dont connect to server", 'danger');
+        console.log(err);
+      })
+   }).catch((err) => {
+     // show error message
+     ui.showMessage("dont connect to server", 'danger');
+     console.log(err);
+   });
+
+   // set product data to DOM content --------->
+   function setDataInDOM(productData){
+     console.log(productData);
+
+     // access to the wrapper
+     const wrapper = document.querySelector('#product-wrapper');
+     // acess to the article tag
+     const article = document.querySelector('article');
+
+    //  created product images box 
+    createdProductImages();
+    function createdProductImages(){
+      // access to images
+      const images = productData.images;
+      // each in images for created product images carusel
+      images.forEach(img => {
+        // created product images carusel slide in DOM
+        productImageCarusel.addSlide(1, [
+          `
+          <div class="swiper-slide">
+              <img src="${img}" />
+          </div>
+          `
+        ])
+      });
+
+      // each in images for created product images Light box
+      images.forEach(img => {
+        // created product images light box slide in dom
+        productImageLightbox.addSlide(1, [
+          `
+          <div class="swiper-slide">
+            <div class='swiper-zoom-container'>
+              <img src="${img}" />
+            </div>
+          </div>
+            `
+        ])
+      });
+    }
+
+    // created product info *********
+    createdProductInfo()
+    function createdProductInfo(){
+      // created Parent section
+      const parentSection = document.createElement('div');
+      // set parent section classes
+      parentSection.classList = 'col-12 col-md-6 mr-lg-5 product-info  px-0 px-md-1';
+      // set parent section attributes
+      parentSection.setAttribute('product-id', productData.productId);
+      parentSection.setAttribute('maxQuntity', productData.maxQuantity);
+      // created parent section template
+      parentSection.innerHTML = `
+        <div class="row px-1 mx-0 mx-lg-auto" style="width: 99%;">
+        </div>
+      `;
+
+      /*
+        All options append in row
+       */
+      // access to the row
+      const row = parentSection.firstElementChild;
+
+      /// offer price checking
+      if(productData.offerSale){
+        // add offer class to parent section
+        parentSection.classList.add('offer');
+      }
+
+      // created product id
+      const productIdTag = document.createElement('div');
+      // set product id tag classes
+      productIdTag.classList = 'col-12 mb-4 product-id d-flex align-items-center justify-content-between';
+      // created product id tag template
+      productIdTag.innerHTML = `
+        <span class="badge-red sale-badge">SALE</span>
+        <span>Product ID: ${productData.productId} </span>
+      `;
+      // append product id tag to ROW
+      row.appendChild(productIdTag);
+
+
+      // created product title tag
+      const productTitleTag = document.createElement('div');
+      // set product title tag classes
+      productTitleTag.classList = 'col-12 product-title mb-2';
+      // created product title tag template
+      productTitleTag.innerText = productData.title ;
+      // append productTitle tag to ROW
+      row.appendChild(productTitleTag);
+
+
+      // created product Price tag
+      const productPriceTag = document.createElement('div');
+      // set product Price tag classes
+      productPriceTag.classList = 'col-12 product-prices mb-4';
+      // created product Price tag template
+      productPriceTag.innerHTML = `
+        <span class="d-flex align-items-center justify-content-start">
+            <div class="offer-price mr-4">
+                $${productData.offerPrice}
+            </div>
+            <div class="price">
+                $${productData.price}
+            </div>
+        </span>
+        <span class="product-brand ml-lg-auto my-3">${productData.brand}</span>
+      `;
+      // append productPrice tag to ROW
+      row.appendChild(productPriceTag);
+
+
+      // created product select color tag
+      const selectColorTag = document.createElement('div');
+      // set product select color tag classes
+      selectColorTag.classList = 'col-12 font-7 mb-3';
+      // created product select color tag template
+      selectColorTag.innerHTML = `
+      <p>Color:</p>
+      <div class="color-box">
+      </div>
+      `
+      // access to the color box
+      const colorBox = selectColorTag.querySelector('.color-box');
+      // each in colors 
+      productData.colors.forEach(color => {
+        // created color input in DOM
+          colorBox.innerHTML += `
+          <input type="radio" name="productColor" aria-color='${color.colorCode}' id="${color.id}">
+          `
+      });
+      // set checked in first color
+      colorBox.firstElementChild.setAttribute('checked', 'true')
+      // append product select color tag to ROW
+      row.appendChild(selectColorTag);
+
+
+      // created product chosse tag
+      const chosseSizeTag = document.createElement('div');
+      // set product chosse size tag classes
+      chosseSizeTag.classList = 'col-12 font-7 my-3';
+      // created product chosse size tag template
+      chosseSizeTag.innerHTML = `
+        <span class="d-inline-block mr-3 mb-3">Size:</span><span class="d-inline-block">See size table</span><br>
+        <select name="choose-size" id="choose-size">
+          <option value="null">Choose size</option>
+        </select>
+      `
+      // access to the sizes box
+      const sizesBox = chosseSizeTag.querySelector('#choose-size');
+      // each in sizes
+      productData.sizes.forEach(size => {
+        // created size input in DOM
+          sizesBox.innerHTML += `
+              <option value="${size.id}">${size.name}</option>
+          `
+      });
+      // append product chosse size tag to ROW
+      row.appendChild(chosseSizeTag);
+
+
+       // created more buttons tag
+       const moreButtonsTag = document.createElement('div');
+       // set product more buttons tag classes
+       moreButtonsTag.classList = 'col-12 font-7 my-3';
+       // created product chosse size tag template
+       moreButtonsTag.innerHTML = `
+        <p>Quantity:</p>
+        <div class="more-buttons d-flex align-items-center">
+            <div class="counter">
+                <span id="decrease">-</span>
+                <span id="current">1</span>
+                <span id="increase">+</span>
+            </div>
+            <button class="add-to-cart" type="button">ADD TO CART</button>
+            <i class="feather-icon icon-heart"></i>
+        </div>
+       `
+       // append more buttons tag to ROW
+      row.appendChild(moreButtonsTag);
+
+      
+      
+      /// append parent section to article
+      article.appendChild(parentSection);
+
+    }
+    
+
+    // Execute the rest of the code after loading the product information ---->
     // product images light box show and hide buttons
     lightBoxBtns();
-    // light box zoom effect
-    zoomEffect();
     //set colors
     setColors();
     // product counter from product info section 
-    productCounterFromProductInfo();
+    productCounterFromProductInfo(productData.maxQuantity);
     // description and reviews tabs
     tabs();
     // load comments from API
@@ -25,13 +239,9 @@ function eventlisteners(){
     fillTotalScoreStars();
     // recommend products loaded from API
     recommentProduct();
-  })
+   }
+
 }
-
-
-
-
-// Functions ---------------------------------------------------->
 
 // product images light box show and hide buttons
 function lightBoxBtns(){
@@ -41,41 +251,21 @@ function lightBoxBtns(){
   const lightBox = document.querySelector('#product-image-light-box');
   // access to the close button
   const closeBtn = document.querySelector('#product-image-light-box .close-btn');
+  // access active image
+  const activeImage = document.querySelectorAll(".product-image-preview  .swiper-slide");
 
   // created click event to show button and show light box
   showBtn.addEventListener('click', () => lightBox.classList.add('show'));
+  // each in images and add click event
+  activeImage.forEach(image => {
+    // add click event
+    image.addEventListener('click', (e) => {
+      // show light box after click
+      lightBox.classList.add('show');
+    })
+  });
   // created click event to close button and close light box
   closeBtn.addEventListener('click', () => lightBox.classList.remove('show'));
-}
-
-// light box zoom effect
-function zoomEffect(){
-  // access to the images 
-  const images = document.querySelectorAll('#product-image-light-box .light-box-images .swiper-slide img');
-
-  // add double click event in images
-  images.forEach(image => {
-    // add event --- zoom in image
-    image.addEventListener('mousemove', (e) => {
-      // access to the click location
-      const x = e.clientX - e.target.offsetLeft;
-      const y = e.clientY - e.target.offsetTop;
-
-      // set click position and zoom to selected location
-      image.style.transformOrigin = `${x}px ${y}px`;
-      // zoom in image
-      image.style.transform = 'scale(2)';
-    });
-
-    // add event --- zoom out image
-    image.addEventListener('mouseleave', (e) => {
-      // set click position and zoom to selected location
-      image.style.transformOrigin = `center`;
-      // zoom in image
-      image.style.transform = 'scale(1)';
-    });
-
-  });
 }
 
 
@@ -92,7 +282,7 @@ function setColors(){
 }
 
 // product counter from product info section 
-function productCounterFromProductInfo(){
+function productCounterFromProductInfo(maxQuantity){
   // access to the current tag
   const currentTag = document.querySelector('.counter #current');
   // access to counter buttons
@@ -124,7 +314,7 @@ function productCounterFromProductInfo(){
     const currentValue = document.querySelector('.counter #current').innerText;
     // created new value 
     let newValue = 0;
-    if(currentValue < 3){
+    if(currentValue < maxQuantity){
       newValue = Number(currentValue) + 1;
       // set new value
       currentTag.innerText = newValue;
@@ -132,7 +322,7 @@ function productCounterFromProductInfo(){
       prInfoTag.setAttribute('quntity', currentTag.innerText = newValue);
     }else{
       // show err message
-      ui.showMessage('The maximum inventory of this product is 3.!', 'alert');
+      ui.showMessage(`The maximum inventory of this product is ${maxQuantity}.!`, 'alert');
     }
   });
 }
@@ -478,11 +668,10 @@ var productImageCarusel = new Swiper(".product-image-preview", {
       },
       mousewheel: true,
       keyboard: true,
-      lazy: true,
+      zoom : true,
 });
 
 var productImageLightbox = new Swiper(".product-lightbox", {
-    zoom : true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -493,6 +682,6 @@ var productImageLightbox = new Swiper(".product-lightbox", {
       },
       mousewheel: true,
       keyboard: true,
-      lazy: true,
+      zoom : true,
 });
 

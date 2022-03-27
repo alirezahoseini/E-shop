@@ -12,6 +12,7 @@ class ProductCarusel {
           createdCaruselToDOM(finallyRespons);
         })
       }).catch((error) => {
+        ui.showMessage('dont conect to server', 'danger');
         console.log(error);
       });
   
