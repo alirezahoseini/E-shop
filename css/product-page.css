@@ -498,27 +498,27 @@ article .pagination ul li.slash{
 }
 /* End of description  */
 /* reviews */
-#rating{
+#rateing{
     position: sticky;
     top: 100px; 
     height: 100%;
 }
-#rating .total-socre h4{
+#rateing .total-socre h4{
     font-size: 2.3em;
     font-weight: 300;
 }
-#rating .total-socre .stars-outer{
+#rateing .total-socre .stars-outer{
     color: rgb(199, 199, 199);
     letter-spacing: 3px;
     position: relative;
     display: inline-block;
     overflow: hidden;
 }
-#rating .total-socre .stars-outer::before{
+#rateing .total-socre .stars-outer::before{
     content: '\f1e2 \f1e2 \f1e2 \f1e2 \f1e2';
     font-family: "feather-icons";
 }
-#rating .total-socre .stars-outer .stars-inner{
+#rateing .total-socre .stars-outer .stars-inner{
     color: rgb(255, 153, 0);
     position: absolute;
     top: 0;
@@ -526,34 +526,34 @@ article .pagination ul li.slash{
     width: 0;
     overflow: hidden;
 }
-#rating .total-socre .stars-outer .stars-inner::before{
+#rateing .total-socre .stars-outer .stars-inner::before{
     content: '\f1e2 \f1e2 \f1e2 \f1e2 \f1e2';
     font-family: "feather-icons";
 }
-#rating .total-socre .counter{
+#rateing .total-socre .counter{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: .55em;
     color: gray;
 }
-#rating .stars-counter{
+#rateing .stars-counter{
     font-size: .6em;
 }
-#rating .stars-counter ul li{
+#rateing .stars-counter ul li{
     margin: 8px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-#rating .stars-counter ul li span{
+#rateing .stars-counter ul li span{
     margin-right: 10px;
 }
-#rating .stars-counter ul li i.icon-star-s{
+#rateing .stars-counter ul li i.icon-star-s{
     color: rgb(255, 153, 0);
     margin-right: 5px;
 }
-#rating .stars-counter ul li .progress-bar{
+#rateing .stars-counter ul li .progress-bar{
     width: 70%;
     height: 2px;
     background-color: rgb(199, 199, 199);
@@ -564,12 +564,12 @@ article .pagination ul li.slash{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-#rating .stars-counter ul li .progress-bar .prograss{
+#rateing .stars-counter ul li .progress-bar .prograss{
     background-color: rgb(255, 153, 0);
     height: 100%;
     display: block;
 }
-#rating .stars-counter ul li #progress-bar-1 .prograss{
+/* #rating .stars-counter ul li #progress-bar-1 .prograss{
     width: 0%;
 }
 #rating .stars-counter ul li #progress-bar-2 .prograss{
@@ -583,7 +583,7 @@ article .pagination ul li.slash{
 }
 #rating .stars-counter ul li #progress-bar-5 .prograss{
     width: 83%;
-}
+} */
  button.add-comment-btn{
      background-color: rgb(255, 153, 0);
      border: none;

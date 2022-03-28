@@ -37,8 +37,7 @@ function loadingData(){
    function setDataInDOM(productData){
      console.log(productData);
 
-     // access to the wrapper
-     const wrapper = document.querySelector('#product-wrapper');
+
      // acess to the article tag
      const article = document.querySelector('article');
 
@@ -220,6 +219,94 @@ function loadingData(){
       article.appendChild(parentSection);
 
     }
+
+    // created Review and Descrition *********
+    createdReviewAndDescription()
+    function createdReviewAndDescription(){
+      /// set description in DOM ----->
+      // access to the description tag
+      const descriptionTag = document.querySelector("#description #text")
+      // set description to text box
+      descriptionTag.innerHTML = productData.description;
+
+
+      /// created rateing box ----->
+      // access to the rateing tag
+      const rateingTag = document.querySelector("#rateing");
+      // created div
+      const div = document.createElement("div");
+      // set div classes
+      div.classList = "row mx-0 px-0 w-100";
+      // created div template
+      div.innerHTML = `
+        <!-- total score -->
+        <div class="col-12 col-lg-6">
+            <div class="total-socre" total-socre="${productData.score.totalScore}">
+                <h4>${productData.score.totalScore}</h4>
+                <div class="total-socre-stars">
+                    <div class="stars-outer">
+                        <div class="stars-inner"></div>
+                    </div>
+                </div>
+                <div class="counter mt-2">
+                    <i class="feather-icon icon-user mr-2"></i>
+                    <span>${productData.score.commentsCounter} All opinions</span>
+                </div>
+            </div>
+        </div>
+        <!-- End of total score -->
+        <!-- stars counter  -->
+        <div class="col-12 col-lg-6 text-lg-left mt-3 mt-lg-0">
+            <div class="stars-counter">
+                <ul>
+                    <li>
+                        <i class="feather-icon icon-star-s"></i>
+                        <span>1</span>
+                        <div class="progress-bar" id="progress-bar-1">
+                            <div class="prograss" style="width:${productData.score.oneStar}%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="feather-icon icon-star-s"></i>
+                        <span>2</span>
+                        <div class="progress-bar" id="progress-bar-2">
+                            <div class="prograss" style="width:${productData.score.twoStar}%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="feather-icon icon-star-s"></i>
+                        <span>3</span>
+                        <div class="progress-bar" id="progress-bar-3">
+                            <div class="prograss" style="width:${productData.score.threeStar}%"div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="feather-icon icon-star-s"></i>
+                        <span>4</span>
+                        <div class="progress-bar" id="progress-bar-4">
+                            <div class="prograss" style="width:${productData.score.fourStar}%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="feather-icon icon-star-s"></i>
+                        <span>5</span>
+                        <div class="progress-bar" id="progress-bar-5">
+                            <div class="prograss" style="width:${productData.score.fiweStar}%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End of stars counter  -->
+        <button class="add-comment-btn mx-auto mt-3">ADD OPINIONS</button>
+      `
+
+      // append div in rateing tag
+      rateingTag.appendChild(div)
+
+
+
+    }
     
 
     // Execute the rest of the code after loading the product information ---->
@@ -227,8 +314,6 @@ function loadingData(){
     lightBoxBtns();
     //set colors
     setColors();
-    // product counter from product info section 
-    productCounterFromProductInfo(productData.maxQuantity);
     // description and reviews tabs
     tabs();
     // load comments from API
@@ -239,6 +324,8 @@ function loadingData(){
     fillTotalScoreStars();
     // recommend products loaded from API
     recommentProduct();
+    // product counter from product info section 
+    productCounterFromProductInfo(productData.maxQuantity);
    }
 
 }
