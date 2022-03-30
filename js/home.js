@@ -77,7 +77,7 @@ function headerSlider(){
                 </div>
                 <div class="row mx-0 px-0">
                     <div class="col-12">
-                        <a href="#" class="shop-btn">
+                        <a href="${slide.url}" class="shop-btn">
                             <img src="../files/image/header banner/go-shop-arrow.svg" alt="shop now">
                             <p>SHOP NOW</p>
                         </a>

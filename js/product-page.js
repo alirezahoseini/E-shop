@@ -302,7 +302,7 @@ function loadingData(){
       `
 
       // append div in rateing tag
-      rateingTag.appendChild(div)
+      rateingTag.appendChild(div);
 
 
 

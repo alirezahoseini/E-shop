@@ -1,14 +1,17 @@
 [
     {
         "image" : "../files/image/header banner/background-joao-silas-SfkLX6fUObk-unsplash.jpg",
-        "title" : "Sale of the summer collection"
+        "title" : "Sale of the summer collection",
+        "url" : "http://a-hosseini.ir/projects/e-shop"
     },
     {
         "image" : "../files/image/header banner/mahdi-bafande-XCU9ZV_ys5w-unsplash.jpg",
-        "title" : "Sale of the men collection"
+        "title" : "Sale of the men collection",
+        "url" : "http://a-hosseini.ir/projects/e-shop"
     },
     {
         "image" : "../files/image/header banner/radu-florin-OP8655xgBjo-unsplash.jpg",
-        "title" : "Sale of the women collection"
+        "title" : "Sale of the women collection",
+        "url" : "http://a-hosseini.ir/projects/e-shop"
     }
 ]
