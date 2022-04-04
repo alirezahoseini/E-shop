@@ -1,0 +1,55 @@
+[
+    {
+        "productId" : "6",
+        "title" : "GAP Men's hoodie red Červená",
+        "offerSale" : true,
+        "price" : 53,
+        "offerPrice" : 36.95,
+        "brand" : "gap",
+        "colors" : [
+            {
+                "id" : "red",
+                "colorCode" : "#FF192C"
+            },
+            {
+                "id" : "maya-blue",
+                "colorCode" : "#6BC4FF"
+            },
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            },        
+            {
+                "id" : "xtra-large",
+                "name" : "XL"
+            }           
+        ],
+        "maxQuantity" : 12,
+        "score" : {
+            "totalScore" : 4.8,
+            "commentsCounter" : 42,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "9",
+            "fourStar" : "5",
+            "fiweStar" : "89"
+        },
+        "images" : ["../../image/product-images/products/mens-sweaters/1/gap-men-s-hoodie-red-cervena-3307610-A.jpg","../../image/product-images/products/mens-sweaters/1/gap-men-s-hoodie-red-cervena-3307610-C.jpg","../../image/product-images/products/mens-sweaters/1/gap-men-s-hoodie-red-cervena-3307610-D.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

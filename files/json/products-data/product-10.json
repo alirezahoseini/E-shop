@@ -1,0 +1,51 @@
+[
+    {
+        "productId" : "10",
+        "title" : "Ragwear Men's hoodie Nate",
+        "offerSale" : true,
+        "price" : 74,
+        "offerPrice" : 59,
+        "brand" : "Ragwear",
+        "colors" : [
+            {
+                "id" : "silver",
+                "colorCode" : "#C9C9C9"
+            },
+            {
+                "id" : "jet",
+                "colorCode" : "#363636"
+            },
+            {
+                "id" : "hunter-green",
+                "colorCode" : "#27622C"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }         
+        ],
+        "maxQuantity" : 5,
+        "score" : {
+            "totalScore" : 4.7,
+            "commentsCounter" : 15,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "14",
+            "fourStar" : "11",
+            "fiweStar" : "87"
+        },
+        "images" : ["../../image/product-images/products/mens-sweaters/5/celio-men-s-sweaters-tracksuits-green-3298215-C.jpg","../../image/product-images/products/mens-sweaters/5/celio-men-s-sweaters-tracksuits-green-3298215-D.jpg","../../image/product-images/products/mens-sweaters/5/ragwear-men-s-hoodie-nate-3287412-A.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

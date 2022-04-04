@@ -1,0 +1,51 @@
+[
+    {
+        "productId" : "3",
+        "title" : "Blutsgeschwister Women's dress creamy",
+        "offerSale" : true,
+        "price" : 95,
+        "offerPrice" : 81.95,
+        "brand" : "Blutsgeschwister",
+        "colors" : [
+            {
+                "id" : "baby-powder",
+                "colorCode" : "#F9F7F3"
+            },
+            {
+                "id" : "skyblue",
+                "colorCode" : "#B5E2FA"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "xtra-small",
+                "name" : "XS"
+            },
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }            
+        ],
+        "maxQuantity" : 7,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 93,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "2",
+            "fourStar" : "5",
+            "fiweStar" : "93"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-A.jpg","../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-C.jpg","../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-D.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

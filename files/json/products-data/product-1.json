@@ -1,0 +1,42 @@
+[
+    {
+        "productId" : "1",
+        "title" : "Desigual Women's dress black Atenas",
+        "offerSale" : false,
+        "price" : 119.99,
+        "offerPrice" : 0,
+        "brand" : "Desigual",
+        "colors" : [
+            {
+                "id" : "cream",
+                "colorCode" : "#ffe261"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }
+        ],
+        "maxQuantity" : 5,
+        "score" : {
+            "totalScore" : 4.6,
+            "commentsCounter" : 15,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "8",
+            "fourStar" : "10",
+            "fiweStar" : "92"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/1/1_thumb_desigual-women-s-dress-black-atenas-3190677-D.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-A.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-B.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-C.jpg"],
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

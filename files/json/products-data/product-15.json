@@ -1,0 +1,51 @@
+[
+    {
+        "productId" : "15",
+        "title" : "GAP Women's leggings blue Fit",
+        "offerSale" : true,
+        "price" : 63,
+        "offerPrice" : 43,
+        "brand" : "GAP",
+        "colors" : [
+            {
+                "id" : "blue",
+                "colorCode" : "#B5E2FA"
+            },
+            {
+                "id" : "purple",
+                "colorCode" : "#7400C1"
+            },
+            {
+                "id" : "yellow",
+                "colorCode" : "#FFE500"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }          
+        ],
+        "maxQuantity" : 3,
+        "score" : {
+            "totalScore" : 4.8,
+            "commentsCounter" : 196,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "8",
+            "fourStar" : "12",
+            "fiweStar" : "86"
+        },
+        "images" : ["../../image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-A.jpg","../../image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-B.jpg","../../image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

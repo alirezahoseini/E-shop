@@ -1,0 +1,47 @@
+[
+    {
+        "productId" : "5",
+        "title" : "Trendyol Women's dress",
+        "offerSale" : false,
+        "price" : 31,
+        "offerPrice" : 0,
+        "brand" : "Trendyol",
+        "colors" : [
+            {
+                "id" : "medium-champange",
+                "colorCode" : "#eddea4"
+            },
+            {
+                "id" : "granny-smith-apple",
+                "colorCode" : "#B1EDA4"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }            
+        ],
+        "maxQuantity" : 7,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 102,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "2",
+            "fourStar" : "12",
+            "fiweStar" : "93"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-A.jpg","../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-B.jpg","../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

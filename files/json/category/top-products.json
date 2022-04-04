@@ -1,0 +1,223 @@
+[
+    {
+        "productId" : "18",
+        "title" : "Tommy Hilfiger Men's shoes blue",
+        "offerSale" : false,
+        "price" : 97,
+        "offerPrice" : 0,
+        "brand" : "Tommy Hilfiger ",
+        "colors" : [
+            {
+                "id" : "blue",
+                "colorCode" : "#ACB7FF"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "40"
+            },
+            {
+                "id" : "medium",
+                "name" : "41"
+            },
+            {
+                "id" : "large",
+                "name" : "42"
+            }          
+        ],
+        "maxQuantity" : 5,
+        "score" : {
+            "totalScore" : 4.7,
+            "commentsCounter" : 13,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "12",
+            "fourStar" : "3",
+            "fiweStar" : "93"
+        },
+        "images" : ["../../image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-A.jpg","../../image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-B.jpg","../../image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-D.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "19",
+        "title" : "CAMAIEU Women's skirt black",
+        "offerSale" : false,
+        "price" : 35,
+        "offerPrice" : 0,
+        "brand" : "CAMAIEU",
+        "colors" : [
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }          
+        ],
+        "maxQuantity" : 5,
+        "score" : {
+            "totalScore" : 4.7,
+            "commentsCounter" : 46,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "12",
+            "fourStar" : "3",
+            "fiweStar" : "89"
+        },
+        "images" : ["../../image/product-images/products/top-products/2/camaieu-women-s-skirt-black-2282983-A.jpg","../../image/product-images/products/top-products/2/camaieu-women-s-skirt-black-2282983-B.jpg","../../image/product-images/products/top-products/2/camaieu-women-s-skirt-black-2282983-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "20",
+        "title" : "Celio Men's shirt blue Baflax",
+        "offerSale" : true,
+        "price" : 49,
+        "offerPrice" : 37,
+        "brand" : "Celio ",
+        "colors" : [
+            {
+                "id" : "oxford-blue",
+                "colorCode" : "#000229"
+            },
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            },
+            {
+                "id" : "grey",
+                "colorCode" : "#4A4A4A"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }          
+        ],
+        "maxQuantity" : 3,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 493,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "5",
+            "fourStar" : "7",
+            "fiweStar" : "89"
+        },
+        "images" : ["../../image/product-images/products/top-products/4/celio-men-s-shirt-blue-baflax-3298200-A.jpg","../../image/product-images/products/top-products/4/celio-men-s-shirt-blue-baflax-3298200-B.jpg","../../image/product-images/products/top-products/4/celio-men-s-shirt-blue-baflax-3298200-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "21",
+        "title" : "Celio Men's shirt blue Baflax",
+        "offerSale" : true,
+        "price" : 49,
+        "offerPrice" : 37,
+        "brand" : "Celio ",
+        "colors" : [
+            {
+                "id" : "oxford-blue",
+                "colorCode" : "#000229"
+            },
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            },
+            {
+                "id" : "grey",
+                "colorCode" : "#4A4A4A"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }          
+        ],
+        "maxQuantity" : 3,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 493,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "5",
+            "fourStar" : "7",
+            "fiweStar" : "89"
+        },
+        "images" : ["../../image/product-images/products/top-products/4/celio-men-s-shirt-blue-baflax-3298200-A.jpg","../../image/product-images/products/top-products/4/celio-men-s-shirt-blue-baflax-3298200-B.jpg","../../image/product-images/products/top-products/4/celio-men-s-shirt-blue-baflax-3298200-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "22",
+        "title" : "Black parka ONLY CARMAKOMA New Lorca",
+        "offerSale" : false,
+        "price" : 67,
+        "offerPrice" : 0,
+        "brand" : "ONLY CARMAKOMA",
+        "colors" : [
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }          
+        ],
+        "maxQuantity" : 3,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 493,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "5",
+            "fourStar" : "12",
+            "fiweStar" : "93"
+        },
+        "images" : ["../../image/product-images/products/top-products/5/black-parka-only-carmakoma-new-lorca_z-15192844-black-C.jpg","../../image/product-images/products/top-products/5/black-parka-only-carmakoma-new-lorca_z-15192844-black-D.jpg","../../image/product-images/products/top-products/5/black-parka-only-carmakoma-new-lorca_z-15192844-black-E.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

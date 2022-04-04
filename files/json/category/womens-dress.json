@@ -1,0 +1,279 @@
+[
+    {
+        "productId" : "1",
+        "title" : "Desigual Women's dress black Atenas",
+        "offerSale" : false,
+        "price" : 119.99,
+        "offerPrice" : 0,
+        "brand" : "Desigual",
+        "colors" : [
+            {
+                "id" : "cream",
+                "colorCode" : "#ffe261"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }
+        ],
+        "maxQuantity" : 5,
+        "score" : {
+            "totalScore" : 4.6,
+            "commentsCounter" : 15,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "8",
+            "fourStar" : "10",
+            "fiweStar" : "92"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/1/1_thumb_desigual-women-s-dress-black-atenas-3190677-D.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-A.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-B.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-C.jpg"],
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "2",
+        "title" : "Desigual Women's dress black Guepardita",
+        "offerSale" : false,
+        "price" : 75,
+        "offerPrice" : 0,
+        "brand" : "Desigual",
+        "colors" : [
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "xtra-small",
+                "name" : "XS"
+            },
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            },
+            {
+                "id" : "xtra-large",
+                "name" : "XL"
+            }
+        ],
+        "maxQuantity" : 3,
+        "score" : {
+            "totalScore" : 4.7,
+            "commentsCounter" : 39,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "8",
+            "fourStar" : "15",
+            "fiweStar" : "89"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-A.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-D.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-E.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "2",
+        "title" : "Desigual Women's dress black Guepardita",
+        "offerSale" : false,
+        "price" : 75,
+        "offerPrice" : 0,
+        "brand" : "Desigual",
+        "colors" : [
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "xtra-small",
+                "name" : "XS"
+            },
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            },
+            {
+                "id" : "xtra-large",
+                "name" : "XL"
+            }
+        ],
+        "maxQuantity" : 3,
+        "score" : {
+            "totalScore" : 4.7,
+            "commentsCounter" : 39,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "8",
+            "fourStar" : "15",
+            "fiweStar" : "89"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-A.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-D.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-E.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "3",
+        "title" : "Blutsgeschwister Women's dress creamy",
+        "offerSale" : true,
+        "price" : 95,
+        "offerPrice" : 81.95,
+        "brand" : "Blutsgeschwister",
+        "colors" : [
+            {
+                "id" : "baby-powder",
+                "colorCode" : "#F9F7F3"
+            },
+            {
+                "id" : "skyblue",
+                "colorCode" : "#B5E2FA"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "xtra-small",
+                "name" : "XS"
+            },
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }            
+        ],
+        "maxQuantity" : 7,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 93,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "2",
+            "fourStar" : "5",
+            "fiweStar" : "93"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-A.jpg","../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-C.jpg","../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-D.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "4",
+        "title" : "Armani Exchange Women's dress black",
+        "offerSale" : true,
+        "price" : 73.95,
+        "offerPrice" : 62.95,
+        "brand" : "Armani Exchange",
+        "colors" : [
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            },
+            {
+                "id" : "white",
+                "colorCode" : "#ffffff"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }            
+        ],
+        "maxQuantity" : 2,
+        "score" : {
+            "totalScore" : 4.4,
+            "commentsCounter" : 102,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "15",
+            "fourStar" : "21",
+            "fiweStar" : "82"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-A.jpg","../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-B.jpg","../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-C.jpg","../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-F.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "productId" : "5",
+        "title" : "Trendyol Women's dress",
+        "offerSale" : false,
+        "price" : 31,
+        "offerPrice" : 0,
+        "brand" : "Trendyol",
+        "colors" : [
+            {
+                "id" : "medium-champange",
+                "colorCode" : "#eddea4"
+            },
+            {
+                "id" : "granny-smith-apple",
+                "colorCode" : "#B1EDA4"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }            
+        ],
+        "maxQuantity" : 7,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 102,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "2",
+            "fourStar" : "12",
+            "fiweStar" : "93"
+        },
+        "images" : ["../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-A.jpg","../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-B.jpg","../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

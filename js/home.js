@@ -23,11 +23,11 @@ function eventlisteners(){
 // product carusels 
 function productCaruselsRun(){
     // carusel 1 --- > just for you products
-    productCarusel.newCarusel ('../files/json/products/just-for-you.json', 'just-for-you');
+    productCarusel.newCarusel ('../files/json/products-carusel/just-for-you.json', 'just-for-you');
     // carusel 2 --- > womens-coat products
-    productCarusel.newCarusel('../files/json/products/womens-coat.json', 'womens-coat');
+    productCarusel.newCarusel('../files/json/products-carusel/womens-coat.json', 'womens-coat');
     // carusel 3 --- > womens-skirts products
-    productCarusel.newCarusel( '../files/json/products/womens-skirts.json', 'womens-skirts');
+    productCarusel.newCarusel( '../files/json/products-carusel/womens-skirts.json', 'womens-skirts');
 }
 
 // header slider runing 

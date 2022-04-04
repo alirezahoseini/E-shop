@@ -1,0 +1,55 @@
+[
+    {
+        "productId" : "7",
+        "title" : "Armani Exchange Men's hoodie red",
+        "offerSale" : true,
+        "price" : 126,
+        "offerPrice" : 107.90,
+        "brand" : "Armani Exchange",
+        "colors" : [
+            {
+                "id" : "red",
+                "colorCode" : "#FF192C"
+            },
+            {
+                "id" : "white",
+                "colorCode" : "#ffffff"
+            },
+            {
+                "id" : "black",
+                "colorCode" : "#000000"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            },        
+            {
+                "id" : "xtra-large",
+                "name" : "XL"
+            }           
+        ],
+        "maxQuantity" : 2,
+        "score" : {
+            "totalScore" : 4.5,
+            "commentsCounter" : 169,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "15",
+            "fourStar" : "12",
+            "fiweStar" : "79"
+        },
+        "images" : ["../../image/product-images/products/mens-sweaters/2/armani-exchange-men-s-hoodie-red-3135816-A.jpg","../../image/product-images/products/mens-sweaters/2/armani-exchange-men-s-hoodie-red-3135816-B.jpg","../../image/product-images/products/mens-sweaters/2/armani-exchange-men-s-hoodie-red-3135816-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]

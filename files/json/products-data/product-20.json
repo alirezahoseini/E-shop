@@ -1,0 +1,51 @@
+[
+    {
+        "productId" : "20",
+        "title" : "Top Under Armour UA Knockout Tank-PNK",
+        "offerSale" : true,
+        "price" : 43,
+        "offerPrice" : 37,
+        "brand" : "Under Armour",
+        "colors" : [
+            {
+                "id" : "pink",
+                "colorCode" : "#FF136D"
+            },
+            {
+                "id" : "yellow",
+                "colorCode" : "#F3FF13"
+            },
+            {
+                "id" : "gray",
+                "colorCode" : "#7A7A7A"
+            }
+        ],
+        "sizes" : [
+            {
+                "id" : "small",
+                "name" : "S"
+            },
+            {
+                "id" : "medium",
+                "name" : "M"
+            },
+            {
+                "id" : "large",
+                "name" : "L"
+            }          
+        ],
+        "maxQuantity" : 7,
+        "score" : {
+            "totalScore" : 4.9,
+            "commentsCounter" : 397,
+            "oneStar" : "0",
+            "twoStar" : "0",
+            "threeStar" : "5",
+            "fourStar" : "7",
+            "fiweStar" : "95"
+        },
+        "images" : ["../../image/product-images/products/top-products/3/top-under-armour-ua-knockout-tank-pnk-u-1351596-660-A.jpg","../../image/product-images/products/top-products/3/top-under-armour-ua-knockout-tank-pnk-u-1351596-660-B.jpg","../../image/product-images/products/top-products/3/top-under-armour-ua-knockout-tank-pnk-u-1351596-660-C.jpg"],
+
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]
