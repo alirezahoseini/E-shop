@@ -53,23 +53,23 @@ class ProductCarusel {
   
         // each in products and created product cart
         products.forEach(product => {
-  
+
           // if offerPrice not exist 
           if (product.offerPrice != 0){
             // not exist ---->
               // calculating offer
             const claculate = product.price - product.offerPrice
             const offer = Math.round(claculate / (product.price / 100)) ;
-            
+
             // set product info in div and created product cart template
             mySwiper.addSlide(1, [
               `
               <!-- start slide -->
-              <div class="swiper-slide product-cart" data-id='${product.id}' quntity='1'>
-                  <a>
+              <div class="swiper-slide product-cart flex-column" data-id='${product.productId}' quntity='1'>
+                  <a href='/pages/product-page.html?id=${product.productId}'>
                       <!-- product image -->
                       <div class="product-image">
-                          <img src="${product.image}" loading='lazy' alt="product 13">
+                          <img src="${product.images[0]}" loading='lazy' alt="product 13">
                           <div class='add-to-favorites'>
                               <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                           </div>
@@ -84,12 +84,12 @@ class ProductCarusel {
                               <p class="default-price">$${product.price}</p>
                           </div>
                       </div>
+                      <!-- End of product body -->
+                      </a>
                       <div class="add-to-cart">
                           <span></span>
                           <i class="feather-icon"></i>
                       </div>
-                      <!-- End of product body -->
-                  </a>
               </div>
               <!-- End of slide -->
               `
@@ -101,11 +101,11 @@ class ProductCarusel {
             mySwiper.addSlide(1, [
               `
               <!-- start slide -->
-              <div class="swiper-slide product-cart" data-id='${product.id}' quntity='1'>
-                  <a>
+              <div class="swiper-slide product-cart flex-column" data-id='${product.productId}' quntity='1'>
+                  <a href='/pages/product-page.html?id=${product.productId}'>
                       <!-- product image -->
                       <div class="product-image">
-                          <img src="${product.image}" loading='lazy' alt="product 13">
+                          <img src="${product.images[0]}" loading='lazy' alt="product 13">
                           <div class='add-to-favorites'>
                               <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                           </div>
@@ -118,12 +118,12 @@ class ProductCarusel {
                               <p class="default-price">$${product.price}</p>
                           </div>
                       </div>
-                      <div class="add-to-cart">
-                          <span></span>
-                          <i class="feather-icon"></i>
-                      </div>
                       <!-- End of product body -->
-                  </a>
+                    </a>
+                    <div class="add-to-cart">
+                        <span></span>
+                        <i class="feather-icon"></i>
+                    </div>
               </div>
               <!-- End of slide -->
               `

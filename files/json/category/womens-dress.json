@@ -36,7 +36,7 @@
             "fourStar" : "10",
             "fiweStar" : "92"
         },
-        "images" : ["../../image/product-images/products/womens-dress/1/1_thumb_desigual-women-s-dress-black-atenas-3190677-D.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-A.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-B.jpg","../../image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-C.jpg"],
+        "images" : ["../files/image/product-images/products/womens-dress/1/1_thumb_desigual-women-s-dress-black-atenas-3190677-D.jpg","../files/image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-A.jpg","../files/image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-B.jpg","../files/image/product-images/products/womens-dress/1/desigual-women-s-dress-black-atenas-3190677-C.jpg"],
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
@@ -84,56 +84,7 @@
             "fourStar" : "15",
             "fiweStar" : "89"
         },
-        "images" : ["../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-A.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-D.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-E.jpg"],
-
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        "productId" : "2",
-        "title" : "Desigual Women's dress black Guepardita",
-        "offerSale" : false,
-        "price" : 75,
-        "offerPrice" : 0,
-        "brand" : "Desigual",
-        "colors" : [
-            {
-                "id" : "black",
-                "colorCode" : "#000000"
-            }
-        ],
-        "sizes" : [
-            {
-                "id" : "xtra-small",
-                "name" : "XS"
-            },
-            {
-                "id" : "small",
-                "name" : "S"
-            },
-            {
-                "id" : "medium",
-                "name" : "M"
-            },
-            {
-                "id" : "large",
-                "name" : "L"
-            },
-            {
-                "id" : "xtra-large",
-                "name" : "XL"
-            }
-        ],
-        "maxQuantity" : 3,
-        "score" : {
-            "totalScore" : 4.7,
-            "commentsCounter" : 39,
-            "oneStar" : "0",
-            "twoStar" : "0",
-            "threeStar" : "8",
-            "fourStar" : "15",
-            "fiweStar" : "89"
-        },
-        "images" : ["../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-A.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-D.jpg","../../image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-E.jpg"],
+        "images" : ["../files/image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-A.jpg","../files/image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-D.jpg","../files/image/product-images/products/womens-dress/2/desigual-women-s-dress-black-guepardita-3190710-E.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -182,7 +133,7 @@
             "fourStar" : "5",
             "fiweStar" : "93"
         },
-        "images" : ["../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-A.jpg","../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-C.jpg","../../image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-D.jpg"],
+        "images" : ["../files/image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-A.jpg","../files/image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-C.jpg","../files/image/product-images/products/womens-dress/3/blutsgeschwister-women-s-dress-creamy-3226515-D.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -227,7 +178,7 @@
             "fourStar" : "21",
             "fiweStar" : "82"
         },
-        "images" : ["../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-A.jpg","../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-B.jpg","../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-C.jpg","../../image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-F.jpg"],
+        "images" : ["../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-A.jpg","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-B.jpg","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-C.jpg","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-F.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -272,7 +223,7 @@
             "fourStar" : "12",
             "fiweStar" : "93"
         },
-        "images" : ["../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-A.jpg","../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-B.jpg","../../image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-C.jpg"],
+        "images" : ["../files/image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-A.jpg","../files/image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-B.jpg","../files/image/product-images/products/womens-dress/5/trendyol-women-s-dress-3278373-C.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }

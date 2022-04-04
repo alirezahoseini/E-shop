@@ -48,7 +48,7 @@
             "fourStar" : "6",
             "fiweStar" : "98"
         },
-        "images" : ["../../image/product-images/products/womens-leggings/1/gap-women-s-leggings-beige-bezova-3309557-A.jpg","../../image/product-images/products/womens-leggings/1/gap-women-s-leggings-beige-bezova-3309557-B.jpg","../../image/product-images/products/womens-leggings/1/gap-women-s-leggings-beige-bezova-3309557-D.jpg"],
+        "images" : ["../files/image/product-images/products/womens-leggings/1/gap-women-s-leggings-beige-bezova-3309557-A.jpg","../files/image/product-images/products/womens-leggings/1/gap-women-s-leggings-beige-bezova-3309557-B.jpg","../files/image/product-images/products/womens-leggings/1/gap-women-s-leggings-beige-bezova-3309557-D.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -89,7 +89,7 @@
             "fourStar" : "16",
             "fiweStar" : "86"
         },
-        "images" : ["../../image/product-images/products/womens-leggings/2/guess-women-s-leggings-black-aline-3251142-A.jpg","../../image/product-images/products/womens-leggings/2/guess-women-s-leggings-black-aline-3251142-C.jpg","../../image/product-images/products/womens-leggings/2/guess-women-s-leggings-black-aline-3251142-D.jpg"],
+        "images" : ["../files/image/product-images/products/womens-leggings/2/guess-women-s-leggings-black-aline-3251142-A.jpg","../files/image/product-images/products/womens-leggings/2/guess-women-s-leggings-black-aline-3251142-C.jpg","../files/image/product-images/products/womens-leggings/2/guess-women-s-leggings-black-aline-3251142-D.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -134,7 +134,7 @@
             "fourStar" : "12",
             "fiweStar" : "86"
         },
-        "images" : ["../../image/product-images/products/womens-leggings/3/gap-women-s-leggings-creamy-3290118-A.jpg","../../image/product-images/products/womens-leggings/3/gap-women-s-leggings-creamy-3290118-B.jpg","../../image/product-images/products/womens-leggings/3/gap-women-s-leggings-creamy-3290118-D.jpg"],
+        "images" : ["../files/image/product-images/products/womens-leggings/3/gap-women-s-leggings-creamy-3290118-A.jpg","../files/image/product-images/products/womens-leggings/3/gap-women-s-leggings-creamy-3290118-B.jpg","../files/image/product-images/products/womens-leggings/3/gap-women-s-leggings-creamy-3290118-D.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -183,7 +183,7 @@
             "fourStar" : "12",
             "fiweStar" : "86"
         },
-        "images" : ["../../image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-A.jpg","../../image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-B.jpg","../../image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-C.jpg"],
+        "images" : ["../files/image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-A.jpg","../files/image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-B.jpg","../files/image/product-images/products/womens-leggings/4/gap-women-s-leggings-blue-fit-3290103-C.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -232,7 +232,7 @@
             "fourStar" : "3",
             "fiweStar" : "86"
         },
-        "images" : ["../../image/product-images/products/womens-leggings/5/gap-women-s-leggings-grey-3290124-A.jpg","../../image/product-images/products/womens-leggings/5/gap-women-s-leggings-grey-3290124-B.jpg","../../image/product-images/products/womens-leggings/5/gap-women-s-leggings-grey-3290124-C.jpg"],
+        "images" : ["../files/image/product-images/products/womens-leggings/5/gap-women-s-leggings-grey-3290124-A.jpg","../files/image/product-images/products/womens-leggings/5/gap-women-s-leggings-grey-3290124-B.jpg","../files/image/product-images/products/womens-leggings/5/gap-women-s-leggings-grey-3290124-C.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -285,7 +285,7 @@
             "fourStar" : "3",
             "fiweStar" : "86"
         },
-        "images" : ["../../image/product-images/products/womens-leggings/6/camaieu-women-s-leggings-2182423-C.jpg","../../image/product-images/products/womens-leggings/6/camaieu-women-s-leggings-2182423-A.jpg","../../image/product-images/products/womens-leggings/6/camaieu-women-s-leggings-2182423-D.jpg"],
+        "images" : ["../files/image/product-images/products/womens-leggings/6/camaieu-women-s-leggings-2182423-C.jpg","../files/image/product-images/products/womens-leggings/6/camaieu-women-s-leggings-2182423-A.jpg","../files/image/product-images/products/womens-leggings/6/camaieu-women-s-leggings-2182423-D.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }

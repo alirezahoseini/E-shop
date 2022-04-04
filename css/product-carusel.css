@@ -58,13 +58,13 @@
     -ms-box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
     -o-box-shadow: 0px 0px 30px .2px rgba(0, 0, 0, 0.075);
   }
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-  }
   .swiper-slide a{
     cursor: auto;
+    color: black;
+    height: 100%;
+  }
+  .swiper-slide a:hover{
+    color: black;
   }
 .button-next , .button-prev {
   display: inline-block;
@@ -97,6 +97,13 @@
 /* product cart styles */
 .product-image{
   position: relative;
+  top: 0;
+  cursor: pointer;
+}
+.product-image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 .product-image .add-to-favorites{
   display: flex;

@@ -16,8 +16,14 @@ function eventlisteners(){
 // loading product data from api and set in DOM
 loadingData();
 function loadingData(){
+
+  // access to the productId 
+  let productId = window.location.search;
+  productId = productId.split('=');
+  productId = productId[1];
+   
    // access data from api with fetch --------->
-   fetch('../files/json/product-page-data.json').then((response) => {
+   fetch(`../files/json/products-data/product-${productId}.json`).then((response) => {
      // open response and access to json file data
       response.json().then((finallyResponse) => {
         // send data to set data in DOM function
@@ -35,7 +41,6 @@ function loadingData(){
 
    // set product data to DOM content --------->
    function setDataInDOM(productData){
-     console.log(productData);
 
 
      // acess to the article tag
@@ -52,7 +57,7 @@ function loadingData(){
         productImageCarusel.addSlide(1, [
           `
           <div class="swiper-slide">
-              <img src="${img}" />
+              <img src="${img}" class='img-fluid'/>
           </div>
           `
         ])
@@ -672,7 +677,7 @@ function fillTotalScoreStars(){
 
 // recommend products loaded
 function recommentProduct(){
-  productCarusel.newCarusel('../files/json/products-carusel/womens-coat.json', 'recommend-products');
+  productCarusel.newCarusel('../files/json/category/top-products.json', 'recommend-products');
 }
 
 

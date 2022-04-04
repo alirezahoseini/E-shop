@@ -36,7 +36,7 @@
             "fourStar" : "3",
             "fiweStar" : "93"
         },
-        "images" : ["../../image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-A.jpg","../../image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-B.jpg","../../image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-D.jpg"],
+        "images" : ["../files/image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-A.jpg","../files/image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-B.jpg","../files/image/product-images/products/top-products/1/tommy-hilfiger-men-s-shoes-blue_z-em0em00952-cte-D.jpg"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }

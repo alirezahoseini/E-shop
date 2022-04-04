@@ -22,12 +22,12 @@ function eventlisteners(){
 // functions------------------------------> 
 // product carusels 
 function productCaruselsRun(){
-    // carusel 1 --- > just for you products
-    productCarusel.newCarusel ('../files/json/products-carusel/just-for-you.json', 'just-for-you');
-    // carusel 2 --- > womens-coat products
-    productCarusel.newCarusel('../files/json/products-carusel/womens-coat.json', 'womens-coat');
-    // carusel 3 --- > womens-skirts products
-    productCarusel.newCarusel( '../files/json/products-carusel/womens-skirts.json', 'womens-skirts');
+    // carusel 1 --- > womens-dress products
+    productCarusel.newCarusel ('../files/json/category/womens-dress.json', 'womens-dress');
+    // carusel 2 --- > mens-sweaters products
+    productCarusel.newCarusel('../files/json/category/mens-sweaters.json', 'mens-sweaters');
+    // carusel 3 --- > women-Leggings products
+    productCarusel.newCarusel( '../files/json/category/women-Leggings.json', 'women-Leggings');
 }
 
 // header slider runing 
