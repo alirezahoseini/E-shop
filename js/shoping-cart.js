@@ -14,7 +14,6 @@ shoping cart and my favorites codes
 class ShopingCart{
     run(caruselParentId){
         // variables -------------------------------------------->
-
         // access to the carusel parent
         const parent = document.querySelector(`#${caruselParentId}`)
         // access to the all products
