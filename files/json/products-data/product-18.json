@@ -5,6 +5,7 @@
         "offerSale" : false,
         "price" : 97,
         "offerPrice" : 0,
+        "category" : "mens shoes",
         "brand" : "Tommy Hilfiger ",
         "colors" : [
             {

@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 49,
         "offerPrice" : 37,
+        "category" : "mens dress",
         "brand" : "Celio ",
         "colors" : [
             {

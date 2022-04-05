@@ -66,30 +66,33 @@ class ProductCarusel {
               `
               <!-- start slide -->
               <div class="swiper-slide product-cart flex-column" data-id='${product.productId}' quntity='1'>
-                  <a href='/pages/product-page.html?id=${product.productId}'>
-                      <!-- product image -->
-                      <div class="product-image">
-                          <img src="${product.images[0]}" loading='lazy' alt="product 13">
-                          <div class='add-to-favorites'>
-                              <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
-                          </div>
-                          <div class="sell">${offer}%</div>
-                      </div>
-                      <!-- End of product image -->
-                      <!-- product body -->
-                      <div class="product-body">
-                          <h3>${product.title}</h3>
-                          <div class="new-price">
-                              <p class="off-price">$${product.offerPrice}</pc>
-                              <p class="default-price">$${product.price}</p>
-                          </div>
-                      </div>
-                      <!-- End of product body -->
-                      </a>
-                      <div class="add-to-cart">
-                          <span></span>
-                          <i class="feather-icon"></i>
-                      </div>
+                <div class='icons'>
+                  <div class='add-to-favorites'>
+                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
+                  </div>
+                  <div class="sell">${offer}%</div>
+                </div>
+                <a href='/pages/product-page.html?id=${product.productId}'>
+                    <!-- product image -->
+                    <div class="product-image">
+                        <img src="${product.images[0]}" loading='lazy' alt="${product.title}">
+                        
+                    </div>
+                    <!-- End of product image -->
+                    <!-- product body -->
+                    <div class="product-body">
+                        <h3>${product.title}</h3>
+                        <div class="new-price">
+                            <p class="off-price">$${product.offerPrice}</pc>
+                            <p class="default-price">$${product.price}</p>
+                        </div>
+                    </div>
+                    <!-- End of product body -->
+                  </a>
+                  <div class="add-to-cart" title='Add to cart'>
+                      <span></span>
+                      <i class="feather-icon"></i>
+                  </div>
               </div>
               <!-- End of slide -->
               `
@@ -102,36 +105,41 @@ class ProductCarusel {
               `
               <!-- start slide -->
               <div class="swiper-slide product-cart flex-column" data-id='${product.productId}' quntity='1'>
-                  <a href='/pages/product-page.html?id=${product.productId}'>
-                      <!-- product image -->
-                      <div class="product-image">
-                          <img src="${product.images[0]}" loading='lazy' alt="product 13">
-                          <div class='add-to-favorites'>
-                              <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
-                          </div>
-                      </div>
-                      <!-- End of product image -->
-                      <!-- product body -->
-                      <div class="product-body">
-                          <h3>${product.title}</h3>
-                          <div class="new-price">
-                              <p class="default-price">$${product.price}</p>
-                          </div>
-                      </div>
-                      <!-- End of product body -->
-                    </a>
-                    <div class="add-to-cart">
-                        <span></span>
-                        <i class="feather-icon"></i>
+                <div class='icons'>
+                  <div class='add-to-favorites'>
+                    <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
+                  </div>
+                </div>
+                <a href='/pages/product-page.html?id=${product.productId}'>
+                    <!-- product image -->
+                    <div class="product-image">
+                        <img src="${product.images[0]}" loading='lazy' alt="${product.title}">
                     </div>
+                    <!-- End of product image -->
+                    <!-- product body -->
+                    <div class="product-body">
+                        <h3>${product.title}</h3>
+                        <div class="new-price">
+                            <p class="default-price">$${product.price}</p>
+                        </div>
+                    </div>
+                    <!-- End of product body -->
+                </a>
+                <div class="add-to-cart">
+                    <span></span>
+                    <i class="feather-icon"></i>
+                </div>
               </div>
               <!-- End of slide -->
               `
             ]);
           }
         });
-        // 
+        // run carusel
         shopingCart.run(caruselParentId);
+        // add hide class to loading
+        const loading = document.querySelector(`#${caruselId} .carusel-loading`);
+        loading.classList.add('hide')
       }
     };
   

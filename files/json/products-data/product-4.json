@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 73.95,
         "offerPrice" : 62.95,
+        "category" : "womens dress",
         "brand" : "Armani Exchange",
         "colors" : [
             {

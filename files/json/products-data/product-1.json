@@ -5,6 +5,7 @@
         "offerSale" : false,
         "price" : 119.99,
         "offerPrice" : 0,
+        "category" : "womens dress",
         "brand" : "Desigual",
         "colors" : [
             {

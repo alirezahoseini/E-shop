@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 74,
         "offerPrice" : 59,
+        "category" : "mens sweaters",
         "brand" : "Ragwear",
         "colors" : [
             {

@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 43,
         "offerPrice" : 35,
+        "category" : "womens leggings",
         "brand" : "leggings",
         "colors" : [
             {

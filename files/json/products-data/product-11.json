@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 58,
         "offerPrice" : 0,
+        "category" : "mens sweaters",
         "brand" : "Levi's®",
         "colors" : [
             {

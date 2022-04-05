@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 95,
         "offerPrice" : 81.95,
+        "category" : "womens dress",
         "brand" : "Blutsgeschwister",
         "colors" : [
             {

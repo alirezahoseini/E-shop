@@ -202,9 +202,9 @@ class ShopingCart{
             // quntity
             const quntity = Number( product.getAttribute('quntity'));
             // product img
-            const image = product.firstElementChild.children[0].children[0].getAttribute('src');
+            const image = product.children[1].children[0].firstElementChild.getAttribute('src');
             // product title
-            const title = product.firstElementChild.children[1].children[0].innerHTML;
+            const title = product.children[1].children[1].firstElementChild.innerText;
             // product price
             let price = document.querySelector(`div[data-id="${dataId}"] .default-price`).innerHTML;
             price = price.split('$');
@@ -247,12 +247,12 @@ class ShopingCart{
                         </div>
                         <i class="feather-icon icon-x remove-item" action='remove'></i>
                         <div class="col-4 cart-img">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <img src="${productInfo.image}" class="img-fluid rounded">
                             </a>
                         </div>
                         <div class="col-7 cart-info">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <p class="cart-title">
                                     ${productInfo.title}
                                 </p>
@@ -285,12 +285,12 @@ class ShopingCart{
                         </div>
                         <i class="feather-icon icon-x remove-item" action='remove'></i>
                         <div class="col-4 cart-img">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <img src="${productInfo.image}" class="img-fluid rounded">
                             </a>
                         </div>
                         <div class="col-7 cart-info">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <p class="cart-title">
                                     ${productInfo.title}
                                 </p>
@@ -473,10 +473,12 @@ class ShopingCart{
         
         // everything in favorites ----------------------------------------------------------->
         allProductTags.forEach(productTag => {
+
             // access to the add to favorites button
             const addToFavoritesBtn = productTag.querySelector('.add-to-favorites');
             // add click event in add to favorites button
             addToFavoritesBtn.addEventListener('click', (e) => {
+                
                 // access to the product info
                 const productInfo = accessToProductInfo(productTag);
                 // if favorites empty
@@ -499,7 +501,7 @@ class ShopingCart{
                             removeFavoritItem(item, productInfo);
                         }
                     })
-                 // if cart length > 0 
+                // if cart length > 0 
                 }else{
                     // checking added class exist ---> if exsist show err message
                     if(addToFavoritesBtn.classList.contains('added')){
@@ -512,21 +514,22 @@ class ShopingCart{
                         addToFavoritesBtn.classList.add('added');
                         // show success message 
                         ui.showMessage('Product added to favorites', 'success');
-                                    // show item to the DOM
-                    showFavoriteToDom(productInfo);
-                    // update favorites count
-                    favoritesCount();
-                    // access to the favorittes items
-                    const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
-                    // active buttons
-                    favoriteItems.forEach((item) => {
-                        if(item.getAttribute('data-id') === productInfo.dataId){
-                            removeFavoritItem(item, productInfo);
-                        }
-                    })
+                        // show item to the DOM
+                        showFavoriteToDom(productInfo);
+                        // update favorites count
+                        favoritesCount();
+                        // access to the favorittes items
+                        const favoriteItems = document.querySelectorAll('.my-favorites .cart-item');
+                        // active buttons
+                        favoriteItems.forEach((item) => {
+                            if(item.getAttribute('data-id') === productInfo.dataId){
+                                removeFavoritItem(item, productInfo);
+                            }
+                        })
                     }
                 }
-        
+                
+            
             })
         })
         
@@ -549,12 +552,12 @@ class ShopingCart{
                         </div>
                             <i class="feather-icon icon-x remove-item" action='remove'></i>
                         <div class="col-4 cart-img">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <img src="${productInfo.image}" class="img-fluid rounded">
                             </a>
                         </div>
                         <div class="col-7 cart-info">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <p class="cart-title">
                                     ${productInfo.title}
                                 </p>
@@ -579,12 +582,12 @@ class ShopingCart{
                         </div>
                             <i class="feather-icon icon-x remove-item" action='remove'></i>
                         <div class="col-4 cart-img">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <img src="${productInfo.image}" class="img-fluid rounded">
                             </a>
                         </div>
                         <div class="col-7 cart-info">
-                            <a href="#">
+                            <a href="/pages/product-page.html?id=${productInfo.dataId}">
                                 <p class="cart-title">
                                     ${productInfo.title}
                                 </p>

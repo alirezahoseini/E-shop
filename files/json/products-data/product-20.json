@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 43,
         "offerPrice" : 37,
+        "category" : "womens dress",
         "brand" : "Under Armour",
         "colors" : [
             {

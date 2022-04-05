@@ -5,6 +5,7 @@
         "offerSale" : false,
         "price" : 31,
         "offerPrice" : 0,
+        "category" : "womens leggings",
         "brand" : "Gap",
         "colors" : [
             {

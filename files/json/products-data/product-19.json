@@ -5,6 +5,7 @@
         "offerSale" : false,
         "price" : 35,
         "offerPrice" : 0,
+        "category" : "womens dress",
         "brand" : "CAMAIEU",
         "colors" : [
             {

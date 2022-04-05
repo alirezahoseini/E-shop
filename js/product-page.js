@@ -39,12 +39,52 @@ function loadingData(){
      console.log(err);
    });
 
+
+
    // set product data to DOM content --------->
    function setDataInDOM(productData){
 
-
      // acess to the article tag
      const article = document.querySelector('article');
+
+
+    // created pagination
+    createdPageintion()
+    function createdPageintion(){
+      // created div
+      const div = document.createElement('div');
+      // add classes to div
+      div.classList = 'col-12 w-100';
+
+      // created div template
+      div.innerHTML = `
+      <!-- pagination path  -->
+      <div class="pagination ml-lg-5">
+          <ul>
+              <li>
+                  <a href="./home.html">
+                      <i class="feather-icon icon-home"></i>
+                  </a>
+              </li>
+              <li class="slash">/</li>
+              <li>
+                  <a href="/pages/category?name=${productData.category}">
+                      ${productData.category}
+                  </a>
+              </li>
+              <li class="slash">/</li>
+              <li>
+                  ${productData.title}
+              </li>
+          </ul>
+      </div>
+      <!-- End of pagination path  -->
+      `;
+
+      // append div to article
+      article.insertBefore(div, article.firstChild);
+    }
+
 
     //  created product images box 
     createdProductImages();

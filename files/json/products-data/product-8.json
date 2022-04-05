@@ -5,6 +5,7 @@
         "offerSale" : false,
         "price" : 85,
         "offerPrice" : 0,
+        "category" : "mens sweaters",
         "brand" : "Under Armour",
         "colors" : [
             {

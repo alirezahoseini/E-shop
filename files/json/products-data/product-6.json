@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 53,
         "offerPrice" : 36.95,
+        "category" : "mens sweaters",
         "brand" : "gap",
         "colors" : [
             {

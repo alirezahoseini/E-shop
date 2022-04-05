@@ -25,6 +25,7 @@ article .pagination ul{
 article .pagination ul li{
     margin: 0 5px;
     font-size: .8em;
+    text-transform: capitalize;
 }
 article .pagination ul li:first-child{
     font-size: 1em;

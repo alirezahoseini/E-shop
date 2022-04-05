@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 126,
         "offerPrice" : 107.90,
+        "category" : "mens sweaters",
         "brand" : "Armani Exchange",
         "colors" : [
             {

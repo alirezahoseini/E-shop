@@ -5,6 +5,7 @@
         "offerSale" : true,
         "price" : 12,
         "offerPrice" : 9,
+        "category" : "womens leggings",
         "brand" : "CAMAIEU",
         "colors" : [
             {
