@@ -72,7 +72,7 @@ class ProductCarusel {
                   </div>
                   <div class="sell">${offer}%</div>
                 </div>
-                <a href='/pages/product-page.html?id=${product.productId}'>
+                <a href='product-page.html?id=${product.productId}'>
                     <!-- product image -->
                     <div class="product-image">
                         <img src="${product.images[0]}" loading='lazy' alt="${product.title}">
@@ -110,7 +110,7 @@ class ProductCarusel {
                     <i class="feather-icon add-favorites-icon icon-heart" title="Add to Favorites" ></i>
                   </div>
                 </div>
-                <a href='/pages/product-page.html?id=${product.productId}'>
+                <a href='product-page.html?id=${product.productId}'>
                     <!-- product image -->
                     <div class="product-image">
                         <img src="${product.images[0]}" loading='lazy' alt="${product.title}">
