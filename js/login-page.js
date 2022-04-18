@@ -560,3 +560,17 @@ function forgotFormValidation(){
         }
     }
 }
+
+// page switcher runing 
+pageSwitcher();
+function pageSwitcher(){
+    // access to the page switcher in dom
+    const pageSwitcher = document.querySelector('.page-switcher');
+    // access to the page switcher icon
+    const icon = pageSwitcher.querySelector('.icon');
+    // created click event on icon
+    icon.addEventListener('click', () =>{
+        pageSwitcher.classList.toggle('active');
+    })
+    console.log(icon);
+}
