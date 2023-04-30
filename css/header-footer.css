@@ -1564,7 +1564,7 @@ header.sticky{
     -moz-transform: translateY(-50%) translateX(-134px);
     -ms-transform: translateY(-50%) translateX(-134px);
     -o-transform: translateY(-50%) translateX(-134px);
-    z-index: 10000;
+    z-index: 700;
     min-width: 150px;
     max-width: 200px;
     transition: .3s ease-in;
@@ -1633,12 +1633,13 @@ header.sticky{
     -ms-transform: translateY(-30%);
     -o-transform: translateY(-30%);
     background-color: white;
-    width: 35px;
-    height: 30px;
+    width: 30px;
+    height: 28px;
+    font-size: .9em;
     display: flex;
     align-items: center;
     justify-content: right;
-    box-shadow: 1px 1px 15px rgba(7, 7, 7, 0.164);
+    box-shadow: 1px 1px 15px rgba(99, 99, 99, 0.164);
     padding-right: 5px;
     border-radius: 0 20px 20px 0;
     -webkit-border-radius: 0 20px 20px 0;
@@ -1646,29 +1647,39 @@ header.sticky{
     -ms-border-radius: 0 20px 20px 0;
     -o-border-radius: 0 20px 20px 0;
     cursor: pointer;
-    transition: .2s ease-in;
-    -webkit-transition: .2s ease-in;
-    -moz-transition: .2s ease-in;
-    -ms-transition: .2s ease-in;
-    -o-transition: .2s ease-in;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+    color: gray;
 }
 .page-switcher.active .icon{
     margin-left: 10px;
     padding: 5px;
-    width: 30px;
+    width: 28px;
     justify-content: center;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transform: translateY(-30%) rotate(45deg);
-    -webkit-transform: translateY(-30%) rotate(45deg);
-    -moz-transform: translateY(-30%) rotate(45deg);
-    -ms-transform: translateY(-30%) rotate(45deg);
-    -o-transform: translateY(-30%) rotate(45deg);
     background-color: rgb(255, 74, 74) ;
     color: white;
+}
+.page-switcher .icon i{
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.page-switcher.active .icon i{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
 /* End of page switcher */
 
