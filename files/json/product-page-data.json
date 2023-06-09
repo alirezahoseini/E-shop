@@ -48,7 +48,7 @@
             "fourStar" : "35",
             "fiweStar" : "86"
         },
-        "images" : ["../files/image/product-images/product-preview/pr-1.jpg", "../files/image/product-images/product-preview/pr-2.jpg", "../files/image/product-images/product-preview/pr-3.jpg", "../files/image/product-images/product-preview/pr-4.jpg", "../files/image/product-images/product-preview/pr-5.jpg", "../files/image/product-images/product-preview/pr-6.jpg"],
+        "images" : ["../files/image/product-images/product-preview/pr-1.webp", "../files/image/product-images/product-preview/pr-2.webp", "../files/image/product-images/product-preview/pr-3.webp", "../files/image/product-images/product-preview/pr-4.webp", "../files/image/product-images/product-preview/pr-5.webp", "../files/image/product-images/product-preview/pr-6.webp"],
         "description" : "Gray Sumer Vibes T-shirt in the uiKit line with a colorful print. <br> Made of jersey cotton. T-shirt fits prefectly with jeans, pants or shorts."
     }
 ]

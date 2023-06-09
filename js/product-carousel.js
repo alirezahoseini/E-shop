@@ -71,7 +71,7 @@ class ProductCarousel {
                 <a href='product-page.html?id=${product.productId}'>
                     <!-- product image -->
                     <div class="product-image">
-                        <img src="${product.images[0]}" loading='lazy' alt="${product.title}">
+                        <img src="${product.images[0]}" width='640px' loading='lazy' alt="${product.title}">
                         
                     </div>
                     <!-- End of product image -->

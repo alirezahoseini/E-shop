@@ -41,7 +41,7 @@
             "fourStar" : "21",
             "fiweStar" : "82"
         },
-        "images" : ["../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-A.jpg","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-B.jpg","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-C.jpg","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-F.jpg"],
+        "images" : ["../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-A.webp","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-B.webp","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-C.webp","../files/image/product-images/products/womens-dress/4/armani-exchange-women-s-dress-black-2463784-F.webp"],
 
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
