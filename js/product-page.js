@@ -1,5 +1,5 @@
 // Classes ------------------------------------------------------>
-const productCarusel = new ProductCarusel();
+const productCarousel = new ProductCarousel();
 
 
 // Eventlisteners ----------------------------------------------->
@@ -717,11 +717,9 @@ function fillTotalScoreStars(){
 
 // recommend products loaded
 function recommentProduct(){
-  productCarusel.newCarusel('../files/json/category/top-products.json', 'recommend-products');
+  productCarousel.newCarousel('../files/json/category/top-products.json', 'recommend-products');
 }
 
-
-// adding product the shoping cart
 // function addToCartButton(){
 //   // access to the add to cart button
 //   const btn = document.querySelector('.more-buttons .add-to-cart');

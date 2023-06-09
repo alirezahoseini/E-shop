@@ -286,7 +286,6 @@ function pageSwitcher(){
     icon.addEventListener('click', () =>{
         pageSwitcher.classList.toggle('active');
     })
-    console.log(icon);
 }
 
 

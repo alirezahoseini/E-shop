@@ -1,7 +1,7 @@
 
-// product carusel class 
-class ProductCarusel {
-    newCarusel(dataLink, caruselParentId){
+// product carousel class 
+class ProductCarousel {
+    newCarousel(dataLink, carouselParentId){
       // created shoping cart class
       const shopingCart = new ShopingCart();
     
@@ -9,19 +9,19 @@ class ProductCarusel {
       fetch(dataLink).then((firstRespons) => {
         firstRespons.json().then((finallyRespons) => {
           // send products to create DOM function
-          createdCaruselToDOM(finallyRespons);
+          createdCarouselToDOM(finallyRespons);
         })
       }).catch((error) => {
-        ui.showMessage('dont conect to server', 'danger');
+        ui.showMessage('dont connect to server', 'danger');
         console.log(error);
       });
   
-      // created product carusel to DOM 
-      async function createdCaruselToDOM(products){
+      // created product carousel to DOM 
+      async function createdCarouselToDOM(products){
         // access carusel id
-        const caruselId = document.querySelector(`#${caruselParentId} .swiper`).getAttribute('id');
-        // access carusel and created new swiper
-        const mySwiper = new Swiper(`#${caruselId}`, {
+        const carouselId = document.querySelector(`#${carouselParentId} .swiper`).getAttribute('id');
+        // access carousel and created new swiper
+        const mySwiper = new Swiper(`#${carouselId}`, {
             spaceBetween: 30,
             navigation: {
               nextEl: ".button-next",
@@ -131,10 +131,10 @@ class ProductCarusel {
             ]);
           }
         });
-        // run carusel
-        shopingCart.run(caruselParentId);
+        // run carousel
+        shopingCart.run(carouselParentId);
         // add hide class to loading
-        const loading = document.querySelector(`#${caruselId} .carusel-loading`);
+        const loading = document.querySelector(`#${carouselId} .carusel-loading`);
         loading.classList.add('hide')
       }
     };

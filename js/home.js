@@ -1,5 +1,5 @@
 // Classes 
-const productCarusel = new ProductCarusel();
+const productCarousel = new ProductCarousel();
 
 
 
@@ -10,7 +10,7 @@ function eventlisteners(){
     // header slider runing
     document.addEventListener("DOMContentLoaded", headerSlider);
     // product crusel runing
-    document.addEventListener("DOMContentLoaded", productCaruselsRun);
+    document.addEventListener("DOMContentLoaded", productCarouselsRun);
 }
 
 
@@ -20,14 +20,14 @@ function eventlisteners(){
 
 
 // functions------------------------------> 
-// product carusels 
-function productCaruselsRun(){
-    // carusel 1 --- > womens-dress products
-    productCarusel.newCarusel ('../files/json/category/womens-dress.json', 'womens-dress');
-    // carusel 2 --- > mens-sweaters products
-    productCarusel.newCarusel('../files/json/category/mens-sweaters.json', 'mens-sweaters');
-    // carusel 3 --- > women-Leggings products
-    productCarusel.newCarusel( '../files/json/category/women-Leggings.json', 'women-Leggings');
+// product carousels 
+function productCarouselsRun(){
+    // carousel 1 --- > womens-dress products
+    productCarousel.newCarousel ('../files/json/category/womens-dress.json', 'womens-dress');
+    // carousel 2 --- > mens-sweaters products
+    productCarousel.newCarousel('../files/json/category/mens-sweaters.json', 'mens-sweaters');
+    // carousel 3 --- > women-Leggings products
+    productCarousel.newCarousel( '../files/json/category/women-Leggings.json', 'women-Leggings');
 }
 
 // header slider runing 
