@@ -9,7 +9,7 @@ A static template is a store that receives dynamic data from local json files. �
 This is my first big practice project with javascript.
 Although I didn't know much, I tried to make it perfect✨
 
-[try it online ❤️👌](https://a-hosseini.ir/projects/e-shop)
+[try it online ❤️👌](https://alirezahoseini.github.io/E-shop/pages/home.html)
 
 ## Features of this template
 
